@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Telegraf-Regular';
+    src: url('src/assets/fonts/Telegraf-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Telegraf-UltraBold';
+    src: url('src/assets/fonts/Telegraf-UltraBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Telegraf-UltraLight';
+    src: url('src/assets/fonts/Telegraf-UltraLight.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+  
+  $telegrafRegular: 'Telegraf-Regular', sans-serif;
+  $telegrafUltraBold: 'Telegraf-UltraBold', sans-serif;
+  $telegrafUltraLight: 'Telegraf-UltraLight', sans-serif;
+  
