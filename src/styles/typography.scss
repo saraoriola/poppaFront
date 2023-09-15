@@ -1,3 +1,4 @@
+// Reglas @font-face para las fuentes Telegraf
 @font-face {
     font-family: 'Telegraf-Regular';
     src: url('src/assets/fonts/Telegraf-Regular.otf') format('opentype');
@@ -19,7 +20,75 @@
     font-style: normal;
   }
   
+  // Reglas @font-face para las fuentes Nocturne
+  @font-face {
+    font-family: 'Nocturne-ExtraLight';
+    src: url('src/assets/fonts/Nocturne-ExtraLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-Bold';
+    src: url('src/assets/fonts/Nocturne-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-ExtraThin';
+    src: url('src/assets/fonts/Nocturne-ExtraThin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-Light';
+    src: url('src/assets/fonts/Nocturne-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-Medium';
+    src: url('src/assets/fonts/Nocturne-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-Regular';
+    src: url('src/assets/fonts/Nocturne-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-SemiBold';
+    src: url('src/assets/fonts/Nocturne-SemiBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nocturne-Thin';
+    src: url('src/assets/fonts/Nocturne-Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  // Variables para las fuentes Telegraf
   $telegrafRegular: 'Telegraf-Regular', sans-serif;
   $telegrafUltraBold: 'Telegraf-UltraBold', sans-serif;
   $telegrafUltraLight: 'Telegraf-UltraLight', sans-serif;
+  
+  // Variables para las fuentes Nocturne
+  $nocturneExtraLight: 'Nocturne-ExtraLight', sans-serif;
+  $nocturneBold: 'Nocturne-Bold', sans-serif;
+  $nocturneExtraThin: 'Nocturne-ExtraThin', sans-serif;
+  $nocturneLight: 'Nocturne-Light', sans-serif;
+  $nocturneMedium: 'Nocturne-Medium', sans-serif;
+  $nocturneRegular: 'Nocturne-Regular', sans-serif;
+  $nocturneSemiBold: 'Nocturne-SemiBold', sans-serif;
+  $nocturneThin: 'Nocturne-Thin', sans-serif;
   
