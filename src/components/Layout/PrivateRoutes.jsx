@@ -1,16 +1,11 @@
-import { Spinner } from "@chakra-ui/react";
-import { useSelector } from "react-redux"; 
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Layout from "./Layout";
 
 const PrivateRoutes = () => {
-    const user = useSelector((state) => state.user); 
-    const navigate = useNavigate(); 
+    const user = useSelector((state) => state.user);
 
-    if (!user) {
-        navigate("/login"); 
-        return <Spinner/>; 
-    }
+    if (!user) return <Navigate to="/login" />;
 
     return <Layout />;
 };

@@ -1,12 +1,11 @@
 import React from "react";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import routes from "../routes";
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes";
 
 const App = () => {
     return (
         <>
-            <div className="app-container">
+            {/* <div className="app-container">
                 <h1 className="titulo">Título en Telegraf-UltraBold</h1>
                 <p className="texto-light">Este es un texto en Telegraf-UltraLight.</p>
                 <div className="font-group">
@@ -40,7 +39,7 @@ const App = () => {
                     <div className="color-box gray-bg20">Gray</div>
                     <div className="color-box orange-bg20">Orange</div>
                 </div>
-            </div>
+            </div> */}
 
             <RouterProvider router={routes} />
         </>
