@@ -3,6 +3,7 @@ import Logout from "../User/Auth/Logout";
 import Login from "../User/Auth/Login";
 import { Link } from "react-router-dom";
 import { Box, Button } from "@chakra-ui/react";
+import EventCreate from "../Event/CreateEvent/EventCreate";
 
 const Home = () => {
     const user = useSelector((state) => state.auth.user);
@@ -10,12 +11,17 @@ const Home = () => {
         <Box>
             {!user && (
                 <Link to="register">
-                    <Button ml="80%" mt="8%" colorScheme="blue">
+                    <Button ml="60%" mt="8%" colorScheme="blue">
                         Registrarse
                     </Button>
                 </Link>
             )}
-            {user && <Logout />}
+            {user && (
+                <>
+                    <Logout />
+                    <EventCreate />
+                </>
+            )}
             {!user && <Login />}
         </Box>
     );
