@@ -47,7 +47,7 @@ const Login = () => {
 
     return (
         <>
-            <Card w="30%" p="3%" mt="10%" ml="35%" boxShadow="2xl" bg="" mb="16%">
+            <Card w="80%" p="4%" mt="20%" ml="10%" boxShadow="2xl" bg="" mb="16%">
                 <form onSubmit={onSubmit}>
                     <VStack spacing="4" align="center">
                         <Text color="blue" as="b" fontSize="1.2em" mb="3%">

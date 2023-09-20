@@ -7,6 +7,7 @@ const createEvent = async (eventData) => {
             headers: {
                 Authorization: token,
             },
+            withCredentials: true,
         });
         return res.data;
     } catch (error) {
