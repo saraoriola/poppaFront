@@ -7,6 +7,7 @@ import Logout from "./components/User/Auth/Logout";
 import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Register from "./components/User/Auth/Register";
+//import Location from "./components/Location/CreateLocation";
 
 const routes = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const routes = createBrowserRouter([
         element: <Register />,
         errorElement: <ErrorPage />,
     },
+    /*{
+        path: "location",
+        element: <Location />,
+        errorElement: <ErrorPage />,
+    },*/
     {
         element: <PrivateRoutes />,
         errorElement: <ErrorPage />,
