@@ -22,16 +22,9 @@ const Logout = () => {
     };
 
     return (
-        <Card w="30%" p="3%" mt="10%" ml="35%" mb="8%" boxShadow="2xl">
-            <VStack spacing="4" align="center">
-                <Text color="blue" as="b" fontSize="1.2em" mb="3%">
-                    Cerrar Sesión
-                </Text>
-                <Button mt="8%" colorScheme="blue" onClick={handleLogout}>
-                    Cerrar Sesión
-                </Button>
-            </VStack>
-        </Card>
+        <Button mt="6%" ml="60%" colorScheme="blue" onClick={handleLogout}>
+            Cerrar Sesión
+        </Button>
     );
 };
 

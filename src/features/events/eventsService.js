@@ -1,4 +1,4 @@
-import apiClient from "../../api/apiClient";
+import apiClient from "../../api/apiClient"; //para las llamadas implementamos el apiClient
 
 const createEvent = async (eventData) => {
     try {
@@ -7,6 +7,7 @@ const createEvent = async (eventData) => {
             headers: {
                 Authorization: token,
             },
+            withCredentials: true,
         });
         return res.data;
     } catch (error) {

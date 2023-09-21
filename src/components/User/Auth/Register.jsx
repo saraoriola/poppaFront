@@ -65,7 +65,7 @@ const Register = () => {
     return (
         <>
             <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                <Card w="30%" p="3%" mt="10%" ml="35%" mb="8%" boxShadow="2xl">
+                <Card w="80%" p="4%" mt="30%" ml="10%" mb="8%" boxShadow="2xl">
                     <form onSubmit={onSubmit}>
                         <VStack spacing="4" align="center">
                             <Text color="blue" as="b" fontSize="1.2em" mb="3%">
@@ -83,7 +83,7 @@ const Register = () => {
                 </Card>
             </motion.div>
             <Link to="/">
-                <Button mt="8%" ml="45%" colorScheme="blue" type="submit">
+                <Button mt="8%" ml="35%" colorScheme="blue" type="submit">
                     Ir a inicio
                 </Button>
             </Link>
