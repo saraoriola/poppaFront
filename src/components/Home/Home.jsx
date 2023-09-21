@@ -1,21 +1,17 @@
 import { useSelector } from "react-redux";
 import { Box } from "@chakra-ui/react";
 import HeaderRender from "../Header/HeaderRender/HeaderRender";
+import "./Home.scss";
 
 // NOTE: Lo que había antes aquí lo he pasado a User -> Auth
 const Home = () => {
-  const user = useSelector((state) => state.auth.user);
   return (
-    <Box>
-      <Box>
+    <Box className="home-container">
+      <Box className="header-container">
         <HeaderRender />
       </Box>
-      <Box>
-        Filtros
-      </Box>
-      <Box>
-        Cards
-      </Box>
+      <Box className="filter-container">Filtros</Box>
+      <Box className="cards-container">Cards</Box>
     </Box>
   );
 };
