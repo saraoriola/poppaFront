@@ -33,6 +33,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: "logout", element: <Logout /> },
+            // NOTE: La ruta segura/privada/guard
             // { path: "childrenExample", element: <childrenExample /> },
         ],
         //     children: [
