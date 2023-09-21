@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createEvent } from "../../../features/events/eventsSlice";
+import { createEvent } from "../../../features/event/eventsSlice";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack } from "@chakra-ui/react";

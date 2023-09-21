@@ -1,30 +1,23 @@
 import { useSelector } from "react-redux";
-import Logout from "../User/Auth/Logout";
-import Login from "../User/Auth/Login";
-import { Link } from "react-router-dom";
-import { Box, Button } from "@chakra-ui/react";
-import EventCreate from "../Event/CreateEvent/EventCreate";
+import { Box } from "@chakra-ui/react";
+import HeaderRender from "../Header/HeaderRender/HeaderRender";
 
+// NOTE: Lo que había antes aquí lo he pasado a User -> Auth
 const Home = () => {
-    const user = useSelector((state) => state.auth.user);
-    return (
-        <Box>
-            {!user && (
-                <Link to="register">
-                    <Button ml="60%" mt="8%" colorScheme="blue">
-                        Registrarse
-                    </Button>
-                </Link>
-            )}
-            {user && (
-                <>
-                    <Logout />
-                    <EventCreate />
-                </>
-            )}
-            {!user && <Login />}
-        </Box>
-    );
+  const user = useSelector((state) => state.auth.user);
+  return (
+    <Box>
+      <Box>
+        <HeaderRender />
+      </Box>
+      <Box>
+        Filtros
+      </Box>
+      <Box>
+        Cards
+      </Box>
+    </Box>
+  );
 };
 
 export default Home;
