@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import eventService from "./eventService";
 
 const initialState = {
-  events: null,
+  events: "null",
 };
 
 export const getAllEvents = createAsyncThunk("event/getAllEvents", async () => {
@@ -29,9 +29,13 @@ export const eventSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getEventByTitle.fulfilled, (state, action) => {
-      state.events = action.payload;
-    });
+    builder
+      .addCase(getAllEvents.fulfilled, (state, action) => {
+        state.events = action.payload.events;
+      })
+      .addCase(getEventByTitle.fulfilled, (state, action) => {
+        state.events = action.payload.events;
+      });
   },
 });
 

@@ -1,9 +1,16 @@
-import React from 'react'
+import { Box } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getAllEvents } from "../../../features/event/eventSlice";
 
 const GetAllEvents = () => {
-  return (
-    <div>GetAllEvents</div>
-  )
-}
+  const dispatch = useDispatch();
 
-export default GetAllEvents
+  useEffect(() => {
+    dispatch(getAllEvents());
+  }, []);
+
+  return <Box>GetAllEvents</Box>;
+};
+
+export default GetAllEvents;
