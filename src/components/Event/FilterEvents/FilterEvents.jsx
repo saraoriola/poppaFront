@@ -9,8 +9,6 @@ const FilterEvents = () => {
     (state) => state.auth
   );
 
-  console.log(userEvents);
-
   const { events } = useSelector((state) => state.event);
   const [filter, setFilter] = useState("Todos");
 
@@ -34,25 +32,47 @@ const FilterEvents = () => {
 
   if (userRole.type === "admin") {
     return (
-      <Box>
-        <Button onClick={() => setFilter("Todos")}>Todos</Button>
-        <Button onClick={() => setFilter("Inscrito")}>Inscrito</Button>
-        <Button onClick={() => setFilter("Pendiente")}>
+      <>
+        <Button className="filter-input" onClick={() => setFilter("Todos")}>
+          Todos
+        </Button>
+        <Button className="filter-input" onClick={() => setFilter("Inscrito")}>
+          Inscrito
+        </Button>
+        <Button className="filter-input" onClick={() => setFilter("Pendiente")}>
           Pendientes de aprobación
         </Button>
-        <Button onClick={() => setFilter("Organizo")}>Organizo</Button>
-        <Button onClick={() => setFilter("Finalizado")}>Finalizado</Button>
+        <Button className="filter-input" onClick={() => setFilter("Organizo")}>
+          Organizo
+        </Button>
+        <Button
+          className="filter-input"
+          onClick={() => setFilter("Finalizado")}
+        >
+          Finalizado
+        </Button>
 
+        {/* FIXME: Esto huele ya que lo renderizo también en home*/}
         <PrintEvents results={filteredEvents()} />
-      </Box>
+      </>
     );
   } else {
     return (
-      <Box>
-        <Button onClick={() => setFilter("Todos")}>Todos</Button>
-        <Button onClick={() => setFilter("Inscrito")}>Inscrito</Button>
-        <Button onClick={() => setFilter("Finalizado")}>Finalizado</Button>
+      <Box className="filter-container">
+        <Button className="filter-input" onClick={() => setFilter("Todos")}>
+          Todos
+        </Button>
+        <Button className="filter-input" onClick={() => setFilter("Inscrito")}>
+          Inscrito
+        </Button>
+        <Button
+          className="filter-input"
+          onClick={() => setFilter("Finalizado")}
+        >
+          Finalizado
+        </Button>
 
+{/* FIXME: Esto huele ya que lo renderizo también en home*/}
         <PrintEvents results={filteredEvents()} />
       </Box>
     );
