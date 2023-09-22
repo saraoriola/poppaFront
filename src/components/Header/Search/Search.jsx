@@ -11,12 +11,14 @@ const Search = ({ onSearch }) => {
     const searchTerm = e.target.value;
     setSearch(searchTerm);
 
-    // Aplicar la lógica de búsqueda y pasar los resultados a la función onSearch
-    const results = searchTerm
-      ? events.filter((data) =>
-          data.title.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      : events;
+    let results = events;
+
+    if (searchTerm) {
+      results = events.filter((data) =>
+        data.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
     onSearch(results);
   };
 
