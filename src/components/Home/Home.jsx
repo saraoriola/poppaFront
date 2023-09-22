@@ -13,12 +13,12 @@ const Home = () => {
       <Box className="header-container">
         <HeaderRender />
       </Box>
-      <Box className="filter-container">
+      {/* <Box className="filter-container">
         <FilterEvents />
       </Box>
       <Box className="cards-container">
         <GetAllEvents />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

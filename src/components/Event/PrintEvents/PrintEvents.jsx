@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 const PrintEvents = () => {
   const { events } = useSelector((state) => state.event);
 
+
   const printEvents = events.map((event) => {
     return (
       <Card key={event.id}>
@@ -20,6 +21,7 @@ const PrintEvents = () => {
         <CardBody>
           {/* NOTE: Aquí iría la url del banner */}
           <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
+          <Text>{event.title}</Text>
           <Text>{event.description}</Text>
         </CardBody>
         <CardFooter>
