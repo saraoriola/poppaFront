@@ -5,25 +5,13 @@ import { getAllEvents } from "../../../features/event/eventSlice";
 import PrintEvents from "../PrintEvents/PrintEvents";
 
 const GetAllEvents = () => {
-  const { events, isLoading } = useSelector((state) => state.event);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    //Cada vez que se añada un evento se reflejará aquí. Le pongo el if para que no se ejecute siempre.
-    if (!events.length) {
-      dispatch(getAllEvents());
-    }
-  }, [events]);
+    dispatch(getAllEvents());
+  }, [dispatch]);
 
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  return (
-    <>
-      <PrintEvents />
-    </>
-  );
+  return null; // Este componente no renderiza nada directamente
 };
 
 export default GetAllEvents;

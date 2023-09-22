@@ -1,67 +1,31 @@
-import {
-  Box,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Image,
-  Input,
-  Spinner,
-  Text,
-} from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { Input, Spinner } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllEvents } from "../../../features/event/eventSlice";
+import {
+  getAllEvents,
+  getEventByTitle,
+} from "../../../features/event/eventSlice";
+import PrintEvents from "../../Event/PrintEvents/PrintEvents";
 
 const Search = () => {
   const [search, setSearch] = useState("");
-  const { events, isLoading } = useSelector((state) => state.event);
+  const { isLoading } = useSelector((state) => state.event);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    // Llamar a la acción para obtener todos los eventos cuando el componente se monta
-    dispatch(getAllEvents());
-  }, [dispatch]);
-
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  let results = [];
 
   const searcher = (e) => {
     const searchTerm = e.target.value;
     setSearch(searchTerm);
-    console.log(searchTerm);
+
+    if (!searchTerm) {
+      dispatch(getAllEvents()); // Si la búsqueda está vacía, obtén todos los eventos
+    } else {
+      dispatch(getEventByTitle(searchTerm)); // Obtén eventos por título
+    }
   };
 
-  if (!search) {
-    results = events;
-  } else {
-    results = events.filter((data) => {
-      return data.title.toLowerCase().includes(search.toLowerCase());
-    });
+  if (isLoading) {
+    return <Spinner />;
   }
-
-  const printEvents = results.map((event) => {
-    return (
-      <Card key={event.id}>
-        <CardHeader>{event.banner}</CardHeader>
-        <CardBody>
-          {/* NOTE: Aquí iría la url del banner */}
-          <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-          <Text>{event.title}</Text>
-          <Text>{event.description}</Text>
-        </CardBody>
-        <CardFooter>
-          <Box>{event.dateTime}</Box>
-          {/* Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
-          <Box>{event.duration_min}</Box>
-          <Box>{event.dateTime}</Box>
-        </CardFooter>
-      </Card>
-    );
-  });
 
   return (
     <>
@@ -71,7 +35,7 @@ const Search = () => {
         type="text"
         placeholder="Búsqueda"
       />
-      {printEvents}
+      <PrintEvents />
     </>
   );
 };

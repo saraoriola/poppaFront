@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 const PrintEvents = () => {
   const { events } = useSelector((state) => state.event);
 
-
   const printEvents = events.map((event) => {
     return (
       <Card key={event.id}>

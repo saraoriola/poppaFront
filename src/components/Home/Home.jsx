@@ -1,24 +1,24 @@
-import { useSelector } from "react-redux";
-import { Box, Spinner } from "@chakra-ui/react";
+import React from "react";
+import { Box } from "@chakra-ui/react";
 import HeaderRender from "../Header/HeaderRender/HeaderRender";
 import "./Home.scss";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
+import Search from "../Header/Search/Search";
 
-
-// NOTE: Lo que había antes aquí lo he pasado a User -> Auth
 const Home = () => {
   return (
     <Box className="home-container">
       <Box className="header-container">
         <HeaderRender />
       </Box>
-      {/* <Box className="filter-container">
+      <Box className="filter-container">
         <FilterEvents />
+        <Search /> {/* Agrega el componente de búsqueda aquí */}
       </Box>
       <Box className="cards-container">
         <GetAllEvents />
-      </Box> */}
+      </Box>
     </Box>
   );
 };
