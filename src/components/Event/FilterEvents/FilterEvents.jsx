@@ -10,12 +10,10 @@ const FilterEvents = () => {
   );
 
   console.log(userEvents);
-  console.log(userRole.type);
 
   const { events } = useSelector((state) => state.event);
-  const [filter, setFilter] = useState("Todos"); // Estado local para el filtro
+  const [filter, setFilter] = useState("Todos");
 
-  // Función para filtrar los eventos según el filtro seleccionado
   const filteredEvents = () => {
     switch (filter) {
       case "Inscrito":
