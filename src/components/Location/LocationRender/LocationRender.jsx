@@ -7,10 +7,8 @@ const LocationRender = () => {
     return (
         <Box>
             {/* <Componentes /> */}
-            
             <CreateLocation />
             <DeleteLocation />
-
         </Box>
     );
 };
