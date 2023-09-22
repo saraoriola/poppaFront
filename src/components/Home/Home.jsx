@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Box } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 import HeaderRender from "../Header/HeaderRender/HeaderRender";
 import "./Home.scss";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
@@ -15,7 +15,9 @@ const Home = () => {
       <Box className="filter-container">
         <FilterEvents />
       </Box>
-      <Box className="cards-container"><GetAllEvents/></Box>
+      <Box className="cards-container">
+        <GetAllEvents />
+      </Box>
     </Box>
   );
 };

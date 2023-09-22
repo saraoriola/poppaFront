@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import eventService from "./eventService";
 
 const initialState = {
-  events: "null",
+  events: [],
+  isLoading: false,
 };
 
 export const getAllEvents = createAsyncThunk("event/getAllEvents", async () => {
@@ -30,8 +31,12 @@ export const eventSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      .addCase(getAllEvents.pending, (state) => {
+        state.isLoading = true;
+      })
       .addCase(getAllEvents.fulfilled, (state, action) => {
         state.events = action.payload.events;
+        state.isLoading = false;
       })
       .addCase(getEventByTitle.fulfilled, (state, action) => {
         state.events = action.payload.events;
