@@ -5,9 +5,8 @@ import HeaderRender from "../Header/HeaderRender/HeaderRender";
 import "./Home.scss";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
-import Search from "../Header/Search/Search";
-import PrintEvents from "../Event/PrintEvents/PrintEvents";
 import { useSelector } from "react-redux";
+import PrintEvents from "../Event/PrintEvents/PrintEvents";
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -20,15 +19,13 @@ const Home = () => {
   return (
     <Box className="home-container">
       <Box className="header-container">
-        <HeaderRender />
+        <HeaderRender onSearch={handleSearch} />
       </Box>
       <Box className="filter-container">
         <FilterEvents />
       </Box>
       <Box className="cards-container">
         <GetAllEvents />
-        
-        <Search onSearch={handleSearch} />
         <PrintEvents results={searchResults} />
       </Box>
     </Box>
