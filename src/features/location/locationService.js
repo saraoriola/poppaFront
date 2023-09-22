@@ -7,19 +7,14 @@ const createLocation = async (formData) => {
     return res.data;
 };
 
-const locationService = async (formData) => {
-  const res = await axios.post(API_URL + "/locations/create", formData); 
-  return res.data;
+const deleteLocation = async (id) => {
+    const res = await axios.delete(API_URL + "/locations/delete/" + id);
+    return res.data;
 };
 
-const deleteLocation = async (id) => {
-  const res = await axios.delete(API_URL + "/locations/delete/" + id)
-  return res.data;
-}
-
 const locationService = {
-  createLocation,
-  deleteLocation
+    createLocation,
+    deleteLocation,
 };
 
 export default locationService;
