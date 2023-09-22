@@ -8,13 +8,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const PrintEvents = () => {
   const { events } = useSelector((state) => state.event);
 
   const printEvents = events.map((event) => {
-    console.log(event);
     return (
       <Card key={event.id}>
         <CardHeader>{event.banner}</CardHeader>

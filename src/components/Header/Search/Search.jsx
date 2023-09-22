@@ -3,6 +3,7 @@ import React from "react";
 
 //FIXME: Falta lógica
 const Search = () => {
+
   return <Input type="text" placeholder="Búsqueda" />;
 };
 
