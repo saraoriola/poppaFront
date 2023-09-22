@@ -12,10 +12,16 @@ const deleteLocation = async (id) => {
   return res.data;
 }
 
+const getLocationById = async (id) => {
+  const res = await axios.get(`${API_URL}/locations/getbyid/${id}`)
+  return res.data;
+}
+
 
 const locationService = {
   createLocation,
-  deleteLocation
+  deleteLocation,
+  getLocationById
 
 };
 
