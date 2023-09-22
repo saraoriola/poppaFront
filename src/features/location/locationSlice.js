@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import locationService from "./locationService";
 
+
 const initialState = {
   locations: [],
 };
@@ -13,6 +14,16 @@ export const locationCreate = createAsyncThunk("locations/create", async (formDa
   }
 });
 
+export const Delete = createAsyncThunk("locations/delete", async (id) => {
+  try {
+    return await locationService.deleteLocation(id);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+
+
 export const locationSlice = createSlice({
   name: "location",
   initialState,
@@ -21,7 +32,11 @@ export const locationSlice = createSlice({
     builder.addCase(locationCreate.fulfilled, (state, action) => {
       state.locations = action.payload;
     });
+    builder.addCase(Delete.fulfilled, (state, action ) => {
+      state.locations = action.payload
+    });
   },
+
 });
 
 export default locationSlice.reducer;

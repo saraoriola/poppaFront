@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import { locationCreate } from "../../../features/location/locationSlice";
 import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, useToast } from "@chakra-ui/react";
+
 
 const CreateLocation = () => {
   const dispatch = useDispatch();
@@ -55,10 +55,12 @@ const CreateLocation = () => {
         console.error("Error al crear location:", result.error.message);
       }
     });
+
+  
   };
 
   return (
-    <Box p="5%">
+    <Box p="7%">
       <form onSubmit={handleSubmit}>
         <VStack spacing={4}>
           <FormControl>
@@ -86,8 +88,12 @@ const CreateLocation = () => {
             <Input type="number" name="facility_id" value={formData.facility_id} onChange={handleChange} />
           </FormControl>
 
-          <Button type="submit">Create Location</Button>
+          <Button mt={10}  colorScheme="blue" type="submit">
+            Create Location
+          </Button>
+
         </VStack>
+
       </form>
     </Box>
   );
