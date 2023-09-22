@@ -22,6 +22,14 @@ export const Delete = createAsyncThunk("locations/delete", async (id) => {
   }
 });
 
+export const get = createAsyncThunk("locations/getbyid", async (id) => {
+  try {
+    return await locationService.getLocationById(id)
+  } catch (error) {
+    console.error(error)
+  }
+});
+
 
 
 export const locationSlice = createSlice({
@@ -33,8 +41,11 @@ export const locationSlice = createSlice({
       state.locations = action.payload;
     });
     builder.addCase(Delete.fulfilled, (state, action ) => {
-      state.locations = action.payload
+      state.locations = action.payload;
     });
+    builder.addCase(get.fulfilled, (state, action) => {
+      state.locations = action.payload;
+    })
   },
 
 });
