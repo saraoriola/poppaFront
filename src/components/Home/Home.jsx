@@ -5,6 +5,7 @@ import "./Home.scss";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 
+
 // NOTE: Lo que había antes aquí lo he pasado a User -> Auth
 const Home = () => {
   return (

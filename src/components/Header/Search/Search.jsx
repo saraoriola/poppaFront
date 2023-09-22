@@ -1,10 +1,24 @@
 import { Input } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
-//FIXME: Falta lógica
 const Search = () => {
+  // Utiliza el hook useState de forma correcta
+  const [search, setSearch] = useState(""); 
 
-  return <Input type="text" placeholder="Búsqueda" />;
+  const searcher = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  };
+
+  return (
+    <Input
+      value={search}
+      onChange={searcher}
+      type="text"
+      placeholder="Búsqueda"
+    />
+  );
 };
 
 export default Search;
+
