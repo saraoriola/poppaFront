@@ -7,7 +7,6 @@ const HeaderRender = () => {
   return (
     <>
       <Box>
-        <Search />
       </Box>
       <Box>LOGO</Box>
       <Box>

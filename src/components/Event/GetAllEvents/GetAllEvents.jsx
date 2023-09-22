@@ -16,7 +16,7 @@ const GetAllEvents = () => {
     return <Spinner />;
   }
 
-  return <Search />;
+  return null;
 };
 
 export default GetAllEvents;

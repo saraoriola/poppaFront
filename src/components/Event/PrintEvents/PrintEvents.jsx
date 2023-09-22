@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import {
   Box,
   Card,
@@ -7,17 +6,15 @@ import {
   CardFooter,
   CardHeader,
   Image,
-  Input,
   Text,
 } from "@chakra-ui/react";
 
 const PrintEvents = ({ results }) => {
   return results.map((event) => (
     <Card key={event.id}>
-      <CardHeader>{event.banner}</CardHeader>
+      {/* NOTE: Aquí iría la url del banner */}
+      <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
       <CardBody>
-        {/* NOTE: Aquí iría la url del banner */}
-        <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
         <Text>{event.title}</Text>
         <Text>{event.description}</Text>
       </CardBody>
