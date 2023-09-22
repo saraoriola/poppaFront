@@ -7,7 +7,8 @@ import Logout from "./components/User/Auth/Logout";
 import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Register from "./components/User/Auth/Register";
-import Location from "./components/Location/CreateLocation/CreateLocation";
+import Location from "./components/Location/LocationRender/LocationRender"; 
+
 
 const routes = createBrowserRouter([
     {
