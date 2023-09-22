@@ -1,30 +1,25 @@
-import { Input, Spinner } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  getAllEvents,
-  getEventByTitle,
-} from "../../../features/event/eventSlice";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import PrintEvents from "../../Event/PrintEvents/PrintEvents";
+import { Input } from "@chakra-ui/react";
 
 const Search = () => {
   const [search, setSearch] = useState("");
-  const { isLoading } = useSelector((state) => state.event);
-  const dispatch = useDispatch();
+  const { events } = useSelector((state) => state.event);
+
+  let results = [];
 
   const searcher = (e) => {
     const searchTerm = e.target.value;
     setSearch(searchTerm);
-
-    if (!searchTerm) {
-      dispatch(getAllEvents()); // Si la búsqueda está vacía, obtén todos los eventos
-    } else {
-      dispatch(getEventByTitle(searchTerm)); // Obtén eventos por título
-    }
   };
 
-  if (isLoading) {
-    return <Spinner />;
+  if (!search) {
+    results = events;
+  } else {
+    results = events.filter((data) => {
+      return data.title.toLowerCase().includes(search.toLowerCase());
+    });
   }
 
   return (
@@ -35,7 +30,7 @@ const Search = () => {
         type="text"
         placeholder="Búsqueda"
       />
-      <PrintEvents />
+      <PrintEvents results={results} />
     </>
   );
 };

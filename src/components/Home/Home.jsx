@@ -14,7 +14,6 @@ const Home = () => {
       </Box>
       <Box className="filter-container">
         <FilterEvents />
-        <Search /> {/* Agrega el componente de búsqueda aquí */}
       </Box>
       <Box className="cards-container">
         <GetAllEvents />
