@@ -17,13 +17,14 @@ const Home = () => {
 
   return (
     <Box className="home-container">
-      <Box className="header-container">
+      <Box className="father-header-container">
         <HeaderRender onSearch={handleSearch} />
       </Box>
-      <Box className="filter-container">
+      <Box className="home-title">Próximos eventos</Box>
+      <Box className="father-filter-container">
         <FilterEvents />
       </Box>
-      <Box className="cards-container">
+      <Box className="father-cards-container">
         <GetAllEvents />
         {/* FIXME: Esto ha dejado de ir :c Hay bugs*/}
         <PrintEvents results={searchResults} />

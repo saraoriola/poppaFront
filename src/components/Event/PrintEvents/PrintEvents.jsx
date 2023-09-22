@@ -11,11 +11,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import "./PrintEvents.scss";
+
 const PrintEvents = ({ results }) => {
   return (
-    <div>
+    <>
       {results.map((event) => (
-        <Card key={event.id}>
+        <Card className="card-container" key={event.id}>
           {/* NOTE: Aquí iría la url del banner */}
           <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
           <CardBody>
@@ -30,7 +32,7 @@ const PrintEvents = ({ results }) => {
           </CardFooter>
         </Card>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -32,7 +32,7 @@ const FilterEvents = () => {
 
   if (userRole.type === "admin") {
     return (
-      <>
+      <Box className="filter-container">
         <Button className="filter-input" onClick={() => setFilter("Todos")}>
           Todos
         </Button>
@@ -54,7 +54,7 @@ const FilterEvents = () => {
 
         {/* FIXME: Esto huele ya que lo renderizo también en home*/}
         <PrintEvents results={filteredEvents()} />
-      </>
+      </Box>
     );
   } else {
     return (
