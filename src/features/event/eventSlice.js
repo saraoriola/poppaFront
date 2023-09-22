@@ -14,17 +14,6 @@ export const getAllEvents = createAsyncThunk("event/getAllEvents", async () => {
   }
 });
 
-export const getEventByTitle = createAsyncThunk(
-  "event/getEventByTitle",
-  async (title) => {
-    try {
-      return await eventService.getEventByTitle(title);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-);
-
 export const eventSlice = createSlice({
   name: "event",
   initialState,
@@ -38,9 +27,6 @@ export const eventSlice = createSlice({
         state.events = action.payload.events;
         state.isLoading = false;
       })
-      .addCase(getEventByTitle.fulfilled, (state, action) => {
-        state.events = action.payload.events;
-      });
   },
 });
 

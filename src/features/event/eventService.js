@@ -8,11 +8,6 @@ const getAllEvents = async () => {
   return res.data;
 };
 
-const getEventByTitle = async (title) => {
-  const res = await axios.get(API_URL + "getbytitle/" + title);
-  return res.data;
-};
-
 const createEvent = async (eventData) => {
   try {
     const token = JSON.parse(localStorage.getItem("token"));
@@ -31,7 +26,6 @@ const createEvent = async (eventData) => {
 
 const eventService = {
   getAllEvents,
-  getEventByTitle,
   createEvent,
 };
 

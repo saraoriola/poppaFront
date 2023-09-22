@@ -10,7 +10,7 @@ const GetAllEvents = () => {
 
   useEffect(() => {
     dispatch(getAllEvents());
-  }, []);
+  }, [dispatch]);
 
   if (isLoading) {
     return <Spinner />;

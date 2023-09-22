@@ -1,11 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import authService from "./authService";
 
+// NOTE: Estoy guardando el role y los eventos que está accediendo el usuario en el local storage. Revisar esto.
 const user = JSON.parse(localStorage.getItem("userConnected")) || null;
+const userEvents = JSON.parse(localStorage.getItem("userEvents")) || null;
+const userRole = JSON.parse(localStorage.getItem("userRole")) || null;
 const token = JSON.parse(localStorage.getItem("token")) || null;
 
 const initialState = {
   userConnected: user,
+  userEvents: userEvents,
+  userRole: userRole,
   token: token,
   users: null,
 };
@@ -59,6 +64,8 @@ export const authSlice = createSlice({
     builder
       .addCase(login.fulfilled, (state, action) => {
         state.userConnected = action.payload.user;
+        state.userEvents = action.payload.user.events;
+        state.userRole = action.payload.user.role;
         state.token = action.payload.token;
         state.isSuccess = true;
       })
