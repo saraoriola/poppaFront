@@ -7,7 +7,6 @@ import GetLocationById from "../GetLocationById/GetLocationById";
 const LocationRender = () => {
     return (
         <Box>
-            {/* <Componentes /> */}
             <CreateLocation />
             <GetLocationById />
             <DeleteLocation />
