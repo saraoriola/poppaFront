@@ -1,20 +1,24 @@
-import axios from "axios";
-
-const API_URL = import.meta.env.VITE_API_URL;
+import apiClient from "../../api/apiClient";
 
 const createLocation = async (formData) => {
-    const res = await axios.post(API_URL + "/locations/create", formData);
+    const res = await apiClient.post("/locations/create", formData);
     return res.data;
 };
 
 const deleteLocation = async (id) => {
-    const res = await axios.delete(API_URL + "/locations/delete/" + id);
+    const res = await apiClient.delete(`/locations/delete/${id}`);
+    return res.data;
+};
+
+const getLocationById = async (id) => {
+    const res = await apiClient.get(`/locations/getbyid/${id}`);
     return res.data;
 };
 
 const locationService = {
     createLocation,
     deleteLocation,
+    getLocationById,
 };
 
 export default locationService;

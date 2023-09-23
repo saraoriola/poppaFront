@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { locationCreate } from "../../../features/location/locationSlice";
 import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, useToast } from "@chakra-ui/react";
 
-
 const CreateLocation = () => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
@@ -60,31 +59,31 @@ const CreateLocation = () => {
   };
 
   return (
-    <Box p="7%">
+    <Box p="4%">
       <form onSubmit={handleSubmit}>
         <VStack spacing={4}>
           <FormControl>
-            <FormLabel>LOCATION </FormLabel>
+            <FormLabel>LOCATION: </FormLabel>
             <Input type="text" name="title" value={formData.title} onChange={handleChange} />
           </FormControl>
 
           <FormControl>
-            <FormLabel>Meeting room</FormLabel>
+            <FormLabel>Meeting room:</FormLabel>
             <Input type="text" name="meeting_room" value={formData.meeting_room} onChange={handleChange} />
           </FormControl>
 
           <FormControl>
-            <FormLabel>Description</FormLabel>
+            <FormLabel>Description:</FormLabel>
             <Textarea type="text" name="description" value={formData.description} onChange={handleChange} />
           </FormControl>
 
           <FormControl>
-            <FormLabel>Capacity</FormLabel>
+            <FormLabel>Capacity:</FormLabel>
             <Input type="number" name="capacity" value={formData.capacity} onChange={handleChange} />
           </FormControl>
 
           <FormControl>
-            <FormLabel>facility ID</FormLabel>
+            <FormLabel>Facility ID:</FormLabel>
             <Input type="number" name="facility_id" value={formData.facility_id} onChange={handleChange} />
           </FormControl>
 

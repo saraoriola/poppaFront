@@ -25,7 +25,7 @@ const DeleteLocation = () => {
     };
 
     return (
-        <Box p="7%">
+        <Box p="4%">
             <FormControl>
                 <FormLabel>Delete location by ID:</FormLabel>
                 <Input type="text" value={locationId} onChange={handleChange} />
