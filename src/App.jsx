@@ -41,7 +41,6 @@ const App = () => {
                     <div className="color-box orange-bg20">Orange</div>
                 </div>
             </div> */}
-<Dashboard/>
             <RouterProvider router={routes} />
         </>
     );
