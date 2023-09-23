@@ -5,6 +5,13 @@ import locationService from "./locationService";
 const initialState = {
   locations: [],
 };
+export const get = createAsyncThunk("locations/getbyid", async (id) => {
+  try {
+    return await locationService.getLocationById(id)
+  } catch (error) {
+    console.error(error)
+  }
+});
 
 export const locationCreate = createAsyncThunk("locations/create", async (formData) => {
   try {
@@ -22,13 +29,6 @@ export const Delete = createAsyncThunk("locations/delete", async (id) => {
   }
 });
 
-export const get = createAsyncThunk("locations/getbyid", async (id) => {
-  try {
-    return await locationService.getLocationById(id)
-  } catch (error) {
-    console.error(error)
-  }
-});
 
 
 
@@ -37,15 +37,15 @@ export const locationSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    builder.addCase(get.fulfilled, (state, action) => {
+      state.locations = action.payload;
+    })
     builder.addCase(locationCreate.fulfilled, (state, action) => {
       state.locations = action.payload;
     });
     builder.addCase(Delete.fulfilled, (state, action ) => {
       state.locations = action.payload;
     });
-    builder.addCase(get.fulfilled, (state, action) => {
-      state.locations = action.payload;
-    })
   },
 
 });
