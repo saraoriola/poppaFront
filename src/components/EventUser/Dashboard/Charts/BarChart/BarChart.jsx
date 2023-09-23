@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
-import { nationality as data } from '../../../../data/data';
+import { nationality as data } from '../../../../../../src/data/data.json';
 
 const BarChart = () => {
   const chartBackgroundColor = '#f8f8f8'; 

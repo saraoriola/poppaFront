@@ -1,13 +1,12 @@
 import React from 'react';
 import { Box, Card, Text, VStack, Flex } from '@chakra-ui/react';
-import './ChartEvent.scss';
 import data from "../../../../data/data.json"
 
-const ChartEvent = () => {
+const HeaderEvent = () => {
   const conferenceData = data;
   
   const cardStyle = {
-    backgroundImage: 'url("./src/assets/img/fotoevento.jpg")',
+    backgroundImage: 'url("../../../../../src/assets/images/fotoevento.jpg")',
     backgroundSize: 'cover',
     height: '150px',
     position: 'relative',
@@ -74,4 +73,4 @@ const ChartEvent = () => {
   );
 }
 
-export default ChartEvent;
+export default HeaderEvent;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsiveBump } from '@nivo/bump';
-import { entry_exit as data } from '../../../../data/data';
+import { entry_exit as data } from '../../../../../../src/data/data.json';
 
 const invertYData = (data) => {
   return data.map((serie) => ({

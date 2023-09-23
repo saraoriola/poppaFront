@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
-import { type as data } from '../../../../data/data';
+import { type as data } from '../../../../../../src/data/data.json';
 
 const PieChart = () => {
   const chartBackgroundColor = '#f8f8f8'; 

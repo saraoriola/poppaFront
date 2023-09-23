@@ -5,15 +5,15 @@ import PieChart from './Charts/PieChart/PieChart';
 import LineChart from './Charts/LineChart/LineChart';
 
 import './Dashboard.scss';
-import ChartEvent from './Charts/ChartEvent/ChartEvent';
-import Attendees from './Charts/Attendees/Attendees.JSX';
+import HeaderEvent from './HeaderEvent/HeaderEvent';
+import Attendees from './Attendees/Attendees';
 
 
 const Dashboard = () => {
   return (
     <div>
       <Box className="dashboard-container" bg="#e6dfcf" >
-          <ChartEvent/>
+          <HeaderEvent/>
           <Attendees />
         <Grid templateColumns="repeat(1, 1fr)" gap={4} width="100%">
           <GridItem>
