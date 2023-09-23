@@ -1,6 +1,7 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes";
+import Dashboard from "./components/EventUser/Dashboard/Dashboard";
 
 const App = () => {
     return (
@@ -40,7 +41,6 @@ const App = () => {
                     <div className="color-box orange-bg20">Orange</div>
                 </div>
             </div> */}
-
             <RouterProvider router={routes} />
         </>
     );
