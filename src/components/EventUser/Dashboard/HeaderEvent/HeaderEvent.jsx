@@ -21,7 +21,6 @@ const HeaderEvent = () => {
     <div>{event.day}</div>
     <div>{event.month}</div>
     </>
-
   )
 }
 
