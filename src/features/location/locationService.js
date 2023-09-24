@@ -12,6 +12,11 @@ const createLocation = async (formData) => {
   return res.data;
 };
 
+const updateLocation = async (id, formData) => {
+  const res = await axios.put(`${API_URL}/locations/update/${id}`, formData);
+  return res.data;
+};
+
 const deleteLocation = async (id) => {
   const res = await axios.delete(`${API_URL}/locations/delete/${id}` )
   return res.data;
@@ -22,9 +27,9 @@ const deleteLocation = async (id) => {
 const locationService = {
   createLocation,
   deleteLocation,
-  getLocationById
+  getLocationById,
+  updateLocation
 
 };
 
 export default locationService;
-
