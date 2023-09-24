@@ -27,24 +27,24 @@ export const dashboardsSlice = createSlice({
   },
 });
 
-export const getEventById = createAsyncThunk('dashboards/getEventById', async (id) => {
+export const getEventById = createAsyncThunk('dashboards/getEventById', async (id, thunkAPI) => {
   try {
     return await dashboardsService.getEventById(id);
   } catch (error) {
     console.error(error);
     const message = error.response.data.message;
-    return thunkAPI.rejectWithValue(message);
-}
+    throw new Error(message); 
+  }
 });
 
-export const getAttendees= createAsyncThunk('dashboards/getAttendees', async (id) => {
+export const getAttendees = createAsyncThunk('dashboards/getAttendees', async (id, thunkAPI) => {
   try {
     return await dashboardsService.getAttendees(id);
   } catch (error) {
     console.error(error);
     const message = error.response.data.message;
-    return thunkAPI.rejectWithValue(message);
-}
+    throw new Error(message);
+  }
 });
 
 
