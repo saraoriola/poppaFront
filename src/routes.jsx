@@ -37,7 +37,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/dashboards/event/:id",
+        path: "dashboard",
         element: <Dashboard/>,
         errorElement: <ErrorPage />,
     },
