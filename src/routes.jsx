@@ -8,6 +8,7 @@ import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Register from "./components/User/Auth/Register";
 import Location from "./components/Location/LocationRender/LocationRender"; 
+import Dashboard from "./components/EventUser/Dashboard/Dashboard";
 
 
 const routes = createBrowserRouter([
@@ -33,6 +34,11 @@ const routes = createBrowserRouter([
     {
         path: "location",
         element: <Location />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/dashboards/event/:id",
+        element: <Dashboard/>,
         errorElement: <ErrorPage />,
     },
     {
