@@ -7,15 +7,8 @@ const getEventById = async (id) => {
       return res.data;
   };
 
-  const getAttendees = async (id) => {
-      const res = await axios.get(`${API_URL}/dashboards/event/${id}/getAttendees`);
-      return res.data;
-    
-  };
-
 const dashboardsService = {
   getEventById,
-  getAttendees
 };
 
 export default dashboardsService;

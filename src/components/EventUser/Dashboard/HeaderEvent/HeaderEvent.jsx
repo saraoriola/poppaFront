@@ -1,32 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getEventById } from "../../../../features/dashboards/dashboardsSlice";
+import React from 'react'
 
 const HeaderEvent = () => {
-  const dispatch = useDispatch();
-  const { id } = useParams();
-  const { event } = useSelector(state => state.dashboards);
-
-  useEffect(() => {
-    dispatch(getEventById(id));
-  }, [id, dispatch]);
-
   return (
-    <div>
-          {event.day}
-
-            {event.month}
-
-            {event.title}
-           
-            {event.description}
- 
-            {event.speacker}
-            
-
-    </div>
-  );
+    <div>HeaderEvent</div>
+  )
 }
 
-export default HeaderEvent;
+export default HeaderEvent
