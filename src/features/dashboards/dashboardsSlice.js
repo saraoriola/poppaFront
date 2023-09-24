@@ -5,6 +5,8 @@ const initialState = {
   events: [],
   loading: false,
   event:{},
+  metrics:{},
+  
 };
 
 export const dashboardsSlice = createSlice({
@@ -16,6 +18,11 @@ export const dashboardsSlice = createSlice({
       .addCase(getEventById.fulfilled, (state, action) => {
         state.loading = false;
         state.event = action.payload;
+      })
+
+      .addCase(getAttendees.fulfilled, (state, action) => {
+        state.loading = false;
+        state.metrics = action.payload;
       })
   },
 });
@@ -29,5 +36,16 @@ export const getEventById = createAsyncThunk('dashboards/getEventById', async (i
     return thunkAPI.rejectWithValue(message);
 }
 });
+
+export const getAttendees= createAsyncThunk('dashboards/getAttendees', async (id) => {
+  try {
+    return await dashboardsService.getAttendees(id);
+  } catch (error) {
+    console.error(error);
+    const message = error.response.data.message;
+    return thunkAPI.rejectWithValue(message);
+}
+});
+
 
 export default dashboardsSlice.reducer;
