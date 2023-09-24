@@ -21,6 +21,14 @@ export const locationCreate = createAsyncThunk("locations/create", async (formDa
   }
 });
 
+export const locationUpdate = createAsyncThunk("locations/update", async ({ id, formData }) => {
+  try {
+    return await locationService.updateLocation(id, formData);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 export const Delete = createAsyncThunk("locations/delete", async (id) => {
   try {
     return await locationService.deleteLocation(id);
@@ -43,11 +51,16 @@ export const locationSlice = createSlice({
     builder.addCase(locationCreate.fulfilled, (state, action) => {
       state.locations = action.payload;
     });
+    builder.addCase(locationUpdate.fulfilled, (state, action) =>{
+      state.locations = action.payload;
+    });
     builder.addCase(Delete.fulfilled, (state, action ) => {
       state.locations = action.payload;
     });
   },
 
 });
+
+export const { updateLocation } = locationSlice.actions;
 
 export default locationSlice.reducer;

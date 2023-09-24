@@ -3,6 +3,7 @@ import React from "react";
 import CreateLocation from "../CreateLocation/CreateLocation";
 import DeleteLocation from "../DeleteLocation/DeleteLocation";
 import GetLocationById from "../GetLocationById/GetLocationById";
+import UpdateLocation from "../UpdateLocation/UpdateLocation";
 
 const LocationRender = () => {
     return (
@@ -10,6 +11,7 @@ const LocationRender = () => {
             <CreateLocation />
             <GetLocationById />
             <DeleteLocation />
+            <UpdateLocation/>
         </Box>
     );
 };
