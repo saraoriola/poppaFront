@@ -15,6 +15,9 @@ const Attendees = () => {
   return (
     <>
     <div>Atteendees de {id}</div>
+    <div>{metrics.attendees.registered}</div>
+    <div>{metrics.attendees.confirmed}</div>
+    <div>{metrics.attendees.present}</div>
     </>
   )
 }
