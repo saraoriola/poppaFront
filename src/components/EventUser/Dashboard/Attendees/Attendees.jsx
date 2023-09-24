@@ -6,7 +6,11 @@ import { getAttendees } from '../../../../features/dashboards/dashboardsSlice';
 const Attendees = () => {
   const { id } = useParams();
   const { metrics } = useSelector(state => state.dashboards);
-  const dispatch = useDispatch();
+  console.log(metrics.registered); // Acceder a registered
+  console.log(metrics.confirmed); // Acceder a confirmed
+  console.log(metrics.present); // Acceder a present
+  console.log(metrics.capacity); // Acceder a capacity
+    const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getAttendees(id));

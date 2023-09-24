@@ -19,11 +19,12 @@ export const dashboardsSlice = createSlice({
         state.loading = false;
         state.event = action.payload;
       })
-
+      
       .addCase(getAttendees.fulfilled, (state, action) => {
         state.loading = false;
         state.metrics = action.payload;
       })
+      
   },
 });
 
