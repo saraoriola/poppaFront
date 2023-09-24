@@ -3,6 +3,7 @@ import dashboardsService from './dashboardsService';
 
 const initialState = {
   events: [],
+  loading: false,
   event:{},
 };
 
@@ -14,7 +15,7 @@ export const dashboardsSlice = createSlice({
     builder
       .addCase(getEventById.fulfilled, (state, action) => {
         state.loading = false;
-        state.events = action.payload;
+        state.event = action.payload;
       })
   },
 });
