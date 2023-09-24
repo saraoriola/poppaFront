@@ -25,4 +25,4 @@ dist-ssr
 *.sw?
 
 # Usar estos datos hasta que data proporcione api
-data 
+# data   no se puede ignorar esta carpeta porque la necesitamos para desplegar en Vecerl
