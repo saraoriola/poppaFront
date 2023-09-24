@@ -3,33 +3,30 @@ import dashboardsService from './dashboardsService';
 
 const initialState = {
   events: [],
-  event: {},
-  loading: false,
-  error: null,
+  event:{},
 };
+
+export const dashboardsSlice = createSlice({
+  name: 'dashboard',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getEventById.fulfilled, (state, action) => {
+        state.loading = false;
+        state.events = action.payload;
+      })
+  },
+});
 
 export const getEventById = createAsyncThunk('dashboards/getEventById', async (id) => {
   try {
     return await dashboardsService.getEventById(id);
   } catch (error) {
     console.error(error);
-  }
-});
-
-export const dashboardsSlice = createSlice({
-  name: 'dashboards',
-  initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(getEventById.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(getEventById.fulfilled, (state, action) => {
-        state.loading = false;
-        state.event = action.payload;
-      })
-  },
+    const message = error.response.data.message;
+    return thunkAPI.rejectWithValue(message);
+}
 });
 
 export default dashboardsSlice.reducer;
