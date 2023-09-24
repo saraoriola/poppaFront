@@ -1,0 +1,132 @@
+{
+    "name": "Technology Innovation",
+    "speaker": "Dr. Alicia Tech",
+    "description": "The latest trends in technology",
+    "date": {
+        "day": "15",
+        "month": "September"
+    },
+    "schedule": {
+        "start": "09:00 AM",
+        "end": "05:00 PM"
+    },
+    "attendees": {
+        "registered": 600,
+        "confirmed": 550,
+        "present": 530
+    },
+    "capacity": 700,
+    "entry_exit": [
+        {
+            "id": "Entradas",
+            "data": [
+                {
+                    "x": "9:00",
+                    "y": 185
+                },
+                {
+                    "x": "10:00",
+                    "y": 120
+                },
+                {
+                    "x": "11:00",
+                    "y": 40
+                },
+                {
+                    "x": "12:00",
+                    "y": 45
+                },
+                {
+                    "x": "13:00",
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "id": "Salidas",
+            "data": [
+                {
+                    "x": "9:00",
+                    "y": 0
+                },
+                {
+                    "x": "10:00",
+                    "y": 50
+                },
+                {
+                    "x": "11:00",
+                    "y": 70
+                },
+                {
+                    "x": "12:00",
+                    "y": 150
+                },
+                {
+                    "x": "13:00",
+                    "y": 220
+                }
+            ]
+        }
+    ],
+    "gender": [
+        {
+            "men": 300,
+            "women": 210,
+            "others": 20
+        }
+    ],
+    "nationality": [
+        {
+            "country": "USA",
+            "United States": 250
+        },
+        {
+            "country": "CAN",
+            "Canada": 70
+        },
+        {
+            "country": "MEX",
+            "Mexico": 80
+        },
+        {
+            "country": "UK",
+            "United Kingdom": 40
+        },
+        {
+            "country": "GER",
+            "Germany": 50
+        }
+    ],
+    "type": [
+        {
+            "id": "Marina de Empresas",
+            "label": "Business Marina",
+            "value": 180
+        },
+        {
+            "id": "AAA",
+            "label": "AAA",
+            "value": 90
+        },
+        {
+            "id": "Patronos",
+            "label": "Patrons",
+            "value": 50
+        },
+        {
+            "id": "Miembros",
+            "label": "Members",
+            "value": 150
+        },
+        {
+            "id": "Centro educativo",
+            "label": "Educational Center",
+            "value": 30
+        },
+        {
+            "id": "Otros",
+            "label": "Others",
+            "value": 30
+        }
+    ]
+}
