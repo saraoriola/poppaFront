@@ -1,4 +1,4 @@
-import apiClient from "../../api/apiClient"; //para las llamadas implementamos el apiClient
+import apiClient from "../../api/apiClient";
 
 const createEvent = async (eventData) => {
     try {

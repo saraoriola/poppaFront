@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { locationCreate } from "../../../features/location/locationSlice";
+import { locationUpdate } from "../../../features/location/locationSlice";
 import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, useToast } from "@chakra-ui/react";
 
-const CreateLocation = () => {
+const UpdateLocation = () => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
+    id:"",
     facility_id: "",
     meeting_room: "",
     capacity: "",
@@ -18,7 +19,7 @@ const CreateLocation = () => {
   useEffect(() => {
     if (isSuccess) {
       toast({
-        title: "Te has una ubicación con éxito",
+        title: "Te has actulizado la ubicación con éxito",
         description: message,
         status: "success",
         duration: 3000,
@@ -27,7 +28,7 @@ const CreateLocation = () => {
     }
     if (isError) {
       toast({
-        title: "Hubo un error al crear una ubicación",
+        title: "Hubo un error al se actualizar la ubicación",
         description: message,
         status: "error",
         duration: 3000,
@@ -47,24 +48,28 @@ const CreateLocation = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(locationCreate(formData)).then((result) => {
-      if (locationCreate.fulfilled.match(result)) {
-        console.log("Location creado exitosamente:", result.payload);
-      } else if (locationCreate.rejected.match(result)) {
-        console.error("Error al crear location:", result.error.message);
-      }
-    });
-
-  
+    dispatch(locationUpdate({ id: formData.id, formData: formData })).then((result) => {
+        if (locationUpdate.fulfilled.match(result)) {
+          console.log("Location atualizada com sucesso:", result.payload);
+        } else if (locationUpdate.rejected.match(result)) {
+          console.error("Erro ao atualizar a localização:", result.error.message);
+        }
+      });
   };
 
   return (
     <Box p="4%">
       <form onSubmit={handleSubmit}>
         <VStack spacing={4}>
-          <FormControl>
-            <FormLabel>LOCATION: </FormLabel>
+          
+        <FormControl>
+            <FormLabel> UDPATE LOCATION: </FormLabel>
             <Input type="text" name="title" value={formData.title} onChange={handleChange} />
+          </FormControl>
+
+          <FormControl>
+            <FormLabel>ID:</FormLabel>
+            <Input type="number" name="id" value={formData.id} onChange={handleChange} />
           </FormControl>
 
           <FormControl>
@@ -87,15 +92,15 @@ const CreateLocation = () => {
             <Input type="number" name="facility_id" value={formData.facility_id} onChange={handleChange} />
           </FormControl>
 
-          <Button mt={10}  colorScheme="blue" type="submit">
-            Create Location
+          <Button mt={10} colorScheme="blue" type="submit">
+            Update Location
           </Button>
-
         </VStack>
-
       </form>
     </Box>
   );
 }
 
-export default CreateLocation;
+export default UpdateLocation;
+
+
