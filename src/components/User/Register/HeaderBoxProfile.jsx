@@ -15,7 +15,7 @@ const HeaderBoxProfile = () => {
     >
     </Box>
     <Box backgroundColor="#e6dfcf" display="flex" alignItems="center" justifyContent="center">
-      <Avatar backgroundColor="#cb7862" size='2xl' mt={-20}/>
+      <Avatar backgroundColor="#cb7862" size='2xl' mt={-20} marginBottom={20}/>
     </Box>
     
     </>
