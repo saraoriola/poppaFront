@@ -3,6 +3,7 @@ import eventService from "./eventService";
 
 const initialState = {
   events: [],
+  event: {},
   isLoading: false,
 };
 
@@ -13,6 +14,17 @@ export const getAllEvents = createAsyncThunk("event/getAllEvents", async () => {
     console.error(error);
   }
 });
+
+export const getEventById = createAsyncThunk(
+  "event/getEventById",
+  async (id) => {
+    try {
+      return await eventService.getEventById(id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+);
 
 export const getEventByTitle = createAsyncThunk(
   "event/getEventByTitle",
@@ -36,6 +48,13 @@ export const eventSlice = createSlice({
       })
       .addCase(getAllEvents.fulfilled, (state, action) => {
         state.events = action.payload.events;
+        state.isLoading = false;
+      })
+      .addCase(getEventById.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getEventById.fulfilled, (state, action) => {
+        state.event = action.payload.events;
         state.isLoading = false;
       })
       .addCase(getEventByTitle.pending, (state) => {
