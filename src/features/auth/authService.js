@@ -29,13 +29,14 @@ const logout = async () => {
     localStorage.clear();
   }
   return res.data;
+
 };
 
 //ESTO LO VAMOS A IMPLEMENTAR EN EL PERFIL, DE MOMENTO DEJARLO COMENTADO
 
 // const uploadAvatar = async avatar => {
 //   const token = JSON.parse(localStorage.getItem('token'));
-//   const res = await axios.post(API_URL + '/users/avatar', avatar, {
+//   const res = await apiClient.post('/users/avatar', avatar, {
 //     headers: {
 //       Authorization: token,
 //     },

@@ -55,15 +55,7 @@ function EventCreate() {
                     </FormControl>
                     <FormControl>
                         <FormLabel>Fecha y Hora</FormLabel>
-                        <Datetime
-                            inputProps={{ name: "dateTime", className: "form-control" }}
-                            value={formData.dateTime}
-                            onChange={handleDateChange}
-                            dateFormat="DD/MM/YYYY HH:mm"
-                            timeConstraints={{
-                                minutes: { step: 15 },
-                            }}
-                        />
+                        <Datetime inputProps={{ name: "dateTime", className: "form-control" }} value={formData.dateTime} onChange={handleDateChange} dateFormat="DD/MM/YYYY" />
                     </FormControl>
                     <FormControl>
                         <FormLabel>Duration (minutes)</FormLabel>

@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : "https://eventum-back.vercel.app";
+// const API_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : "http://ec2-44-201-235-108.compute-1.amazonaws.com:8080";
+
 const apiClient = axios.create({
-    baseURL: "http://localhost:3001",
+    baseURL: API_URL,
     withCredentials: true,
 });
 
