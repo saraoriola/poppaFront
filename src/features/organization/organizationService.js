@@ -1,14 +1,12 @@
-import axios from "axios";
-
-const API_URL = "http://localhost:3001/organizations/";
+import apiClient from "../../api/apiClient";
 
 const getOrganizations = async () => {
-  const res = await axios.get(API_URL + "/getall");
-  return res.data;
+    const res = await apiClient.get("/organizations/getall");
+    return res.data;
 };
 
 const productsService = {
-  getOrganizations,
+    getOrganizations,
 };
 
 export default productsService;
