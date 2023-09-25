@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import ErrorPage from "./components/Error/ErrorPage";
 import Home from "./components/Home/Home";
-import Login from "./components/User/Auth/Login";
-import Logout from "./components/User/Auth/Logout";
+import Login from "./components/User/Login/Login";
+import Logout from "./components/User/Logout/Logout";
 import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Register from "./components/User/Auth/Register";

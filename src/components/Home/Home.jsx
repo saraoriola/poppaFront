@@ -1,30 +1,36 @@
-import { useSelector } from "react-redux";
-import Logout from "../User/Auth/Logout";
-import Login from "../User/Auth/Login";
-import { Link } from "react-router-dom";
-import { Box, Button } from "@chakra-ui/react";
-import EventCreate from "../Event/CreateEvent/EventCreate";
+// Home.js
+import React, { useState } from "react";
+import { Box } from "@chakra-ui/react";
+import HeaderRender from "../Header/HeaderRender/HeaderRender";
+import "./Home.scss";
+import FilterEvents from "../Event/FilterEvents/FilterEvents";
+import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
+import PrintEvents from "../Event/PrintEvents/PrintEvents";
 
 const Home = () => {
-    const user = useSelector((state) => state.auth.user);
-    return (
-        <Box>
-            {!user && (
-                <Link to="register">
-                    <Button ml="60%" mt="8%" colorScheme="blue">
-                        Registrarse
-                    </Button>
-                </Link>
-            )}
-            {user && (
-                <>
-                    <Logout />
-                    <EventCreate />
-                </>
-            )}
-            {!user && <Login />}
-        </Box>
-    );
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Función para manejar los resultados de la búsqueda
+  const handleSearch = (results) => {
+    setSearchResults(results);
+  };
+
+  return (
+    <Box className="home-container">
+      <Box className="father-header-container">
+        <HeaderRender onSearch={handleSearch} />
+      </Box>
+      <Box className="home-title">Próximos eventos</Box>
+      <Box className="father-filter-container">
+        <FilterEvents />
+      </Box>
+      <Box className="father-cards-container">
+        <GetAllEvents />
+        {/* FIXME: Esto ha dejado de ir :c Hay bugs*/}
+        <PrintEvents results={searchResults} />
+      </Box>
+    </Box>
+  );
 };
 
 export default Home;
