@@ -37,7 +37,7 @@ const GetLocationById = () => {
                 <Text fontWeight="bold"> Details about the location:</Text>
                 <Text>ID: {location.id}</Text>
                 <Text>Facility: {location.facility_id}</Text>
-                <Text>Room: {location.meeting_oom}</Text>
+                <Text>Room: {location.meeting_room}</Text>
                 <Text>Capacity: {location.capacity}</Text>
                 <Text>Description: {location.description}</Text>
             </Box>
