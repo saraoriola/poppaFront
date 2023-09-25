@@ -1,11 +1,18 @@
-import QrGenerator from "../../Qr/Generator/QrGenerator";
+import { Box } from "@chakra-ui/layout";
+import React from "react";
+import PrintEventDetail from "./PrintEventDetail/PrintEventDetail";
+import HeaderRender from "../../Header/HeaderRender/HeaderRender";
 
 const EventDetail = () => {
     return (
-        <>
-            <div>EventDetail</div>
-            <QrGenerator eventId={5} />
-        </>
+        <Box>
+            <Box>
+                <HeaderRender />
+            </Box>
+            <Box>
+                <PrintEventDetail />
+            </Box>
+        </Box>
     );
 };
 

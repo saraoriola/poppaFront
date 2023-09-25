@@ -2,7 +2,6 @@ import { Box, Button } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import PrintEvents from "../PrintEvents/PrintEvents";
-import "./FilterEvents.scss";
 
 const FitlerEvents = () => {
     const { userRole, userEvents } = useSelector((state) => state.auth);
@@ -38,22 +37,57 @@ const FitlerEvents = () => {
             <Box>
                 <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
                     <Box className="button-scroll-container">
-                        {/* NOTE: Lo he dejado en scss para no repetir código */}
-                        <Button className="filter-input" onClick={() => handleFilterChange("Todos")}>
+                        {/* NOTE: Cambiar color - active y fuente de letra */}
+                        <Button
+                            borderRadius="20px"
+                            m="0px 5px"
+                            height="2rem"
+                            color="orange"
+                            fontFamily="Telegrafregular"
+                            onClick={() => handleFilterChange("Todos")}
+                        >
                             Todos
                         </Button>
-                        <Button className="filter-input" onClick={() => handleFilterChange("Inscrito")}>
+                        <Button
+                            borderRadius="20px"
+                            m="0px 5px"
+                            height="2rem"
+                            color="orange"
+                            fontFamily="Telegrafregular"
+                            onClick={() => handleFilterChange("Inscrito")}
+                        >
                             Inscrito
                         </Button>
-                        <Button className="filter-input" onClick={() => handleFilterChange("Pendiente")}>
+                        <Button
+                            borderRadius="20px"
+                            m="0px 5px"
+                            height="2rem"
+                            color="orange"
+                            fontFamily="Telegrafregular"
+                            onClick={() => handleFilterChange("Pendiente")}
+                        >
                             Pendientes de aprobación
                         </Button>
-                        {userRole?.type === "admin" && (
-                            <Button className="filter-input" onClick={() => handleFilterChange("Organizo")}>
+                        {userRole.type === "admin" && (
+                            <Button
+                                borderRadius="20px"
+                                m="0px 5px"
+                                height="2rem"
+                                color="orange"
+                                fontFamily="Telegrafregular"
+                                onClick={() => handleFilterChange("Organizo")}
+                            >
                                 Organizo
                             </Button>
                         )}
-                        <Button className="filter-input" onClick={() => handleFilterChange("Finalizado")}>
+                        <Button
+                            borderRadius="20px"
+                            m="0px 5px"
+                            height="2rem"
+                            color="orange"
+                            fontFamily="Telegrafregular"
+                            onClick={() => handleFilterChange("Finalizado")}
+                        >
                             Finalizado
                         </Button>
                     </Box>

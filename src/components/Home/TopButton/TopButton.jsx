@@ -4,30 +4,41 @@ import React, { useEffect, useState } from "react";
 const TopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
-  const handleScrollButton = () => {
-    window.scrollY > 300 ? setShowButton(true) : setShowButton(false);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScrollButton);
+    // Muestra el botón cuando el usuario ha desplazado cierta distancia
+    const handleScroll = () => {
+      if (window.pageYOffset > 100) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScrollButton);
+      // Limpia el evento de desplazamiento al desmontar el componente
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    // Lógica para desplazarse hacia la parte superior de la página
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <>
       {showButton && (
-        <Box onClick={scrollToTop}>
-          <Button className="btn-top">Top</Button>
+        <Box
+          onClick={scrollToTop}
+          position="fixed"
+          bottom="35"
+          left="35"
+          color="orange"
+          bg="white"
+        >
+          <Button>Top</Button>
         </Box>
       )}
     </>
