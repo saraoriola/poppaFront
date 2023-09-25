@@ -1,22 +1,12 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/typography.scss";
 
-  body {
-    background-color: $cream !important; 
-  }
 
 .imput {
-    font-family: $telegrafRegular ;
+    font-family: $telegrafRegular;
   }
-
 
   .title {
     font-family: $nocturneBlack ;
     color: $blue;
   }
-
-
-.input-placeholder {
-    color: #847c7b;
-  }
-  
