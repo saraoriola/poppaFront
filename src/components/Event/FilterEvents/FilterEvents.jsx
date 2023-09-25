@@ -2,6 +2,7 @@ import { Box, Button, Input } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import PrintEvents from "../PrintEvents/PrintEvents";
+import "./FilterEvents.scss";
 
 const FitlerEvents = () => {
   const { userRole, userEvents } = useSelector((state) => state.auth);
@@ -17,7 +18,6 @@ const FitlerEvents = () => {
 
   useEffect(() => {
     switch (filter) {
-      // Actualiza el estado de los eventos filtrados
       case "Inscrito":
         setFilteredEvents(userEvents);
         break;
@@ -45,23 +45,40 @@ const FitlerEvents = () => {
     <>
       <Box className="filter-container">
         <Box className="button-container">
-          <Button
-            className="filter-input"
-            onClick={() => handleFilterChange("Todos")}
-          >
-            Todos
-          </Button>
-          <Button
-            className="filter-input"
-            onClick={() => handleFilterChange("Inscrito")}
-          >
-            Inscrito
-          </Button>
-          <Button className="filter-input">Pendientes de aprobación</Button>
-          {userRole.type === "admin" && (
-            <Button className="filter-input">Organizo</Button>
-          )}
-          <Button className="filter-input">Finalizado</Button>
+          <div className="button-scroll-container">
+            <Button
+              className="filter-input"
+              onClick={() => handleFilterChange("Todos")}
+            >
+              Todos
+            </Button>
+            <Button
+              className="filter-input"
+              onClick={() => handleFilterChange("Inscrito")}
+            >
+              Inscrito
+            </Button>
+            <Button
+              className="filter-input"
+              onClick={() => handleFilterChange("Pendiente")}
+            >
+              Pendientes de aprobación
+            </Button>
+            {userRole.type === "admin" && (
+              <Button
+                className="filter-input"
+                onClick={() => handleFilterChange("Organizo")}
+              >
+                Organizo
+              </Button>
+            )}
+            <Button
+              className="filter-input"
+              onClick={() => handleFilterChange("Finalizado")}
+            >
+              Finalizado
+            </Button>
+          </div>
         </Box>
       </Box>
       <PrintEvents filteredEvents={filteredEvents} />
