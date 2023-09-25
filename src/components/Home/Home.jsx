@@ -21,11 +21,7 @@ const Home = () => {
     <Box>
       {/* NOTE: Cambiar colores */}
       <Box
-        display="flex"
-        justifyContent="space-around"
-        alignItems="center"
-        height="2.75rem"
-        bg="blue"
+
       >
         <HeaderRender onSearch={handleSearch} />
       </Box>

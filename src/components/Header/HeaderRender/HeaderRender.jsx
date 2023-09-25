@@ -7,7 +7,13 @@ import logo from "../../../assets/images/Logotipo.png";
 
 const HeaderRender = ({ onSearch }) => {
   return (
-    <>
+    <Box
+      display="flex"
+      justifyContent="space-around"
+      alignItems="center"
+      height="2.75rem"
+      bg="blue"
+    >
       <Box w="100px" bg="white">
         {/* NOTE: Habrá que ponerle un modal o algo a un icono, si no queda muy feo */}
         <Search onSearch={onSearch} />
@@ -18,7 +24,7 @@ const HeaderRender = ({ onSearch }) => {
       <Box>
         <Profile />
       </Box>
-    </>
+    </Box>
   );
 };
 
