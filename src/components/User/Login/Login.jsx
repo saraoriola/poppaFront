@@ -4,7 +4,6 @@ import { login } from "../../../features/auth/authSlice";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Box,
-  Card,
   FormControl,
   FormLabel,
   Input,
@@ -13,9 +12,7 @@ import {
   VStack,
   useToast,
   Image,
-  Checkbox,
-  Spacer,
-} from "@chakra-ui/react";
+  Checkbox,} from "@chakra-ui/react";
 
 import "./Login.scss";
 import logo from "../../../assets/images/logomarinaazul.png"
@@ -87,64 +84,59 @@ const Login = () => {
           </Text>
           <Image src={logo} mt={3}/>
           <Box m={10}>
-  <FormControl id="email" isRequired  className="form-container">
-    <FormLabel fontSize="xs" mb={1}>
-      Correo electrónico
-    </FormLabel>
-    <Input
-      width="312px" 
-      height="32px"
-      type="email"
-      name="email"
-      placeholder="email@edem.es"
-      value={email}
-      onChange={onChange}
-      borderColor="#E6E5E5"
-      backgroundColor="#f8f8f8"
-      borderRadius={4}
-      className="input-placeholder"
-      fontSize="xs"
-    />
-  </FormControl>
-  <FormControl id="password" isRequired mt={4}>
-    <FormLabel className="input input-placeholder" fontSize="xs" mb={1}>
-      Contraseña
-    </FormLabel>
-    <Input
-      width="312px" 
-      height="32px"
-      type="password"
-      name="password"
-      placeholder="password"
-      value={password}
-      onChange={onChange}
-      borderColor="#E6E5E5"
-      backgroundColor="#f8f8f8"
-      borderRadius={4}
-      className="input input-placeholder"
-      fontSize="xs"
-    />
-  </FormControl>
-</Box>
-<Box display="flex" justifyContent="space-between" alignItems="center" mt={2}>
-  <Checkbox mr="60px" size="sm" colorScheme="teal">Recuérdame</Checkbox>
-  <Text fontSize="xs" color="#cb7862" cursor="pointer">
-    He olvidado mi contraseña
-  </Text>
-</Box>
-
-
+            <FormControl id="email" isRequired  className="form-container">
+              <FormLabel fontSize="xs" mb={1}>
+                Correo electrónico
+              </FormLabel>
+              <Input
+                width="312px" 
+                height="32px"
+                type="email"
+                name="email"
+                placeholder="email@edem.es"
+                value={email}
+                onChange={onChange}
+                borderColor="#E6E5E5"
+                backgroundColor="#f8f8f8"
+                borderRadius={4}
+                className="input-placeholder"
+                fontSize="xs"
+              />
+            </FormControl>
+            <FormControl id="password" isRequired mt={4}>
+              <FormLabel className="input input-placeholder" fontSize="xs" mb={1}>
+                Contraseña
+              </FormLabel>
+              <Input
+                width="312px" 
+                height="32px"
+                type="password"
+                name="password"
+                placeholder="password"
+                value={password}
+                onChange={onChange}
+                borderColor="#E6E5E5"
+                backgroundColor="#f8f8f8"
+                borderRadius={4}
+                className="input input-placeholder"
+                fontSize="xs"
+              />
+            </FormControl>
+          </Box>
+          <Box display="flex" justifyContent="space-between" alignItems="center" mt={2}>
+            <Checkbox mr="60px" size="sm" colorScheme="teal">Recuérdame</Checkbox>
+            <Text fontSize="xs" color="#cb7862" cursor="pointer">
+              He olvidado mi contraseña
+            </Text>
+          </Box>
           <Button width="312px" height="32px" colorScheme="blue" type="submit" bg="#cb7862" borderRadius={8}>
             Acceder
           </Button>
         </VStack>
       </form>
       <Box mt={4} textAlign="center" display="flex" alignItems="center" justifyContent="center">
-  <Text fontSize="sm">¿No tienes cuenta? <Link to="/register" style={{ color: "#cb7862" }}>Regístrate</Link></Text>
-
-</Box>
-
-
+        <Text fontSize="sm">¿No tienes cuenta? <Link to="/register" style={{ color: "#cb7862" }}>Regístrate</Link></Text>
+      </Box>
     </Box>
   );
 };
