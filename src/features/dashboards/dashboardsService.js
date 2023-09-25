@@ -1,18 +1,19 @@
-import apiClient from "../../api/apiClient"; 
+import axios from "axios";
+
+const API_URL = "http://localhost:3001";
 
 const getEventById = async (id) => {
   try {
-    const res = await apiClient.get(`/dashboards/event/${id}`);
+    const res = await axios.get(`${API_URL}/dashboards/event/${id}`);
     return res.data;
-} catch (error) {
+  } catch (error) {
     console.error(error);
     throw error;
-}
+  }
 };
 
-
 const dashboardsService = {
-  getEventById
+  getEventById,
 };
 
 export default dashboardsService;
