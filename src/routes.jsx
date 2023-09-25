@@ -7,9 +7,8 @@ import Logout from "./components/User/Logout/Logout";
 import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Register from "./components/User/Register/Register";
-import Location from "./components/Location/LocationRender/LocationRender"; 
+import Location from "./components/Location/LocationRender/LocationRender";
 import Dashboard from "./components/EventUser/Dashboard/Dashboard";
-
 
 const routes = createBrowserRouter([
     {
@@ -38,7 +37,7 @@ const routes = createBrowserRouter([
     },
     {
         path: "dashboard/:id",
-        element: <Dashboard/>,
+        element: <Dashboard />,
         errorElement: <ErrorPage />,
     },
     {
