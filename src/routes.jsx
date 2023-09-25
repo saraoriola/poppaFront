@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Admin from "./components/Admin/Admin";
 import Register from "./components/User/Register/Register";
 import ErrorPage from "./components/Error/ErrorPage";
 import Home from "./components/Home/Home";
@@ -18,10 +19,7 @@ const routes = createBrowserRouter([
         path: "/",
         element: <Layout />,
         errorElement: <ErrorPage />,
-        children: [
-            { index: true, element: <Home /> },
-            // { path: "childrenExample", element: <childrenExample /> },
-        ],
+        children: [{ index: true, element: <Home /> }],
     },
     {
         path: "login",
@@ -64,19 +62,8 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: "logout", element: <Logout /> },
-            // NOTE: La ruta segura/privada/guard
-            // { path: "childrenExample", element: <childrenExample /> },
+            { path: "admin", element: <Admin /> },
         ],
-        //     children: [
-        //         {
-        //             path: "profile",
-        //             element: <Profile />,
-        //         },
-        //         {
-        //             path: "admin",
-        //             element: <Admin />,
-        //         },
-        //     ],
     },
 ]);
 
