@@ -1,0 +1,24 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.home-container {
+  background-color: $cream;
+}
+
+.father-header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 2.75rem;
+  
+  background-color: $blue;
+}
+
+.home-title {
+  font-size: 1.5rem;
+  // NOTE: La o con acento se ve chunga
+  font-family: $nocturneBold;
+  font-weight: 700;
+  color: $blue;
+}
