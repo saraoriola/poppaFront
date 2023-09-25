@@ -6,6 +6,8 @@ import "./Home.scss";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import PrintEvents from "../Event/PrintEvents/PrintEvents";
+import TopButton from "./TopButton/TopButton";
+import CreateEventButton from "./CreateEventButton/CreateEventButton";
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -26,6 +28,10 @@ const Home = () => {
       </Box>
       <Box className="father-cards-container">
         <GetAllEvents />
+      </Box>
+      <Box>
+        <TopButton />
+        <CreateEventButton />
       </Box>
     </Box>
   );

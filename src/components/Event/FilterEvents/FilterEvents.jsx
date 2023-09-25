@@ -82,6 +82,7 @@ const FitlerEvents = () => {
         </Box>
       </Box>
       <PrintEvents filteredEvents={filteredEvents} />
+      <PrintEvents filteredEvents={filteredEvents} />
     </>
   );
 };
