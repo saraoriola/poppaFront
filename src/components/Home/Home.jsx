@@ -8,21 +8,26 @@ import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import PrintEvents from "../Event/PrintEvents/PrintEvents";
 import TopButton from "./TopButton/TopButton";
 import CreateEventButton from "./CreateEventButton/CreateEventButton";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const { userRole } = useSelector((state) => state.auth);
   const [searchResults, setSearchResults] = useState([]);
 
-  // Función para manejar los resultados de la búsqueda
   const handleSearch = (results) => {
     setSearchResults(results);
   };
 
+  let createEventButton = null;
+
+  if (userRole === "admin") {
+    createEventButton = <CreateEventButton />;
+  }
+
   return (
     <Box>
       {/* NOTE: Cambiar colores */}
-      <Box
-
-      >
+      <Box>
         <HeaderRender onSearch={handleSearch} />
       </Box>
       <Box m="10px" fontSize="xl" fontFamily="Nocturne-Black" color="blue">
@@ -41,7 +46,7 @@ const Home = () => {
         margin="0px 20px"
       >
         <TopButton />
-        <CreateEventButton />
+        {createEventButton}
       </Box>
     </Box>
   );
