@@ -6,7 +6,6 @@ import logo from "../../../assets/images/logomarinaazul.png"
 import {
   Box,
   Button,
-  Card,
   FormControl,
   FormLabel,
   Input,
@@ -16,6 +15,8 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
+import HeaderRegister from "./HeaderRegister";
+import HeaderBoxProfile from "./HeaderBoxProfile";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -79,8 +80,11 @@ const Register = () => {
   };
 
   return (
+    <>
+      <HeaderRegister/>
+      <HeaderBoxProfile/>
     <Box
-      backgroundColor="#f8f8f8"
+      backgroundColor="#e6dfcf"
       height="100vh"
       width="100%"
       display="flex"
@@ -89,19 +93,6 @@ const Register = () => {
     >
       <form onSubmit={onSubmit}>
         <VStack align="center">
-          <Text as="b" fontSize="xl" className="title" justifyContent="center">
-            Te damos
-          </Text>
-          <Text as="b" fontSize="xl" className="title" justifyContent="center" mt={-4}>
-            la bienvenida a
-          </Text>
-          <Text as="b" fontSize="4xl" className="title" mt={-2}>
-            Eventum
-          </Text>
-          <Text as="b" fontSize="lg" className="title" justifyContent="center" mt={5}>
-            la plataforma de eventos de
-          </Text>
-          <Image src={logo} mt={3} />
           <Box m={10}>
             <FormControl id="name" isRequired className="form-container">
               <FormLabel fontSize="xs" mb={1}>
@@ -196,6 +187,12 @@ const Register = () => {
         </Text>
       </Box>
     </Box>
+    
+    
+    
+    
+    
+    </>
   );
 };
 
