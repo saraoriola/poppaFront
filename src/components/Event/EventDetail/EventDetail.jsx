@@ -4,16 +4,16 @@ import PrintEventDetail from "./PrintEventDetail/PrintEventDetail";
 import HeaderRender from "../../Header/HeaderRender/HeaderRender";
 
 const EventDetail = () => {
-  return (
-    <Box>
-      <Box>
-        <HeaderRender />
-      </Box>
-      <Box>
-        <PrintEventDetail />
-      </Box>
-    </Box>
-  );
+    return (
+        <Box>
+            <Box>
+                <HeaderRender />
+            </Box>
+            <Box>
+                <PrintEventDetail />
+            </Box>
+        </Box>
+    );
 };
 
 export default EventDetail;
