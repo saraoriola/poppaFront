@@ -8,7 +8,6 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import "./PrintEvents.scss";
 import eventImg from "../../../assets/images/Imagen y badges.png";
 import { useSelector } from "react-redux";
 
@@ -16,16 +15,17 @@ const PrintEvents = ({ filteredEvents }) => {
   return (
     <>
       {filteredEvents.map((event) => (
-        <Card className="card-container" key={event.id}>
+        <Card key={event.id} m="auto" mt="12px" maxW="22.5rem">
           {/* NOTE: Aquí iría la url del banner */}
-          <CardHeader className="card-header-container">
-            <Image className="card-image" src={eventImg} alt="Dan Abramov" />
+          <CardHeader p="10px">
+            <Image src={eventImg} alt="Dan Abramov" w="22.5rem" />
           </CardHeader>
-          <CardBody className="card-body-container">
+          {/* Como utilizo aquí la variable del scss de estilos */}
+          <CardBody p="0px 10px 10px" fontFamily="Nocturne-Black" color="blue">
             <Text>{event.title}</Text>
             {/* <Text>{event.description}</Text> */}
           </CardBody>
-          <CardFooter className="card-footer-container">
+          <CardFooter display="flex" p="0px 10px 10px">
             <Box>{event.dateTime}</Box>
             {/* Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
             <Box>{event.duration_min}</Box>

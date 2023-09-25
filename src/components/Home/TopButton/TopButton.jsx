@@ -1,6 +1,5 @@
 import { Box, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import "./TopButton.scss";
 
 const TopButton = () => {
   const [showButton, setShowButton] = useState(false);

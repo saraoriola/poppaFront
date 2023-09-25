@@ -1,9 +1,15 @@
-import React from 'react'
+import { Button } from "@chakra-ui/button";
+import React from "react";
+import { useNavigate } from "react-router";
 
 const CreateEventButton = () => {
-  return (
-    <div>CreateEventButton</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default CreateEventButton
+  const goCreateEvent = () => {
+    // NOTE: Acabar esto
+    navigate("/urlDeCrearEvento");
+  };
+  return <Button onClick={goCreateEvent}>+</Button>;
+};
+
+export default CreateEventButton;

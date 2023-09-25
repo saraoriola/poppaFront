@@ -1,14 +1,6 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/typography.scss";
 
-.button-container {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  max-width: 100%;
-  margin-left: 10px;
-}
-
 .filter-input {
   border-radius: 20px;
   margin: 0px 5px;

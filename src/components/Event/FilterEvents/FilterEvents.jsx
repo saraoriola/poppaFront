@@ -10,8 +10,6 @@ const FitlerEvents = () => {
   const [filter, setFilter] = useState("Todos");
   const [filteredEvents, setFilteredEvents] = useState(events);
 
-  console.log(filteredEvents);
-
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
@@ -43,9 +41,10 @@ const FitlerEvents = () => {
 
   return (
     <>
-      <Box className="filter-container">
-        <Box className="button-container">
-          <div className="button-scroll-container">
+      <Box>
+        <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
+          <Box className="button-scroll-container">
+            {/* NOTE: Lo he dejado en scss para no repetir código */}
             <Button
               className="filter-input"
               onClick={() => handleFilterChange("Todos")}
@@ -78,7 +77,7 @@ const FitlerEvents = () => {
             >
               Finalizado
             </Button>
-          </div>
+          </Box>
         </Box>
       </Box>
       <PrintEvents filteredEvents={filteredEvents} />
