@@ -1,4 +1,4 @@
-import { Box, Button, CheckboxGroup } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import "./TopButton.scss";
 
@@ -8,8 +8,6 @@ const TopButton = () => {
   const handleScrollButton = () => {
     window.scrollY > 300 ? setShowButton(true) : setShowButton(false);
   };
-
-  console.log(window.scrollY);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollButton);
