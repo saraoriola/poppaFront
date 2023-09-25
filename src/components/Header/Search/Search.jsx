@@ -1,34 +1,29 @@
-// Search.js
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { Input } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Search = ({ onSearch }) => {
+const Search = () => {
   const [search, setSearch] = useState("");
-  const { events } = useSelector((state) => state.event);
+  const navigate = useNavigate();
 
-  const searcher = (e) => {
-    const searchTerm = e.target.value;
-    setSearch(searchTerm);
-
-    let results = events;
-
-    if (searchTerm) {
-      results = events.filter((data) =>
-        data.title.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+  const handleSearch = (e) => {
+    console.log(search)
+    if (e.key === "Enter") {
+      navigate("getbytitle/" + search);
     }
-
-    onSearch(results);
   };
 
   return (
-    <Input
-      value={search}
-      onChange={searcher}
-      type="text"
-      placeholder="Búsqueda"
-    />
+    <>
+      <Input
+        className="search-input"
+        type="text"
+        placeholder="Search"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        onKeyUp={handleSearch}
+      />
+    </>
   );
 };
 

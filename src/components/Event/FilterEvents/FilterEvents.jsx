@@ -1,13 +1,18 @@
 import { Box, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllEvents } from "../../../features/event/eventSlice";
 import PrintEvents from "../PrintEvents/PrintEvents";
+import { useParams } from "react-router-dom";
+import { getEventByTitle } from "../../../features/event/eventSlice";
 
 const FilterEvents = () => {
-  const { userConnected, userRole, userEvents } = useSelector(
-    (state) => state.auth
-  );
+  const { userRole, userEvents } = useSelector((state) => state.auth);
+  const { title } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getEventByTitle(title));
+  }, [title]);
 
   const { events } = useSelector((state) => state.event);
   const [filter, setFilter] = useState("Todos");
@@ -17,14 +22,11 @@ const FilterEvents = () => {
       case "Inscrito":
         return userEvents;
       case "Pendiente":
-        console.log(events);
-        return events.filter((event) => userEvents.includes(event.id));
+        return console.log(events);
       case "Organizo":
-        console.log(events);
-        return events.filter((event) => userEvents.includes(event.id));
+        return console.log(events);
       case "Finalizado":
-        console.log(events);
-        return events.filter((event) => userEvents.includes(event.id));
+        return console.log(events);
       default:
         return events;
     }
@@ -72,7 +74,7 @@ const FilterEvents = () => {
           Finalizado
         </Button>
 
-{/* FIXME: Esto huele ya que lo renderizo también en home*/}
+        {/* FIXME: Esto huele ya que lo renderizo también en home*/}
         <PrintEvents results={filteredEvents()} />
       </Box>
     );

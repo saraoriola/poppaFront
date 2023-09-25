@@ -1,5 +1,3 @@
-// En PrintEvents.js
-
 import React from "react";
 import {
   Box,
@@ -10,25 +8,30 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-
 import "./PrintEvents.scss";
+import eventImg from "../../../assets/images/Imagen y badges.png";
+import { useSelector } from "react-redux";
 
-const PrintEvents = ({ results }) => {
+const PrintEvents = () => {
+  const { events } = useSelector((state) => state.event);
+
   return (
     <>
-      {results.map((event) => (
+      {events.map((event) => (
         <Card className="card-container" key={event.id}>
           {/* NOTE: Aquí iría la url del banner */}
-          <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-          <CardBody>
+          <CardHeader className="card-header-container">
+            <Image className="card-image" src={eventImg} alt="Dan Abramov" />
+          </CardHeader>
+          <CardBody className="card-body-container">
             <Text>{event.title}</Text>
-            <Text>{event.description}</Text>
+            {/* <Text>{event.description}</Text> */}
           </CardBody>
-          <CardFooter>
+          <CardFooter className="card-footer-container">
             <Box>{event.dateTime}</Box>
             {/* Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
             <Box>{event.duration_min}</Box>
-            <Box>{event.dateTime}</Box>
+            <Box>EDEM</Box>
           </CardFooter>
         </Card>
       ))}
