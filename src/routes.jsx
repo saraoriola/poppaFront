@@ -10,6 +10,7 @@ import Register from "./components/User/Register/Register";
 import Location from "./components/Location/LocationRender/LocationRender";
 import Dashboard from "./components/EventUser/Dashboard/Dashboard";
 import EventDetail from "./components/Event/EventDetail/EventDetail";
+import Counter from "./components/Counter/Counter";
 
 const routes = createBrowserRouter([
   {
@@ -45,6 +46,11 @@ const routes = createBrowserRouter([
   {
     path: "eventdetail/:id",
     element: <EventDetail />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "counter",
+    element: <Counter />,
     errorElement: <ErrorPage />,
   },
   {
