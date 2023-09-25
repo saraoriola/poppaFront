@@ -10,12 +10,12 @@ import TopButton from "./TopButton/TopButton";
 import CreateEventButton from "./CreateEventButton/CreateEventButton";
 
 const Home = () => {
-  const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
-  // Función para manejar los resultados de la búsqueda
-  const handleSearch = (results) => {
-    setSearchResults(results);
-  };
+    // Función para manejar los resultados de la búsqueda
+    const handleSearch = (results) => {
+        setSearchResults(results);
+    };
 
   return (
     <Box className="home-container">

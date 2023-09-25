@@ -2,7 +2,7 @@
 @import "../../styles/typography.scss";
 
 .home-container {
-  background-color: $cream;
+  background-color: #e6dfcf;
 }
 
 .father-header-container {
@@ -12,7 +12,7 @@
   width: 100%;
   height: 2.75rem;
   
-  background-color: $blue;
+  background-color: #004368;
 }
 
 .home-title {
@@ -21,6 +21,5 @@
   // NOTE: La o con acento se ve chunga
   font-family: $nocturneBlack;
   font-weight: 700;
-  color: $blue;
+  color: #004368;
 }
-
