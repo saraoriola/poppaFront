@@ -1,30 +1,19 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router";
-import { getEventById } from "../../../features/event/eventSlice";
-import { Spinner } from "@chakra-ui/spinner";
+import { Box } from "@chakra-ui/layout";
+import React from "react";
+import PrintEventDetail from "./PrintEventDetail/PrintEventDetail";
+import HeaderRender from "../../Header/HeaderRender/HeaderRender";
 
 const EventDetail = () => {
-  const { id } = useParams();
-  const { event, isLoading } = useSelector((state) => state.event);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        dispatch(getEventById(id));
-      } catch (error) {
-        console.error("Hubo un problema");
-      }
-    }
-    fetchData();
-  }, []);
-
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  return <div>EventDetail</div>;
+  return (
+    <Box>
+      <Box>
+        <HeaderRender />
+      </Box>
+      <Box>
+        <PrintEventDetail />
+      </Box>
+    </Box>
+  );
 };
 
 export default EventDetail;

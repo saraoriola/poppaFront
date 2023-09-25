@@ -9,7 +9,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import eventImg from "../../../assets/images/Imagen y badges.png";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const PrintEvents = ({ filteredEvents }) => {

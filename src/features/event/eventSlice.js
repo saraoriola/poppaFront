@@ -54,7 +54,7 @@ export const eventSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getEventById.fulfilled, (state, action) => {
-        state.event = action.payload.events;
+        state.event = action.payload.event;
         state.isLoading = false;
       })
       .addCase(getEventByTitle.pending, (state) => {
