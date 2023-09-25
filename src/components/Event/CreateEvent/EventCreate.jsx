@@ -4,7 +4,6 @@ import { createEvent } from "../../../features/event/eventsSlice";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack } from "@chakra-ui/react";
-import "./EventCreate.scss";
 
 function EventCreate() {
     const dispatch = useDispatch();

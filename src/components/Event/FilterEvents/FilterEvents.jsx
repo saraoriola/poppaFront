@@ -1,72 +1,107 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Input } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import PrintEvents from "../PrintEvents/PrintEvents";
-import { useParams } from "react-router-dom";
-import { getEventByTitle } from "../../../features/event/eventSlice";
 
-const FilterEvents = () => {
-    const { userRole, userEvents } = useSelector((state) => state.auth);
+const FitlerEvents = () => {
+  const { userRole, userEvents } = useSelector((state) => state.auth);
+  const { events } = useSelector((state) => state.event);
+  const [filter, setFilter] = useState("Todos");
+  const [filteredEvents, setFilteredEvents] = useState(events);
 
-    const { events } = useSelector((state) => state.event);
-    const [filter, setFilter] = useState("Todos");
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+  };
 
-    const filteredEvents = () => {
-        switch (filter) {
-            case "Inscrito":
-                return userEvents;
-            case "Pendiente":
-                return console.log(events);
-            case "Organizo":
-                return console.log(events);
-            case "Finalizado":
-                return console.log(events);
-            default:
-                return events;
-        }
-    };
-
-    if (userRole?.type === "admin") {
-        return (
-            <Box className="filter-container">
-                <Button className="filter-input" onClick={() => setFilter("Todos")}>
-                    Todos
-                </Button>
-                <Button className="filter-input" onClick={() => setFilter("Inscrito")}>
-                    Inscrito
-                </Button>
-                <Button className="filter-input" onClick={() => setFilter("Pendiente")}>
-                    Pendientes de aprobación
-                </Button>
-                <Button className="filter-input" onClick={() => setFilter("Organizo")}>
-                    Organizo
-                </Button>
-                <Button className="filter-input" onClick={() => setFilter("Finalizado")}>
-                    Finalizado
-                </Button>
-
-                {/* FIXME: Esto huele ya que lo renderizo también en home*/}
-                {/* <PrintEvents results={filteredEvents()} /> */}
-            </Box>
+  useEffect(() => {
+    switch (filter) {
+      case "Inscrito":
+        setFilteredEvents(userEvents);
+        break;
+      case "Pendiente":
+        setFilteredEvents(
+          events.filter((event) => event.estado === "Pendiente")
         );
-    } else {
-        return (
-            <Box className="filter-container">
-                <Button className="filter-input" onClick={() => setFilter("Todos")}>
-                    Todos
-                </Button>
-                <Button className="filter-input" onClick={() => setFilter("Inscrito")}>
-                    Inscrito
-                </Button>
-                <Button className="filter-input" onClick={() => setFilter("Finalizado")}>
-                    Finalizado
-                </Button>
-
-                {/* FIXME: Esto huele ya que lo renderizo también en home*/}
-                {/* <PrintEvents results={filteredEvents()} /> */}
-            </Box>
+        break;
+      case "Organizo":
+        setFilteredEvents(
+          events.filter((event) => event.organizador === userRole.id)
         );
+        break;
+      case "Finalizado":
+        setFilteredEvents(
+          events.filter((event) => event.estado === "Finalizado")
+        );
+        break;
+      default:
+        setFilteredEvents(events);
     }
+  }, [filter, userEvents, userRole.id, events]);
+
+  return (
+    <>
+      <Box>
+        <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
+          <Box className="button-scroll-container">
+            {/* NOTE: Cambiar color - active y fuente de letra */}
+            <Button
+              borderRadius="20px"
+              m="0px 5px"
+              height="2rem"
+              color="orange"
+              fontFamily="Telegrafregular"
+              onClick={() => handleFilterChange("Todos")}
+            >
+              Todos
+            </Button>
+            <Button
+              borderRadius="20px"
+              m="0px 5px"
+              height="2rem"
+              color="orange"
+              fontFamily="Telegrafregular"
+              onClick={() => handleFilterChange("Inscrito")}
+            >
+              Inscrito
+            </Button>
+            <Button
+              borderRadius="20px"
+              m="0px 5px"
+              height="2rem"
+              color="orange"
+              fontFamily="Telegrafregular"
+              onClick={() => handleFilterChange("Pendiente")}
+            >
+              Pendientes de aprobación
+            </Button>
+            {userRole.type === "admin" && (
+              <Button
+                borderRadius="20px"
+                m="0px 5px"
+                height="2rem"
+                color="orange"
+                fontFamily="Telegrafregular"
+                onClick={() => handleFilterChange("Organizo")}
+              >
+                Organizo
+              </Button>
+            )}
+            <Button
+              borderRadius="20px"
+              m="0px 5px"
+              height="2rem"
+              color="orange"
+              fontFamily="Telegrafregular"
+              onClick={() => handleFilterChange("Finalizado")}
+            >
+              Finalizado
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+      <PrintEvents filteredEvents={filteredEvents} />
+    </>
+  );
 };
 
-export default FilterEvents;
+export default FitlerEvents;
