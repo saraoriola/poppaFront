@@ -7,12 +7,6 @@ import { getEventByTitle } from "../../../features/event/eventSlice";
 
 const FilterEvents = () => {
   const { userRole, userEvents } = useSelector((state) => state.auth);
-  const { title } = useParams();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getEventByTitle(title));
-  }, [title]);
 
   const { events } = useSelector((state) => state.event);
   const [filter, setFilter] = useState("Todos");
@@ -55,7 +49,7 @@ const FilterEvents = () => {
         </Button>
 
         {/* FIXME: Esto huele ya que lo renderizo también en home*/}
-        <PrintEvents results={filteredEvents()} />
+        {/* <PrintEvents results={filteredEvents()} /> */}
       </Box>
     );
   } else {
@@ -75,7 +69,7 @@ const FilterEvents = () => {
         </Button>
 
         {/* FIXME: Esto huele ya que lo renderizo también en home*/}
-        <PrintEvents results={filteredEvents()} />
+        {/* <PrintEvents results={filteredEvents()} /> */}
       </Box>
     );
   }

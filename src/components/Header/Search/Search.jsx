@@ -7,7 +7,6 @@ const Search = () => {
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
-    console.log(search)
     if (e.key === "Enter") {
       navigate("getbytitle/" + search);
     }

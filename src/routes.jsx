@@ -8,6 +8,7 @@ import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Register from "./components/User/Register/Register";
 import Organization from "./components/Organization/OrganizationRender/OrganizationRender";
+import FilterEvents from "./components/Event/FilterEvents/FilterEvents";
 
 const routes = createBrowserRouter([
   {
