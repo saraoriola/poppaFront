@@ -8,8 +8,10 @@ import Layout from "./components/Layout/Layout";
 import PrivateRoutes from "./components/Layout/PrivateRoutes";
 import Location from "./components/Location/LocationRender/LocationRender";
 import Dashboard from "./components/EventUser/Dashboard/Dashboard";
+import ApproverView from "./components/ApproverView/ApproverView";
 import EventDetail from "./components/Event/EventDetail/EventDetail";
 import Counter from "./components/Counter/Counter";
+
 
 const routes = createBrowserRouter([
     {
@@ -38,20 +40,25 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "dashboard/:id",
-        element: <Dashboard />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "eventdetail/:id",
-        element: <EventDetail />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "counter",
-        element: <Counter />,
-        errorElement: <ErrorPage />,
-    },
+    path: "dashboard/:id",
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+},
+{
+    path: "approverview",
+    element: <ApproverView />
+     errorElement: <ErrorPage />,
+},
+{
+    path: "eventdetail/:id",
+    element: <EventDetail />,
+    errorElement: <ErrorPage />,
+},
+{
+    path: "counter",
+    element: <Counter />, 
+    errorElement: <ErrorPage />,
+},
     {
         element: <PrivateRoutes />,
         errorElement: <ErrorPage />,
