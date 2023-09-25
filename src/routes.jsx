@@ -40,25 +40,25 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-    path: "dashboard/:id",
-    element: <Dashboard />,
-    errorElement: <ErrorPage />,
-},
-{
-    path: "approverview",
-    element: <ApproverView />
-     errorElement: <ErrorPage />,
-},
-{
-    path: "eventdetail/:id",
-    element: <EventDetail />,
-    errorElement: <ErrorPage />,
-},
-{
-    path: "counter",
-    element: <Counter />, 
-    errorElement: <ErrorPage />,
-},
+        path: "dashboard/:id",
+        element: <Dashboard />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "approverview",
+        element: <ApproverView />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "eventdetail/:id",
+        element: <EventDetail />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "counter",
+        element: <Counter />,
+        errorElement: <ErrorPage />,
+    },
     {
         element: <PrivateRoutes />,
         errorElement: <ErrorPage />,
