@@ -25,11 +25,7 @@ const routes = createBrowserRouter([
         element: <Login />,
         errorElement: <ErrorPage />,
     },
-    {
-        path: "register",
-        element: <Register />,
-        errorElement: <ErrorPage />,
-    },
+
     {
         path: "location",
         element: <Location />,
