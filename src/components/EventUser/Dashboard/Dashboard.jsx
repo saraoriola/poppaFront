@@ -9,6 +9,7 @@ function Dashboard() {
   return (
     <div>
       <h1>Detalles del evento {id}</h1>
+     
       <HeaderEvent/>
       <Attendees/>
     </div>

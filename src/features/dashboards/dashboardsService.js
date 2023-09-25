@@ -10,19 +10,9 @@ const getEventById = async (id) => {
 }
 };
 
-const getAttendees = async (id) => {
-  try {
-    const res = await apiClient.get(`/dashboards/event/${id}/getAttendees`);
-    return res.data;
-} catch (error) {
-    console.error(error);
-    throw error;
-}
-};
 
 const dashboardsService = {
-  getEventById,
-  getAttendees,
+  getEventById
 };
 
 export default dashboardsService;
