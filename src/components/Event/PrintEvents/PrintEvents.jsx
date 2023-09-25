@@ -8,32 +8,36 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import "./PrintEvents.scss";
 import eventImg from "../../../assets/images/Imagen y badges.png";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-const PrintEvents = () => {
-  const { events } = useSelector((state) => state.event);
-
+const PrintEvents = ({ filteredEvents }) => {
   return (
     <>
-      {events.map((event) => (
-        <Card className="card-container" key={event.id}>
-          {/* NOTE: Aquí iría la url del banner */}
-          <CardHeader className="card-header-container">
-            <Image className="card-image" src={eventImg} alt="Dan Abramov" />
-          </CardHeader>
-          <CardBody className="card-body-container">
-            <Text>{event.title}</Text>
-            {/* <Text>{event.description}</Text> */}
-          </CardBody>
-          <CardFooter className="card-footer-container">
-            <Box>{event.dateTime}</Box>
-            {/* Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
-            <Box>{event.duration_min}</Box>
-            <Box>EDEM</Box>
-          </CardFooter>
-        </Card>
+      {filteredEvents.map((event) => (
+        <Link key={event.id} to={"/eventdetail/" + event.id}>
+          <Card m="auto" mt="12px" maxW="22.5rem">
+            {/* NOTE: Aquí iría la url del banner */}
+            <CardHeader p="10px">
+              <Image src={eventImg} alt="Dan Abramov" w="22.5rem" />
+            </CardHeader>
+            {/* Como utilizo aquí la variable del scss de estilos */}
+            <CardBody
+              p="0px 10px 10px"
+              fontFamily="Nocturne-Black"
+              color="blue"
+            >
+              <Text>{event.title}</Text>
+              {/* <Text>{event.description}</Text> */}
+            </CardBody>
+            <CardFooter display="flex" p="0px 10px 10px">
+              <Box>{event.dateTime}</Box>
+              {/* Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
+              <Box>{event.duration_min}</Box>
+              <Box>EDEM</Box>
+            </CardFooter>
+          </Card>
+        </Link>
       ))}
     </>
   );
