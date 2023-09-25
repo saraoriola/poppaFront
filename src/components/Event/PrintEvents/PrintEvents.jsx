@@ -12,12 +12,10 @@ import "./PrintEvents.scss";
 import eventImg from "../../../assets/images/Imagen y badges.png";
 import { useSelector } from "react-redux";
 
-const PrintEvents = () => {
-  const { events } = useSelector((state) => state.event);
-
+const PrintEvents = ({ filteredEvents }) => {
   return (
     <>
-      {events.map((event) => (
+      {filteredEvents.map((event) => (
         <Card className="card-container" key={event.id}>
           {/* NOTE: Aquí iría la url del banner */}
           <CardHeader className="card-header-container">

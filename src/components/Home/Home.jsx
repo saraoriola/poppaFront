@@ -26,8 +26,6 @@ const Home = () => {
       </Box>
       <Box className="father-cards-container">
         <GetAllEvents />
-        {/* FIXME: Esto ha dejado de ir :c Hay bugs*/}
-        <PrintEvents results={searchResults} />
       </Box>
     </Box>
   );
