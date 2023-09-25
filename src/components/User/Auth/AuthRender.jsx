@@ -1,6 +1,5 @@
 import React from "react";
 import Login from "../Login/Login";
-import Register from "../Register/Register";
 import Logout from "../Logout/Logout";
 import { useSelector } from "react-redux";
 import { Box, Button } from "@chakra-ui/react";
