@@ -12,6 +12,8 @@ import Dashboard from "./components/EventUser/Dashboard/Dashboard";
 import ApproverView from "./components/ApproverView/ApproverView";
 import EventDetail from "./components/Event/EventDetail/EventDetail";
 import Counter from "./components/Counter/Counter";
+import ApprovedAccepted from "./components/ApprovedAccepted/ApprovedAccepted";
+
 
 
 const routes = createBrowserRouter([
@@ -43,7 +45,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "approverview",
+        path: "approver/view",
         element: <ApproverView />,
         errorElement: <ErrorPage />,
     },
@@ -55,6 +57,11 @@ const routes = createBrowserRouter([
     {
         path: "counter",
         element: <Counter />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "approved/accepted",
+        element: <ApprovedAccepted />,
         errorElement: <ErrorPage />,
     },
     {
