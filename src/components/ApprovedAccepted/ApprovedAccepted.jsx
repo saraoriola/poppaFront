@@ -233,72 +233,70 @@ const ApprovedAccepted = () => {
           >
             Editar enlace a la sesión
           </Button>
-          <Tabs mt={7}   w="312px"
-  h="184px" className='button' >
+
+          <Box display="flex"
+width="312px"
+height="184px"
+flex-direction="column"
+justify-content="center"
+align-items="flex-start">
+          <Tabs mt={7}  className='button'variant='enclosed' >
                     <TabList>
-                        <div>
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus1) 
                                     ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
-                                    borderRadius: "10px 10px 0 0"
+                                    border:"1px solid #847c7b"
                                 }}
-                                style={{ fontSize: '12px' }}>
+                                fontSize="9px" height="24px">
                                 Aprobación
                             </Tab>
-                        </div>
-                        <div>
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus2) 
-                                    ? '#48BB78' : checkboxStatus2.some((isChecked) => isChecked) ? '#F6AD55' : 'white',
-                                    borderRadius: "10px 10px 0 0"
+                                    ? '#48BB78' : checkboxStatus2.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
                                 }}
-                                style={{ fontSize: '12px' }}>
+                                fontSize="9px" height="24px">
                                 Recursos
                             </Tab>
-                        </div>
-                        <div>
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus3) 
-                                    ? '#48BB78' : checkboxStatus3.some((isChecked) => isChecked) ? '#F6AD55' : 'white',
-                                    borderRadius: "10px 10px 0 0"
+                                    ? '#48BB78' : checkboxStatus3.some((isChecked) => isChecked) ? '#F6AD55' :'#f2f2f2',
+                                    border:"1px solid #847c7b"
                                 }}
-                                style={{ fontSize: '12px' }}>
+                                fontSize="9px" height="24px">
                                 Difusión
                             </Tab>
-                        </div>
-                        <div>
+                       
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus4) 
-                                    ? '#48BB78' : checkboxStatus4.some((isChecked) => isChecked) ? '#F6AD55' : 'white',
-                                    borderRadius: "10px 10px 0 0"
+                                    ? '#48BB78' : checkboxStatus4.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
                                 }}
-                                style={{ fontSize: '12px' }}>
+                                fontSize="9px" height="24px">
                                 Inscritos
                             </Tab>
-                        </div>
-                        <div>
+                       
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus5) 
-                                    ? '#48BB78' : checkboxStatus5.some((isChecked) => isChecked) ? '#F6AD55' : 'white',
-                                    borderRadius: "10px 10px 0 0"
+                                    ? '#48BB78' : checkboxStatus5.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
                                 }}
-                                style={{ fontSize: '12px' }}>
+                                fontSize="9px" height="24px">
                                 After
                             </Tab>
-                        </div>
                     </TabList>
                     <TabPanels>
-                        <TabPanel backgroundColor="white">
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px">
                             {checkboxStatus1.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -311,7 +309,7 @@ const ApprovedAccepted = () => {
                                 </Stack>
                             ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
+                        <TabPanel backgroundColor='#f2f2f2'>
                             {checkboxStatus2.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -325,7 +323,7 @@ const ApprovedAccepted = () => {
                             ))}
                         </TabPanel>
 
-                        <TabPanel backgroundColor="white">
+                        <TabPanel backgroundColor='#f2f2f2'>
                             {checkboxStatus3.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -338,7 +336,7 @@ const ApprovedAccepted = () => {
                                 </Stack>
                             ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
+                        <TabPanel backgroundColor='#f2f2f2'>
                             {checkboxStatus4.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -351,7 +349,7 @@ const ApprovedAccepted = () => {
                                 </Stack>
                             ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
+                        <TabPanel backgroundColor='#f2f2f2'>
                             {checkboxStatus5.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -366,6 +364,7 @@ const ApprovedAccepted = () => {
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
+                </Box>
       </Box>
     </>
   );
