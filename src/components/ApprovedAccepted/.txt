@@ -7,12 +7,9 @@ import { Avatar } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/Logotipo.png"
+import desafio from "../../assets/images/desafio.jpg"
 import { phrases1, phrases2, phrases3, phrases4, phrases5 } from "../../Phrases/phrases";
-import { Box, Button,Flex, Center, Heading, Image, Tabs, TabList, Tab, TabPanel, TabPanels, Stack, Checkbox, Text, } from "@chakra-ui/react";
-import "./ApprovedAccepted.scss";
-import HeaderRender from '../Header/HeaderRender/HeaderRender';
-import banner from "../../assets/images/desafio.jpg"
-
+import { Box, Button, Center, Heading, Image, Tabs, TabList, Tab, TabPanel, TabPanels, Stack, Checkbox, Text, } from "@chakra-ui/react";
 
 const ApprovedAccepted = () => {
     const [checkboxStatus1, setCheckboxStatus1] = useState([false, false, false, false, false]);
@@ -58,190 +55,153 @@ const ApprovedAccepted = () => {
     const areAllCheckboxesChecked = (checkboxes) => {
         return checkboxes.every((isChecked) => isChecked);
     };
-  
-    const phrases1 = ["Item 1", "Item 2", "Item 3"];
-    const phrases2 = ["Item 4", "Item 5", "Item 6"];
-    const phrases3 = ["Item 7", "Item 8", "Item 9"];
-    const phrases4 = ["Item 10", "Item 11", "Item 12"];
-    const phrases5 = ["Item 13", "Item 14", "Item 15"];
-  return (
-    <>
-      <HeaderRender />
-      <Box padding={6} bgColor="#e6dfcf">
-        <Image
-          src={banner}
-          alt="Bannertripulaciones"
-          borderRadius={4}
-          width="312px"
-          height="140px"
-          objectFit="cover"
-        />
-        <Text
-          color="var(--blue-900, #004368)"
-          fontFamily="Nocturne Serif"
-          fontSize="16px"
-          fontStyle="normal"
-          fontWeight="900"
-          lineHeight="120%"
-          className="custom-font"
-          marginTop={2}
-        >
-          Desafío de Tripulaciones
-          <br />
-          The Bridge septiembre 2023
-        </Text>
 
-        <Flex justifyContent="space-between" alignItems="center">
-          <Flex alignItems="center">
-            <BsCalendar3 size={15} color="#cb7862" />
-            <Text
-              marginLeft="8px"
-              color="rgba(132, 124, 123, 1)"
-              fontSize="12px"
-              className="custom-text"
-            >
-              29/09/2023
-            </Text>
-          </Flex>
-          <Flex alignItems="center" marginTop="2px">
-            <BiTimeFive size={20} color="#cb7862" />
-            <Text
-              marginLeft="8px"
-              color="rgba(132, 124, 123, 1)"
-              fontSize="12px"
-              className="custom-text"
-            >
-              18:00 hr
-            </Text>
-          </Flex>
-        </Flex>
-
-        <Flex justifyContent="space-between" alignItems="center">
-          <Flex alignItems="center">
-            <GoLocation size={15} color="#cb7862" />
-            <Text
-              marginLeft="8px"
-              color="rgba(132, 124, 123, 1)"
-              fontSize="12px"
-              className="custom-text"
-            >
-              EDEM / Online
-            </Text>
-          </Flex>
-          <Flex alignItems="center" marginTop="2px">
-            <MdMapsHomeWork size={15} color="#cb7862" />
-            <Text
-              marginLeft="8px"
-              color="rgba(132, 124, 123, 1)"
-              fontSize="12px"
-              className="custom-text"
-            >
-              Planta 2, sala reuniones 207
-            </Text>
-          </Flex>
-        </Flex>
-
-        <Flex justifyContent="space-between" mt={5}>
-          <Button
-            backgroundColor="white"
-            color="#c11919"
-            height="32px"
-            width="148px"
-            border="1px solid #c11919"
-            fontSize="14px"
-          >
-            Cancelar evento
-          </Button>
-          <Button
-            backgroundColor="#cb7862"
-            color="white"
-            height="32px"
-            width="148px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-          >
-            Modificar
-          </Button>
-        </Flex>
-
-        <Flex justifyContent="space-between" mt={2}>
-          <Button
-            backgroundColor="rgba(248, 248, 248, 1)"
-            color="#cb7862"
-            height="32px"
-            width="148px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-          >
-            Inscribir asistente
-          </Button>
-          <Button
-            backgroundColor="rgba(248, 248, 248, 1)"
-            color="#cb7862"
-            height="32px"
-            width="148px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-          >
-            <Link to="/dashboard/:id">Dashboard</Link>
-          </Button>
-        </Flex>
-
-        <Flex justifyContent="space-between" mt={2}>
-          <Button
-            backgroundColor="rgba(248, 248, 248, 1)"
-            color="#cb7862"
-            height="32px"
-            width="148px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-          >
-            Salidas
-          </Button>
-          <Button
-            backgroundColor="rgba(248, 248, 248, 1)"
-            color="#cb7862"
-            height="32px"
-            width="148px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-          >
-            Foro
-          </Button>
-        </Flex>
-
-        <Button
-            backgroundColor="rgba(248, 248, 248, 1)"
-            color="#cb7862"
-            height="32px"
-            width="312px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-            mt={2}
-          >
-            Lector QR
-          </Button>
-
-          <Button
-            backgroundColor="rgba(248, 248, 248, 1)"
-            color="#cb7862"
-            height="32px"
-            width="312px"
-            border="1px solid #cb7862"
-            fontSize="14px"
-            mt={2}
-          >
-            Editar enlace a la sesión
-          </Button>
-          <Tabs mt={7}   w="312px"
-  h="184px" className='button' >
+    return (
+        <Center as="section" bg="gray.100" h="100vh" p="5">
+            <Box maxW="430px" bg="#e6dfcf" p="6">
+                <Box paddingBottom="1rem">
+                    <Box display="flex" alignItems="center" 
+                    justifyContent="space-between" bg="#004368" p={1} borderRadius="xl">
+                        <Image src={logo} />
+                        <Avatar name={userConnected?.name} src={userConnected?.avatar} size="sm" />
+                    </Box>
+                </Box>
+                <Image
+                    src={desafio}
+                    alt="openday"
+                    borderRadius="xl"
+                    objectFit="cover"
+                    mx="auto"
+                    mt={4}
+                />
+                <Heading my="4" size="lg" fontFamily="Nocturne-Black" color="#004368">
+                    <p>Desafío de Tripulaciones</p>
+                    The Bridge septiembre 2023
+                </Heading>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px"}}>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                        <BsCalendar3 size={25} color="#cb7862" />
+                        <span style={{ marginLeft: "8px" , marginBottom: "2px" }}>29/09/2023</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}>
+                        <BiTimeFive size={25} color="#cb7862" />
+                        <span style={{ marginRight: "8px", marginBottom: "2px" }}>18:00 hrs</span>
+                    </div>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                        <GoLocation size={25} color="#cb7862" />
+                        <span style={{ marginLeft: "8px" }}>EDEM / Online </span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                        <MdMapsHomeWork size={25} color="#cb7862" />
+                        <span style={{ marginLeft: "8px" }}>Planta 2, sala reuniones 207 </span>
+                    </div>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Center my="4">
+                        <Button
+                            backgroundColor="#white"
+                            color="red"
+                            _hover={{ backgroundColor: "red", color: 'white' }}
+                            height="40px"
+                            width="180px"
+                            marginRight="20px"
+                            border="3px solid #c11919" >
+                            Cancelar evento
+                        </Button>
+                        <Button
+                            backgroundColor="#cb7862"
+                            color="white"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            height="40px"
+                            width="180px" >
+                            Modificar
+                        </Button>
+                    </Center>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Center my="0">
+                        <Button
+                            backgroundColor="#white"
+                            color="#cb7862"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            height="40px"
+                            width="180px"
+                            marginRight="20px"
+                            border="2px solid #cb7862" >
+                            Inscribir asistente
+                        </Button>
+                        <Button
+                            backgroundColor="#white"
+                            color="#cb7862"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            height="40px"
+                            width="180px"
+                            border="2px solid #cb7862" >
+                            <Link to="/dashboard/:id" >Dashbord </Link>
+                        </Button>
+                    </Center>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Center my="3">
+                        <Button
+                            backgroundColor="#white"
+                            color="#cb7862"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            height="40px"
+                            width="180px"
+                            marginRight="20px"
+                            border="2px solid #cb7862" >
+                            Salidas
+                        </Button>
+                        <Button
+                            backgroundColor="#white"
+                            color="#cb7862"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            height="40px"
+                            width="180px"
+                            border="2px solid #cb7862" >
+                            Foro
+                        </Button>
+                    </Center>
+                </div>
+                <div>
+                    <Center my="0">
+                        <Button
+                            my="2"
+                            backgroundColor="#white"
+                            color="#cb7862"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            marginRight="1px"
+                            w="380px"
+                            border="2px solid #cb7862" >
+                            Lector QR code
+                        </Button>
+                    </Center>
+                </div>
+                <div>
+                    <Center my="0">
+                        <Button
+                            my="2"
+                            backgroundColor="#white"
+                            color="#cb7862"
+                            _hover={{ backgroundColor: "#004368", color: 'white' }}
+                            marginRight="1px"
+                            w="380px"
+                            border="2px solid #cb7862" >
+                            Editar enlace a la sesión
+                        </Button>
+                    </Center>
+                </div>
+                <Tabs variant='unstyled' my="4">
                     <TabList>
                         <div>
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus1) 
-                                    ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : 'white',
                                     borderRadius: "10px 10px 0 0"
                                 }}
                                 style={{ fontSize: '12px' }}>
@@ -366,9 +326,9 @@ const ApprovedAccepted = () => {
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
-      </Box>
-    </>
-  );
-};
+            </Box>
+        </Center >
+    )
+}
 
 export default ApprovedAccepted;

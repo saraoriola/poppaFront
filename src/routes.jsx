@@ -13,8 +13,7 @@ import ApproverView from "./components/ApproverView/ApproverView";
 import EventDetail from "./components/Event/EventDetail/EventDetail";
 import Counter from "./components/Counter/Counter";
 import ApprovedAccepted from "./components/ApprovedAccepted/ApprovedAccepted";
-
-
+import QrGenerator from "./components/Qr/Generator/QrGenerator";
 
 const routes = createBrowserRouter([
     {
@@ -62,6 +61,12 @@ const routes = createBrowserRouter([
     {
         path: "approved/accepted",
         element: <ApprovedAccepted />,
+        errorElement: <ErrorPage />,
+    },
+
+    {
+        path: "qrgenerator",
+        element: <QrGenerator />,
         errorElement: <ErrorPage />,
     },
     {

@@ -22,15 +22,31 @@ function Dashboard() {
     });
   };
 
-  const handleDownloadJPG = () => {
+
+  const handleShare = () => {
     const input = dashboardRef.current;
 
     html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/jpeg", 1.0);
-      const link = document.createElement("a");
-      link.href = imgData;
-      link.download = "dashboard.jpg";
-      link.click();
+      canvas.toBlob((blob) => {
+        const file = new File([blob], "dashboard.jpg", { type: "image/jpeg" });
+        const shareData = {
+          files: [file],
+        };
+
+        if (navigator.share) {
+          navigator
+            .share(shareData)
+            .then(() => {
+              console.log("Archivo compartido con éxito");
+            })
+            .catch((error) => {
+              console.error("Error al compartir archivo:", error);
+            });
+        } else {
+          console.log("La API de Web Share no es compatible en este navegador.");
+
+        }
+      }, "image/jpeg");
     });
   };
 
@@ -43,7 +59,7 @@ function Dashboard() {
         backgroundColor="#e6dfcf"
         ref={dashboardRef}
       >
-        <Box marginBottom={5} >
+        <Box marginBottom={5}>
           <LineChart />
         </Box>
         <Box marginBottom={5}>
@@ -59,22 +75,29 @@ function Dashboard() {
         backgroundColor="#e6dfcf"
         width="100%"
       >
-        <Button
-          width="48%"
+                <Button
+          width="42%"
           height="32px"
           borderRadius={6}
-          onClick={handleDownloadJPG}
+          onClick={handleShare}
+          backgroundColor="#f2f2f2"
+          color="#cb7862"
         >
-          Descargar JPG
+          Compartir
         </Button>
         <Button
-          width="48%"
+          width="42%"
           height="32px"
           borderRadius={6}
           onClick={handleDownloadPDF}
+          backgroundColor="#cb7862"
+          color="white"
+          marginLeft={5}
+    
         >
           Descargar PDF
         </Button>
+
       </Box>
     </div>
   );
