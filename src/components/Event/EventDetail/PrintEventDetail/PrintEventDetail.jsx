@@ -8,6 +8,7 @@ import { Box, Text } from "@chakra-ui/layout";
 import { getEventById } from "../../../../features/event/eventSlice";
 import eventImg from "../../../../assets/images/fotoevento.jpg";
 import EventDetailButtons from "../EventDetailButtons/EventDetailButtons";
+import { AiFillCalendar, AiOutlineClockCircle } from "react-icons/ai";
 
 const PrintEventDetail = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const PrintEventDetail = () => {
 
   return (
     <Box>
-      <Card m="auto" mt="12px" maxW="22.5rem">
+      <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
         {/* NOTE: Aquí iría la url del banner */}
         <CardHeader p="10px">
           <Image src={eventImg} alt="Banner" w="22.5rem" />
@@ -41,21 +42,39 @@ const PrintEventDetail = () => {
         <CardBody
           p="0px 10px 10px"
           fontFamily="Nocturne-Black"
-          color="blue"
+          color="#004368"
           fontSize="xl"
         >
           <Text>{event.title}</Text>
           {/* <Text>{event.description}</Text> */}
         </CardBody>
-        <CardFooter display="column" p="0px 10px 10px">
-          <Box style={{ display: "flex", justifyContent: "space-between" }}>
-            <Box>{event.dateTime}</Box>
-            <Box>{event.duration_min}</Box>
+        <CardFooter
+          display="column"
+          p="0px 10px 10px"
+          fontFamily="Telegraf-UltraLight"
+          color="#847c7b"
+        >
+          <Box display="flex" justifyContent="space-between">
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiFillCalendar color="#cb7862" />
+              <Box>{event.dateTime}</Box>
+            </Box>
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiOutlineClockCircle color="#cb7862" />
+              <Box>{event.duration_min}</Box>
+            </Box>
           </Box>
-          <Box style={{ display: "flex", justifyContent: "space-between" }}>
-            <Box>EDEM</Box>
-            <Box>{event.location_id}</Box>
+          <Box display="flex" justifyContent="space-between">
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiFillCalendar color="#cb7862" />
+              <Box>EDEM</Box>
+            </Box>
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiOutlineClockCircle color="#cb7862" />
+              <Box>{event.location_id}</Box>
+            </Box>
           </Box>
+          <Box display="flex" justifyContent="space-between"></Box>
         </CardFooter>
       </Card>
 
@@ -63,14 +82,25 @@ const PrintEventDetail = () => {
         <EventDetailButtons />
       </Box>
 
-      <Box>
-        <Text mb="12px" ml="25px" mr="25px">
-          {event.description}
+      <Box
+        borderRadius="15px"
+        m="0px 25px 12px 25px"
+        padding="10px"
+        bg="#f2f2f2"
+        textAlign="justify"
+        color="#847c7b"
+      >
+        <Text>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          corporis, sequi quam hic facere esse aperiam praesentium accusamus
+          quis aut, autem consequuntur quos est exercitationem labore non
+          suscipit omnis porro.
         </Text>
       </Box>
 
-      <Box>
-        <Text>
+      <Box m="10px 25px 10px 25px">
+        <Text>Categorias</Text>
+        <Text fontFamily="Telegraf-UltraLight">
           Implementar etiquetas. Lo pongo aquí porque se supone que son del
           evento.
         </Text>

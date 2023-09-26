@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: 'PPTelegraf-Regular';
+    src: url('../../assets/fonts/PPTelegraf-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'PPTelegraf-UltraBold';
+    src: url('../../assets/fonts/PPTelegraf-UltraBold.woff') format('woff');
+    font-weight: 900; 
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf-Ultralight';
+    src: url('../../assets/fonts/PPTelegraf-UltraLight.woff') format('woff');
+    font-weight: 100; 
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Nocturne-Regular';
+    src: url('../../assets/fonts/Nocturne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+    @font-face {
+      font-family: 'Nocturne-Black';
+      src: url('../../assets/fonts/NocturneSerif-Black.woff') format('woff'); 
+      font-weight: 900;
+      font-style: normal;
+  }
+
+.custom-font {
+    font-family: 'Nocturne-Black', sans-serif !important;
+}
+
+
+.custom-text {
+    font-family: 'PPTelegraf-Regular', sans-serif !important;
+  }
+
+  .button {
+    font-family: 'PPTelegraf-Regular', sans-serif !important;
+  }
