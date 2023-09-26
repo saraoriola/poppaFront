@@ -148,7 +148,6 @@ const ApprovedAccepted = () => {
             height="32px"
             width="148px"
             border="1px solid #c11919"
-            className="button"
             fontSize="14px"
           >
             Cancelar evento
@@ -172,7 +171,6 @@ const ApprovedAccepted = () => {
             height="32px"
             width="148px"
             border="1px solid #cb7862"
-            className="button"
             fontSize="14px"
           >
             Inscribir asistente
@@ -196,7 +194,6 @@ const ApprovedAccepted = () => {
             height="32px"
             width="148px"
             border="1px solid #cb7862"
-            className="button"
             fontSize="14px"
           >
             Salidas
@@ -236,14 +233,15 @@ const ApprovedAccepted = () => {
           >
             Editar enlace a la sesión
           </Button>
-          <Tabs variant='unstyled' my="4">
+          <Tabs mt={7}   w="312px"
+  h="184px" className='button' >
                     <TabList>
                         <div>
                             <Tab
                                 _selected={{
                                     color: 'black',
                                     bg: areAllCheckboxesChecked(checkboxStatus1) 
-                                    ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : 'white',
+                                    ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
                                     borderRadius: "10px 10px 0 0"
                                 }}
                                 style={{ fontSize: '12px' }}>
