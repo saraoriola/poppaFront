@@ -294,7 +294,7 @@ align-items="flex-start">
                         <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px" >
                             {checkboxStatus1.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
-                                    <Checkbox
+                                    <Checkbox mt={1}
                                         colorScheme={isChecked ? 'green' : 'yellow'}
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 1)}
@@ -307,7 +307,7 @@ align-items="flex-start">
                         <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus2.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
-                                    <Checkbox
+                                    <Checkbox mt={1}
                                         colorScheme={isChecked ? 'green' : 'yellow'}
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 2)}
@@ -321,7 +321,7 @@ align-items="flex-start">
                         <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus3.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
-                                    <Checkbox
+                                    <Checkbox mt={1}
                                         colorScheme={isChecked ? 'green' : 'yellow'}
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 3)}
@@ -334,7 +334,7 @@ align-items="flex-start">
                         <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus4.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
-                                    <Checkbox
+                                    <Checkbox mt={1}
                                         colorScheme={isChecked ? 'green' : 'yellow'}
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 4)}
@@ -346,8 +346,8 @@ align-items="flex-start">
                         </TabPanel>
                         <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus5.map((isChecked, index) => (
-                                <Stack spacing={5} direction='row' key={index}>
-                                    <Checkbox
+                                <Stack spacing={5} direction='row' key={index} >
+                                    <Checkbox mt={1}
                                         colorScheme={isChecked ? 'green' : 'yellow'}
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 5)}
@@ -360,6 +360,12 @@ align-items="flex-start">
                     </TabPanels>
                 </Tabs>
                 </Box>
+
+                <Box mt={8} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>
+    Cuando en The Bridge hablamos de formación práctica e inmersiva, lo hacemos de verdad. Gracias al Reto de Tripulaciones nuestros alumnos pueden experimentar la mejor forma de trabajo en equipo, la manera de resolver problemas complejos y, por supuesto, aumentar su conocimiento en otras disciplinas, haciendo uso de metodologías de trabajo agile y de desarrollo de producto.
+</Box>
+
+
       </Box>
     </>
   );
