@@ -6,6 +6,7 @@ import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import TopButton from "./TopButton/TopButton";
 import CreateEventButton from "./CreateEventButton/CreateEventButton";
 import { useSelector } from "react-redux";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
     const { userRole } = useSelector((state) => state.auth);
@@ -44,6 +45,9 @@ const Home = () => {
         >
           <TopButton />
           {createEventButton}
+        </Box>
+        <Box>
+          <Footer/>
         </Box>
       </Box>
     );
