@@ -14,6 +14,7 @@ import EventDetail from "./components/Event/EventDetail/EventDetail";
 import Counter from "./components/Counter/Counter";
 import ApprovedAccepted from "./components/ApprovedAccepted/ApprovedAccepted";
 import QrGenerator from "./components/Qr/Generator/QrGenerator";
+import EventCard from "./components/Event/EventCard/EventCard";
 
 const routes = createBrowserRouter([
     {
@@ -67,6 +68,11 @@ const routes = createBrowserRouter([
     {
         path: "qrgenerator",
         element: <QrGenerator />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "eventcard",
+        element: <EventCard />,
         errorElement: <ErrorPage />,
     },
     {
