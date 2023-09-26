@@ -37,7 +37,6 @@ const FitlerEvents = () => {
         <Box>
           <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
             <Box className="button-scroll-container">
-              {/* NOTE: Cambiar color - active y fuente de letra */}
               <Button
                 borderRadius="20px"
                 m="0px 5px"
