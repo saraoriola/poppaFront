@@ -14,21 +14,21 @@ const ApproverView = () => {
 
     const [tabIndex, setTabIndex] = useState(0)
 
-    const handleSliderChange = (event) => {
-        setTabIndex(parseInt(event.target.value, 10))
-    }
+  const handleSliderChange = (event) => {
+    setTabIndex(parseInt(event.target.value, 10))
+  }
 
-    const handleTabsChange = (index) => {
-        setTabIndex(index)
-    }
+  const handleTabsChange = (index) => {
+    setTabIndex(index)
+  }
 
     return (
         <Center as="section" bg="gray.100" h="100vh">
             <Box maxW="430px" bg="#e6dfcf" p="6">
                 <Box display="flex" alignItems="center" justifyContent="space-between" bg="#004368" p={1} borderRadius="xl">
                     <Image src={logo} />
-                    <div style={{ flex: 1 }}></div> 
-                    <Avatar name={userConnected?.name} src={userConnected?.avatar} size="sm" /> 
+                    <div style={{ flex: 1 }}></div>
+                    <Avatar name={userConnected?.name} src={userConnected?.avatar} size="sm" />
                 </Box>
                 <Image
                     src={opendays}
@@ -74,7 +74,7 @@ const ApproverView = () => {
                     </div>
                 </div>
                 <Box>
-                    <input type='range' min='0' max='3' value={tabIndex} style={{ width: '100%', height: '40px' }} nonChange={handleSliderChange} />
+                    <input type='range' min='0' max='3' value={tabIndex} style={{ width: '100%', height: '40px' }} onChange={handleSliderChange} />
                     <Tabs index={tabIndex} onChange={handleTabsChange}>
                         <TabList>
                             <Tab>Aprobación</Tab>
@@ -86,22 +86,35 @@ const ApproverView = () => {
                             <TabPanel backgroundColor="white">
                                 <p>La aprobación de un evento en la empresa EDEM es un proceso fundamental para garantizar que cada actividad
                                     planificada cumpla con los estándares de calidad y excelencia que representan nuestra institución.
-                                    Nuestro compromiso con la excelencia se refleja en cada etapa del proceso de aprobación.</p>
+                                    Nuestro compromiso con la excelencia se refleja en cada etapa del proceso de aprobación.
+                                    Una vez que un evento recibe la aprobación de EDEM, podemos proceder con confianza en su planificación
+                                    y ejecución. Nos enorgullece ofrecer eventos que fomentan la conexión, el aprendizaje y el crecimiento
+                                    en un ambiente de calidad y profesionalismo.</p>
                             </TabPanel>
                             <TabPanel backgroundColor="white">
                                 <p>La difusión de eventos en EDEM es un componente esencial de nuestra misión de compartir conocimientos,
                                     promover el aprendizaje y fomentar la colaboración en la comunidad empresarial.
-                                    Nos comprometemos a difundir eventos de calidad que aporten valor a nuestros participantes.</p>
+                                    Nos comprometemos a difundir eventos de calidad que aporten valor a nuestros participantes.
+                                    Nuestra estrategia de difusión se centra en llegar a un público diverso y relevante.
+                                    Utilizamos diversos canales de comunicación, como redes sociales, boletines informativos,
+                                    invitaciones personalizadas y alianzas estratégicas, para asegurarnos de que nuestro mensaje.</p>
                             </TabPanel>
                             <TabPanel backgroundColor="white">
                                 <p>Los inscritos en nuestros eventos son el corazón y la fuerza impulsora de la comunidad de EDEM.
                                     Valoramos profundamente a cada individuo que decide unirse a nosotros en nuestros eventos,
-                                    ya que son ellos quienes enriquecen nuestras actividades con sus conocimientos y experiencias únicas.</p>
+                                    ya que son ellos quienes enriquecen nuestras actividades con sus conocimientos y experiencias únicas.
+                                    En EDEM, creemos en la diversidad y la inclusión, y nos enorgullece contar con inscritos de diferentes
+                                    perfiles, industrias y antecedentes. Esta diversidad enriquece las discusiones,
+                                    fomenta la colaboración y brinda una perspectiva amplia en cada evento que organizamos.
+                                    Nuestros inscritos son profesionales.</p>
                             </TabPanel>
                             <TabPanel backgroundColor="white">
                                 <p>Los recursos desempeñan un papel crucial en la organización y éxito de los eventos en EDEM.
                                     Nuestra dedicación a brindar experiencias excepcionales a nuestros participantes requiere una
-                                    planificación y gestión cuidadosa de recursos de todo tipo. Estamos disponibles para garantizar la calidad.</p>
+                                    planificación y gestión cuidadosa de recursos de todo tipo. Estamos disponibles para garantizar la calidad.
+                                    Nuestras bibliotecas bien surtidas, laboratorios de última generación y espacios versátiles de aprendizaje
+                                    son solo algunos ejemplos de los recursos físicos que ponemos a disposición de nuestros participantes.
+                                    Además, contamos con un equipo dedic para hacer que nuestros eventos sean memorables.</p>
                             </TabPanel>
                         </TabPanels>
                     </Tabs>
