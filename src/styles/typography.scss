@@ -1,39 +1,40 @@
-// Reglas @font-face para las fuentes Telegraf
+
 @font-face {
-    font-family: 'Telegraf-Regular';
-    src: url('src/assets/fonts/Telegraf-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Telegraf-UltraBold';
-    src: url('src/assets/fonts/Telegraf-UltraBold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Telegraf-UltraLight';
-    src: url('src/assets/fonts/Telegraf-UltraLight.otf') format('opentype');
-    font-weight: lighter;
-    font-style: normal;
-  }
-  
-  // Reglas @font-face para las fuentes Nocturne
-  @font-face {
-    font-family: 'Nocturne-Regular';
-    src: url('src/assets/fonts/Nocturne-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+  font-family: 'PPTelegraf-Regular';
+  src: url('../../assets/fonts/PPTelegraf-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'PPTelegraf-UltraBold';
+  src: url('../../assets/fonts/PPTelegraf-UltraBold.woff') format('woff');
+  font-weight: 900; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPTelegraf-Ultralight';
+  src: url('../../assets/fonts/PPTelegraf-UltraLight.woff') format('woff');
+  font-weight: 100; 
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Nocturne-Regular';
+  src: url('../../assets/fonts/Nocturne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
   @font-face {
     font-family: 'Nocturne-Black';
-    src: url('src/assets/fonts/Nocturne-Black.otf') format('opentype');
-    font-weight: bold;
+    src: url('../../assets/fonts/NocturneSerif-Black.woff') format('woff'); 
+    font-weight: 900;
     font-style: normal;
-  }
+}
   
   
   // Variables para las fuentes Telegraf
