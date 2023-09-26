@@ -22,25 +22,30 @@ const Home = () => {
     }
 
     return (
+      <Box bg="#e6dfcf">
+        {/* NOTE: Cambiar colores */}
         <Box>
-            {/* NOTE: Cambiar colores */}
-            <Box>
-                <HeaderRender onSearch={handleSearch} />
-            </Box>
-            <Box m="10px" fontSize="xl" fontFamily="Nocturne-Black" color="blue">
-                Próximos eventos
-            </Box>
-            <Box className="father-filter-container">
-                <FilterEvents />
-            </Box>
-            <Box>
-                <GetAllEvents />
-            </Box>
-            <Box display="flex" alignItems="center" justifyContent="space-between" margin="0px 20px">
-                <TopButton />
-                {createEventButton}
-            </Box>
+          <HeaderRender onSearch={handleSearch} />
         </Box>
+        <Box m="10px" fontSize="xl" fontFamily="Nocturne-Black" color="#004368">
+          Próximos eventos
+        </Box>
+        <Box className="father-filter-container">
+          <FilterEvents />
+        </Box>
+        <Box>
+          <GetAllEvents />
+        </Box>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          margin="0px 20px"
+        >
+          <TopButton />
+          {createEventButton}
+        </Box>
+      </Box>
     );
 };
 
