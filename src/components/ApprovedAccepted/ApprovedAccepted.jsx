@@ -59,11 +59,6 @@ const ApprovedAccepted = () => {
         return checkboxes.every((isChecked) => isChecked);
     };
   
-    const phrases1 = ["Item 1", "Item 2", "Item 3"];
-    const phrases2 = ["Item 4", "Item 5", "Item 6"];
-    const phrases3 = ["Item 7", "Item 8", "Item 9"];
-    const phrases4 = ["Item 10", "Item 11", "Item 12"];
-    const phrases5 = ["Item 13", "Item 14", "Item 15"];
   return (
     <>
       <HeaderRender />
@@ -249,7 +244,7 @@ align-items="flex-start">
                                     ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
                                     border:"1px solid #847c7b"
                                 }}
-                                fontSize="9px" height="24px">
+                                fontSize="9px" height="24px" width="70px">
                                 Aprobación
                             </Tab>
                             <Tab
@@ -259,7 +254,7 @@ align-items="flex-start">
                                     ? '#48BB78' : checkboxStatus2.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
                                     border:"1px solid #847c7b"
                                 }}
-                                fontSize="9px" height="24px">
+                                fontSize="9px" height="24px" width="60px">
                                 Recursos
                             </Tab>
                             <Tab
@@ -269,7 +264,7 @@ align-items="flex-start">
                                     ? '#48BB78' : checkboxStatus3.some((isChecked) => isChecked) ? '#F6AD55' :'#f2f2f2',
                                     border:"1px solid #847c7b"
                                 }}
-                                fontSize="9px" height="24px">
+                                fontSize="9px" height="24px" width="52px">
                                 Difusión
                             </Tab>
                        
@@ -280,7 +275,7 @@ align-items="flex-start">
                                     ? '#48BB78' : checkboxStatus4.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
                                     border:"1px solid #847c7b"
                                 }}
-                                fontSize="9px" height="24px">
+                                fontSize="9px" height="24px" width="60px">
                                 Inscritos
                             </Tab>
                        
@@ -291,12 +286,12 @@ align-items="flex-start">
                                     ? '#48BB78' : checkboxStatus5.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
                                     border:"1px solid #847c7b"
                                 }}
-                                fontSize="9px" height="24px">
-                                After
+                                fontSize="9px" height="24px" width="70px">
+                                Post-ev
                             </Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px">
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px" >
                             {checkboxStatus1.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -304,12 +299,12 @@ align-items="flex-start">
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 1)}
                                     >
-                                        <Text color="black">{isChecked ? "" : ""} {phrases1[index]}</Text>
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases1[index]}</Text>
                                     </Checkbox>
                                 </Stack>
                             ))}
                         </TabPanel>
-                        <TabPanel backgroundColor='#f2f2f2'>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus2.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -317,13 +312,13 @@ align-items="flex-start">
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 2)}
                                     >
-                                        <Text color="black">{isChecked ? "" : ""} {phrases2[index]}</Text>
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases2[index]}</Text>
                                     </Checkbox>
                                 </Stack>
                             ))}
                         </TabPanel>
 
-                        <TabPanel backgroundColor='#f2f2f2'>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus3.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -331,12 +326,12 @@ align-items="flex-start">
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 3)}
                                     >
-                                        <Text color="black">{isChecked ? "" : ""} {phrases3[index]}</Text>
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases3[index]}</Text>
                                     </Checkbox>
                                 </Stack>
                             ))}
                         </TabPanel>
-                        <TabPanel backgroundColor='#f2f2f2'>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus4.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -344,12 +339,12 @@ align-items="flex-start">
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 4)}
                                     >
-                                        <Text color="black">{isChecked ? "" : ""} {phrases4[index]}</Text>
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases4[index]}</Text>
                                     </Checkbox>
                                 </Stack>
                             ))}
                         </TabPanel>
-                        <TabPanel backgroundColor='#f2f2f2'>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
                             {checkboxStatus5.map((isChecked, index) => (
                                 <Stack spacing={5} direction='row' key={index}>
                                     <Checkbox
@@ -357,7 +352,7 @@ align-items="flex-start">
                                         defaultChecked={isChecked}
                                         onChange={() => handleCheckboxChange(index, 5)}
                                     >
-                                        <Text color="black">{isChecked ? "" : ""} {phrases5[index]}</Text>
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases5[index]}</Text>
                                     </Checkbox>
                                 </Stack>
                             ))}
