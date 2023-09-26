@@ -156,20 +156,20 @@ const ApprovedAccepted = () => {
                 </div>
                 <Tabs variant='unstyled' my="4">
                     <TabList>
-                        <Tab _selected={{ color: 'white', bg: 'red', borderRadius: "full" }} style={{ fontSize: '12px' }}>
+                        <Tab _selected={{ color: 'black', bg: '#48BB78', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
                             Aprobación
                         </Tab>
-                        <Tab _selected={{ color: 'white', bg: '#004368', borderRadius: "full" }} style={{ fontSize: '12px' }}>
+                        <Tab _selected={{ color: 'black', bg: '#F6AD55', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
                             Recursos
                         </Tab>
-                        <Tab _selected={{ color: 'white', bg: 'green.400', borderRadius: "full" }} style={{ fontSize: '12px' }}>
+                        <Tab _selected={{ color: 'black', bg: '#48BB78', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
                             Difusión
                         </Tab>
-                        <Tab _selected={{ color: 'white', bg: 'green.400', borderRadius: "full" }} style={{ fontSize: '12px' }}>
+                        <Tab _selected={{ color: 'black', bg: '#48BB78', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
                             Inscritos
                         </Tab>
-                        <Tab _selected={{ color: 'white', bg: 'gold', borderRadius: "full" }} style={{ fontSize: '12px' }}>
-                            Post-Evento
+                        <Tab _selected={{ color: 'black', bg: '#F6AD55', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
+                            After
                         </Tab>
                     </TabList>
                     <TabPanels>
@@ -185,7 +185,7 @@ const ApprovedAccepted = () => {
                                 </Checkbox>
                             </Stack>
                             <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
+                                <Checkbox colorScheme='green' defaultChecked>
                                     Pendiente. Servicio Recepción y apoio IT
                                 </Checkbox>
                             </Stack>
@@ -195,7 +195,7 @@ const ApprovedAccepted = () => {
                                 </Checkbox>
                             </Stack>
                             <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
+                                <Checkbox colorScheme='green' defaultChecked>
                                     Confirmación servicio de mesas y camareros
                                 </Checkbox>
                             </Stack>
@@ -207,7 +207,7 @@ const ApprovedAccepted = () => {
                                 </Checkbox>
                             </Stack>
                             <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='red' defaultChecked>
+                                <Checkbox colorScheme='yellow' defaultChecked>
                                     Confirmación servicio limpieza
                                 </Checkbox>
                             </Stack>
@@ -261,7 +261,7 @@ const ApprovedAccepted = () => {
                                 </Checkbox>
                             </Stack>
                             <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
+                                <Checkbox colorScheme='green' defaultChecked>
                                     Estimación: 85 personas
                                 </Checkbox>
                             </Stack>
@@ -271,7 +271,7 @@ const ApprovedAccepted = () => {
                                 </Checkbox>
                             </Stack>
                             <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='red' defaultChecked>
+                                <Checkbox colorScheme='green' defaultChecked>
                                     Interesados deben confirmar el correo
                                 </Checkbox>
                             </Stack>
@@ -298,7 +298,7 @@ const ApprovedAccepted = () => {
                                 </Checkbox>
                             </Stack>
                             <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='red' defaultChecked>
+                                <Checkbox colorScheme='yellow' defaultChecked>
                                     Enviar correo pra todas personas post-evento
                                 </Checkbox>
                             </Stack>

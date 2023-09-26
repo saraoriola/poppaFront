@@ -14,13 +14,13 @@ const ApproverView = () => {
 
     const [tabIndex, setTabIndex] = useState(0)
 
-  const handleSliderChange = (event) => {
-    setTabIndex(parseInt(event.target.value, 10))
-  }
+    const handleSliderChange = (event) => {
+        setTabIndex(parseInt(event.target.value, 10))
+    }
 
-  const handleTabsChange = (index) => {
-    setTabIndex(index)
-  }
+    const handleTabsChange = (index) => {
+        setTabIndex(index)
+    }
 
     return (
         <Center as="section" bg="gray.100" h="100vh">
@@ -64,12 +64,14 @@ const ApproverView = () => {
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <Center my="8" height="20px">
                         <Button backgroundColor="white" color="#cb7862" _hover={{ backgroundColor: "#004368", color: 'white', }} >
-                            Aprobar
+                            Rechazar
                         </Button>
                     </Center>
                     <div>
                         <Center my="8" height="20px">
-                            <Button backgroundColor="#cb7862" color="white" _hover={{ backgroundColor: "#004368", color: 'white', }} > Rechazar</Button>
+                            <Button backgroundColor="#cb7862" color="white" _hover={{ backgroundColor: "#004368", color: 'white', }} >
+                                Aprobar
+                            </Button>
                         </Center>
                     </div>
                 </div>
