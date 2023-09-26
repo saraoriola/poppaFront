@@ -23,9 +23,6 @@ const HeaderEvent = () => {
         width="100%"
         color="white"
         margin={5}
-        justifyContent="space-between"
-        alignItems="center"
-        flexDirection={{ base: 'column', md: 'row' }}
       >
         <Box>
           <Text fontSize="lg">Aquí title</Text>
@@ -33,7 +30,7 @@ const HeaderEvent = () => {
           <Text fontSize="md">Aquí speaker</Text>
         </Box>
 
-        <Box mt={{ base: '1rem', md: '0' }}>
+        <Box>
           <Text fontSize="lg">Aquí day</Text>
           <Text fontSize="md">Aquí month</Text>
         </Box>
