@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Box, Image, Text, Flex } from '@chakra-ui/react';
 import fotoevento from "../../../../assets/images/fotoevento.jpg";
+import { getEventById } from '../../../../features/dashboards/dashboardsSlice'; 
 
 const HeaderEvent = () => {
+  const dispatch = useDispatch();
+  const event = useSelector((state) => state.dashboards.event);
+
+  useEffect((id) => {
+    dispatch(getEventById(id)); 
+  }, [dispatch]);
+
   return (
     <Box
       height="150px"
@@ -25,14 +34,14 @@ const HeaderEvent = () => {
         margin={5}
       >
         <Box>
-          <Text fontSize="lg">Aquí title</Text>
-          <Text fontSize="md">Aquí description</Text>
-          <Text fontSize="md">Aquí speaker</Text>
+          <Text fontSize="lg">{event.title}</Text>
+          <Text fontSize="md">{event.description}</Text>
+          <Text fontSize="md">{event.speacker}</Text>
         </Box>
 
         <Box>
-          <Text fontSize="lg">Aquí day</Text>
-          <Text fontSize="md">Aquí month</Text>
+          <Text fontSize="lg">{event.day}</Text>
+          <Text fontSize="md">{event.month}</Text>
         </Box>
       </Flex>
     </Box>
