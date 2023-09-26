@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import HeaderEvent from "./HeaderEvent/HeaderEvent";
-import Attendees from "./Attendees/Attendees";
 import HeaderDash from "./HeaderDash";
 
 function Dashboard() {
@@ -11,7 +10,7 @@ function Dashboard() {
     <div>
 <HeaderDash/> 
       <HeaderEvent/>
-      <Attendees/>
+
     </div>
   );
 }
