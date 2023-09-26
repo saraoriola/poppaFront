@@ -13,12 +13,14 @@ const QrGenerator = (props) => {
     };
 
     return (
-        <Stack spacing={5} mb={10} mt={10}>
-            <canvas ref={canvasRef} />
-            <Button colorScheme="whatsapp" width={300} onClick={downloadQrImage}>
-                Download as image
-            </Button>
-        </Stack>
+        <>
+            <Stack spacing={5} mb={10} mt={10}>
+                <canvas ref={canvasRef} />
+                <Button colorScheme="whatsapp" width={300} onClick={downloadQrImage}>
+                    Download as image
+                </Button>
+            </Stack>
+        </>
     );
 };
 

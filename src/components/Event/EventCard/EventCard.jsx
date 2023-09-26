@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { getEventById } from "../../../../features/event/eventSlice";
-import eventImg from "../../../../assets/images/desafio.jpg";
-import EventDetailButtons from "../EventDetailButtons/EventDetailButtons";
+import { getEventById } from "../../../features/event/eventSlice";
+import eventImg from "../../../assets/images/desafio.jpg";
+import EventDetailButtons from "../EventDetail/EventDetailButtons/EventDetailButtons";
 import { BsCalendar3 } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { BiTimeFive } from "react-icons/bi";
 import { MdMapsHomeWork } from "react-icons/md";
 import { Card, Box, Text, HStack, Image, Spinner } from "@chakra-ui/react";
 
-const PrintEventDetail = () => {
+const EventCard = () => {
     const { id } = useParams();
     const { event, isLoading } = useSelector((state) => state.event);
     const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const PrintEventDetail = () => {
                     <HStack>
                         <BsCalendar3 size={13} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
-                            {event.dateTime.split("-").reverse().join("-")}
+                            {/* {event.dateTime.split("-").reverse().join("-")} */}
                         </Text>
                     </HStack>
                     <HStack ml="150px">
@@ -86,4 +86,4 @@ const PrintEventDetail = () => {
     );
 };
 
-export default PrintEventDetail;
+export default EventCard;
