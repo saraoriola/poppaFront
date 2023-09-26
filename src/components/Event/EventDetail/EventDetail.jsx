@@ -11,7 +11,7 @@ const EventDetail = () => {
         </Box>
         <Box>
           <PrintEventDetail />
-          <QrGenerator eventId={5} />
+          {/* <QrGenerator eventId={5} /> */}
         </Box>
       </Box>
     );

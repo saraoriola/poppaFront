@@ -17,61 +17,61 @@ import ApprovedAccepted from "./components/ApprovedAccepted/ApprovedAccepted";
 
 
 const routes = createBrowserRouter([
-    {
-        path: "/",
-        element: <Layout />,
-        errorElement: <ErrorPage />,
-        children: [{ index: true, element: <Home /> }],
-    },
-    {
-        path: "login",
-        element: <Login />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "register",
-        element: <Register />,
-        errorElement: <ErrorPage />,
-    },
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [{ index: true, element: <Home /> }],
+  },
+  {
+    path: "login",
+    element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "register",
+    element: <Register />,
+    errorElement: <ErrorPage />,
+  },
 
-    {
-        path: "location",
-        element: <Location />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "dashboard/:id",
-        element: <Dashboard />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "approver/view",
-        element: <ApproverView />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "eventdetail/:id",
-        element: <EventDetail />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "counter",
-        element: <Counter />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "approved/accepted",
-        element: <ApprovedAccepted />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        element: <PrivateRoutes />,
-        errorElement: <ErrorPage />,
-        children: [
-            { path: "logout", element: <Logout /> },
-            { path: "admin", element: <Admin /> },
-        ],
-    },
+  {
+    path: "location",
+    element: <Location />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "dashboard/:id",
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "approver/view",
+    element: <ApproverView />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "eventdetail/:id",
+    element: <EventDetail />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "counter",
+    element: <Counter />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "approved/accepted",
+    element: <ApprovedAccepted />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    element: <PrivateRoutes />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "logout", element: <Logout /> },
+      { path: "admin", element: <Admin /> },
+    ],
+  },
 ]);
 
 export default routes;

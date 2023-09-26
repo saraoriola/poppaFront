@@ -14,8 +14,6 @@ const PrintEventDetail = () => {
   const { id } = useParams();
   const { event, isLoading } = useSelector((state) => state.event);
   const dispatch = useDispatch();
-
-  console.log(event);
   useEffect(() => {
     async function fetchData() {
       try {
