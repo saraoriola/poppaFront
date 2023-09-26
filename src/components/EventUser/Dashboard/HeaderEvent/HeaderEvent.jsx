@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom'; // Importa useParams para obtener el ID de la URL
+import { useParams } from 'react-router-dom';
 import { Box, Image, Text, Flex } from '@chakra-ui/react';
 import fotoevento from "../../../../assets/images/fotoevento.jpg";
-import { getEventById } from '../../../../features/dashboards/dashboardsSlice'; 
+import { getEventById } from '../../../../features/dashboards/dashboardsSlice';
 
 const HeaderEvent = () => {
   const dispatch = useDispatch();
   const event = useSelector((state) => state.dashboards.event);
-  const { id } = useParams(); // Obtiene el ID de los parámetros de la URL
+  const { id } = useParams();
 
   useEffect(() => {
-    dispatch(getEventById(id)); 
-  }, [dispatch, id]); // Asegúrate de incluir id en la lista de dependencias
+    dispatch(getEventById(id));
+  }, [dispatch, id]);
 
   return (
     <Box
@@ -23,8 +23,8 @@ const HeaderEvent = () => {
       <Image
         src={fotoevento}
         objectFit="cover"
-        width="100%" 
-        height="100%" 
+        width="100%"
+        height="100%"
         position="absolute"
         top="0"
         left="0"
@@ -33,7 +33,8 @@ const HeaderEvent = () => {
         position="absolute"
         width="100%"
         color="white"
-        margin={5}
+        padding={5}
+        justifyContent="space-between"
       >
         <Box>
           <Text fontSize="lg">{event.title}</Text>
@@ -41,7 +42,9 @@ const HeaderEvent = () => {
           <Text fontSize="md">{event.speacker}</Text>
         </Box>
 
-        <Box>
+        <Box
+          textAlign="center"
+        >
           <Text fontSize="lg">{event.day}</Text>
           <Text fontSize="md">{event.month}</Text>
         </Box>
