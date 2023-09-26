@@ -22,23 +22,15 @@
             "data": [
                 {
                     "x": "9:00",
-                    "y": 185
+                    "y": 1
                 },
                 {
                     "x": "10:00",
-                    "y": 120
+                    "y": 3
                 },
                 {
                     "x": "11:00",
-                    "y": 40
-                },
-                {
-                    "x": "12:00",
-                    "y": 45
-                },
-                {
-                    "x": "13:00",
-                    "y": 0
+                    "y": 5
                 }
             ]
         },
@@ -47,23 +39,15 @@
             "data": [
                 {
                     "x": "9:00",
-                    "y": 0
+                    "y": 8
                 },
                 {
                     "x": "10:00",
-                    "y": 50
+                    "y": 5
                 },
                 {
                     "x": "11:00",
-                    "y": 70
-                },
-                {
-                    "x": "12:00",
-                    "y": 150
-                },
-                {
-                    "x": "13:00",
-                    "y": 220
+                    "y": 6
                 }
             ]
         }
@@ -77,56 +61,47 @@
     ],
     "nationality": [
         {
-            "country": "USA",
-            "United States": 250
+            "country": "ARG",
+            "quantity": 2
         },
         {
-            "country": "CAN",
-            "Canada": 70
+            "country": "COL",
+            "quantity": 7
         },
         {
-            "country": "MEX",
-            "Mexico": 80
+            "country": "ESP",
+            "quantity": 8
         },
         {
-            "country": "UK",
-            "United Kingdom": 40
-        },
-        {
-            "country": "GER",
-            "Germany": 50
+            "country": "BRA",
+            "quantity": 4
         }
     ],
     "type": [
         {
-            "id": "Marina de Empresas",
-            "label": "Business Marina",
-            "value": 180
+            "id": "FULLSTACK",
+            "label": "FULLSTACK",
+            "value": 2
         },
         {
-            "id": "AAA",
-            "label": "AAA",
-            "value": 90
+            "id": "CIBERSEGURIDAD",
+            "label": "CIBERSEGURIDAD",
+            "value": 3
         },
         {
-            "id": "Patronos",
-            "label": "Patrons",
-            "value": 50
+            "id": "UX/UI",
+            "label": "UX/UI",
+            "value": 3
         },
         {
-            "id": "Miembros",
-            "label": "Members",
-            "value": 150
-        },
-        {
-            "id": "Centro educativo",
-            "label": "Educational Center",
-            "value": 30
+            "id": "DATA",
+            "label": "DATA",
+            "value": 3
         },
         {
             "id": "Otros",
-            "label": "Others",
-            "value": 30
+            "label": "Otros",
+            "value": 3
         }
     ]
 }
