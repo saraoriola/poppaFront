@@ -6,6 +6,7 @@ import { GoLocation } from 'react-icons/go';
 import { BiTimeFive } from 'react-icons/bi';
 import { MdMapsHomeWork } from 'react-icons/md';
 import banner from "../../assets/images/desafio.jpg";
+import { Link } from 'react-router-dom';
 import "./ApprovedAccepted.scss";
 
 const ApprovedAccepted = () => {
@@ -107,6 +108,30 @@ const ApprovedAccepted = () => {
             fontSize="14px"
           >
             Modificar
+          </Button>
+        </Flex>
+
+        <Flex justifyContent="space-between" mt={2}>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            className="button"
+            fontSize="14px"
+          >
+            Inscribir asistente
+          </Button>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            <Link to="/dashboard/:id">Dashboard</Link>
           </Button>
         </Flex>
       </Box>
