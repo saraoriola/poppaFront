@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import PrintEvents from "../PrintEvents/PrintEvents";
 
-const FitlerEvents = () => {
+const FilterEvents = () => {
     const { userRole, userEvents } = useSelector((state) => state.auth);
     const { events } = useSelector((state) => state.event);
     const [filter, setFilter] = useState("Todos");
@@ -97,4 +97,4 @@ const FitlerEvents = () => {
     );
 };
 
-export default FitlerEvents;
+export default FilterEvents;
