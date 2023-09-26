@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import Layout from "./Layout";
 
 const PrivateRoutes = () => {
-    const user = useSelector((state) => state.user);
+    const { userConnected } = useSelector((state) => state.auth);
 
-    if (!user) return <Navigate to="/login" />;
+    if (!userConnected) return <Navigate to="/login" />;
 
     return <Layout />;
 };
