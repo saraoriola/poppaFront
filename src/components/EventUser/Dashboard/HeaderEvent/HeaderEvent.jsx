@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom'; // Importa useParams para obtener el ID de la URL
 import { Box, Image, Text, Flex } from '@chakra-ui/react';
 import fotoevento from "../../../../assets/images/fotoevento.jpg";
 import { getEventById } from '../../../../features/dashboards/dashboardsSlice'; 
@@ -7,10 +8,11 @@ import { getEventById } from '../../../../features/dashboards/dashboardsSlice';
 const HeaderEvent = () => {
   const dispatch = useDispatch();
   const event = useSelector((state) => state.dashboards.event);
+  const { id } = useParams(); // Obtiene el ID de los parámetros de la URL
 
-  useEffect((id) => {
+  useEffect(() => {
     dispatch(getEventById(id)); 
-  }, [dispatch]);
+  }, [dispatch, id]); // Asegúrate de incluir id en la lista de dependencias
 
   return (
     <Box
