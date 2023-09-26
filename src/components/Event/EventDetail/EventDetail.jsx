@@ -5,15 +5,15 @@ import HeaderRender from "../../Header/HeaderRender/HeaderRender";
 
 const EventDetail = () => {
     return (
+      <Box bg="#e6dfcf">
         <Box>
-            <Box>
-                <HeaderRender />
-            </Box>
-            <Box>
-                <PrintEventDetail />
-                <QrGenerator eventId={5} />
-            </Box>
+          <HeaderRender />
         </Box>
+        <Box>
+          <PrintEventDetail />
+          <QrGenerator eventId={5} />
+        </Box>
+      </Box>
     );
 };
 
