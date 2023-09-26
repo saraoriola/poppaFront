@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Link } from "@chakra-ui/react";
-import HeaderRender from "../Header/HeaderRender/HeaderRender";
+import { Box } from "@chakra-ui/react";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import TopButton from "./TopButton/TopButton";
@@ -8,7 +7,7 @@ import CreateEventButton from "./CreateEventButton/CreateEventButton";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-    // const { userRole } = useSelector((state) => state.auth);
+    const { userRole } = useSelector((state) => state.auth);
     const [searchResults, setSearchResults] = useState([]);
 
     const handleSearch = (results) => {
@@ -17,9 +16,9 @@ const Home = () => {
 
     let createEventButton = null;
 
-    // if (userRole === "admin") {
-    //     createEventButton = <CreateEventButton />;
-    // }
+    if (userRole === "admin") {
+        createEventButton = <CreateEventButton />;
+    }
 
     return (
       <Box bg="#e6dfcf">

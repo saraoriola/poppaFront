@@ -15,7 +15,6 @@ const HeaderRenderSearch = ({ onSearch }) => {
       bg="#004368"
     >
       <Box w="100px" bg="white">
-        {/* NOTE: Habrá que ponerle un modal o algo a un icono, si no queda muy feo */}
         <Search onSearch={onSearch} />
       </Box>
       <Box>

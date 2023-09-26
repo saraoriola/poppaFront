@@ -32,11 +32,9 @@ const PrintEventDetail = () => {
   return (
     <Box>
       <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
-        {/* NOTE: Aquí iría la url del banner */}
         <CardHeader p="10px">
           <Image src={eventImg} alt="Banner" w="22.5rem" />
         </CardHeader>
-        {/* Como utilizo aquí la variable del scss de estilos */}
         <CardBody
           p="0px 10px 10px"
           fontFamily="Nocturne-Black"
@@ -44,7 +42,6 @@ const PrintEventDetail = () => {
           fontSize="xl"
         >
           <Text>{event.title}</Text>
-          {/* <Text>{event.description}</Text> */}
         </CardBody>
         <CardFooter
           display="column"
