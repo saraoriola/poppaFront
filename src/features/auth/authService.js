@@ -6,12 +6,12 @@ const register = async (userData) => {
 };
 
 const login = async (userData) => {
-    const res = await apiClient.post("login", userData);
+    const res = await apiClient.post("/users/login", userData);
     if (res.data) {
         localStorage.setItem("userConnected", JSON.stringify(res.data.user));
         localStorage.setItem("userEvents", JSON.stringify(res.data.user.events));
         localStorage.setItem("userRole", JSON.stringify(res.data.user.role));
-        localStorage.setItem("token", JSON.stringify(res.data.token));
+        localStorage.setItem("token", res.data.token);
     }
     return res.data;
 };
