@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+{/* import { getEventById } from '../../../../features/dashboards/dashboardsSlice'; */}
 import { ResponsiveBump } from '@nivo/bump';
+
 import { entry_exit as data } from '../../../../../../src/data/data.json';
 
-const invertYData = (data) => {
+const invertYData = (data) => { //getEventById
   return data.map((serie) => ({
     id: serie.id,
     data: serie.data.map((d) => ({ x: d.x, y: -d.y })),
@@ -10,21 +14,31 @@ const invertYData = (data) => {
 };
 
 const LineChart = () => {
-  const invertedData = invertYData(data);
+  {/* const dispatch = useDispatch();
+const event = useSelector((state) => state.dashboards.event);
+const { id } = useParams();
+
+useEffect(() => {
+  dispatch(getEventById(id));
+}, [dispatch, id]);
+console.log(event) */}
+
+  const invertedData = invertYData(data); //getEventById
 
   const chartBackgroundColor = '#f8f8f8'; 
-  const chartBorderRadius = '10px'; 
+  const chartBorderRadius = '4px'; 
 
   const chartStyle = {
     height: '140px',
     background: chartBackgroundColor,
     borderRadius: chartBorderRadius,
+    boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
   };
 
   return (
     <div style={chartStyle}>
       <ResponsiveBump
-        data={invertedData}
+        data={invertedData} //event.entry_exit
         xOuterPadding={0.15}
         yOuterPadding={0.6}
         colors={{ scheme: 'nivo' }}

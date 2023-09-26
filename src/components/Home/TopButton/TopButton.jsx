@@ -1,5 +1,6 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Icon, Image } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const TopButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -36,9 +37,10 @@ const TopButton = () => {
           bottom="35"
           left="35"
           color="orange"
+          borderRadius="full"
           bg="white"
         >
-          <Button>Top</Button>
+          <AiOutlineArrowUp />
         </Box>
       )}
     </>

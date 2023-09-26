@@ -1,24 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+{/* import { getEventById } from '../../../../features/dashboards/dashboardsSlice'; */}
 import { ResponsivePie } from '@nivo/pie';
-import { type as data } from '../../../../../../src/data/data.json';
+
+import { type as data } from '../../../../../../src/data/data.json'; 
 
 const PieChart = () => {
+{/* const dispatch = useDispatch();
+const event = useSelector((state) => state.dashboards.event);
+const { id } = useParams();
+
+useEffect(() => {
+  dispatch(getEventById(id));
+}, [dispatch, id]);
+console.log(event) */}
+
   const chartBackgroundColor = '#f8f8f8'; 
-  const chartBorderRadius = '10px'; 
+  const chartBorderRadius = '4px'; 
 
   const chartStyle = {
     height: '150px', 
     background: chartBackgroundColor,
     borderRadius: chartBorderRadius,
+    boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
   };
 
   return (
     <div style={chartStyle}>
       <ResponsivePie
-        data={data}
+        data={data} //event.type
         margin={{ top: 30, right: 150, bottom: 30 }}
         sortByValue={true}
-        innerRadius={0.1} 
+        innerRadius={0.6} 
         padAngle={0.7}
         cornerRadius={2}
         activeOuterRadiusOffset={10} 
