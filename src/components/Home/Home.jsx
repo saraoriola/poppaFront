@@ -23,11 +23,7 @@ const Home = () => {
 
     return (
       <Box bg="#e6dfcf">
-        {/* NOTE: Cambiar colores */}
-        <Box>
-          <HeaderRender onSearch={handleSearch} />
-        </Box>
-        <Box m="10px" fontSize="xl" fontFamily="Nocturne-Black" color="#004368">
+        <Box m="0px 10px 10px 10px" fontSize="xl" fontFamily="Nocturne-Black" color="#004368">
           Próximos eventos
         </Box>
         <Box className="father-filter-container">
