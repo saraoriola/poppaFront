@@ -134,6 +134,55 @@ const ApprovedAccepted = () => {
             <Link to="/dashboard/:id">Dashboard</Link>
           </Button>
         </Flex>
+
+        <Flex justifyContent="space-between" mt={2}>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            className="button"
+            fontSize="14px"
+          >
+            Salidas
+          </Button>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            Foro
+          </Button>
+        </Flex>
+
+        <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="312px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+            mt={2}
+          >
+            Lector QR
+          </Button>
+
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="312px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+            mt={2}
+          >
+            Editar enlace a la sesión
+          </Button>
+
       </Box>
     </>
   );
