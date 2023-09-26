@@ -16,23 +16,21 @@ const PrintEvents = ({ filteredEvents }) => {
     <>
       {filteredEvents.map((event) => (
         <Link key={event.id} to={"/eventdetail/" + event.id}>
-          <Card m="auto" mt="12px" maxW="22.5rem">
+          <Card m="auto" mt="6px" mb="6px" maxW="22.5rem">
             {/* NOTE: Aquí iría la url del banner */}
             <CardHeader p="10px">
-              <Image src={eventImg} alt="Dan Abramov" w="22.5rem" />
+              <Image src={eventImg} alt="Event" w="22.5rem" />
             </CardHeader>
-            {/* Como utilizo aquí la variable del scss de estilos */}
             <CardBody
               p="0px 10px 10px"
               fontFamily="Nocturne-Black"
-              color="blue"
+              color="#004368"
             >
               <Text>{event.title}</Text>
-              {/* <Text>{event.description}</Text> */}
             </CardBody>
             <CardFooter display="flex" p="0px 10px 10px">
               <Box>{event.dateTime}</Box>
-              {/* Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
+              {/* NOTE: Aquí de momento dejo la duración del evento ya que en dateTime supongo que está la hora */}
               <Box>{event.duration_min}</Box>
               <Box>EDEM</Box>
             </CardFooter>
