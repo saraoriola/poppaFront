@@ -41,7 +41,6 @@ const PrintEventDetail = () => {
                     <Text pl="24px" mt="5px" fontFamily="Nocturne-Black" color="#004368" fontSize="16px">
                         {event.title}
                     </Text>
-                    {/* <Text>{event.description}</Text> */}
 
                     <CardFooter display="column" p="0px 10px 10px" fontFamily="Telegraf-UltraLight" color="#847c7b">
                         <Box display="flex" justifyContent="space-between">
