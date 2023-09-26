@@ -14,7 +14,7 @@ const HeaderEvent = () => {
   useEffect(() => {
     dispatch(getEventById(id));
   }, [dispatch, id]);
- console.log(event)
+
   return (
     <Box>
     <Box
