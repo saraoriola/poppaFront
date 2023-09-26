@@ -6,7 +6,7 @@ const Layout = () => {
     return (
         <>
         {/* Acá solo se renderizan los componentes que queremos que se muestren en todas las páginas */}
-           {/*  <HeaderRender/>  NO LO TRAE :s */}
+            <HeaderRender/>
             <div className="custom-margin">
                 <Outlet />
             </div>

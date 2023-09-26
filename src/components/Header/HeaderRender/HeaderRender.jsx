@@ -4,24 +4,29 @@ import React from "react";
 import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
 import logo from "../../../assets/images/Logotipo.png";
-import { BiArrowBack } from "react-icons/bi";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const HeaderRender = () => {
   return (
     <Box
       display="flex"
-      justifyContent="space-around"
       alignItems="center"
-      height="2.75rem"
-      bg="#004368"
+      justifyContent="space-between"
+      width="100%"
+      height="44px"
+      backgroundColor="#004368"
     >
-      <Box>
-        <BiArrowBack />
+      <Box ml="15px">
+        <AiOutlineArrowLeft
+          style={{ cursor: "pointer" }}
+          size="28"
+          color="white"
+        />
       </Box>
       <Box>
         <Image src={logo}></Image>
       </Box>
-      <Box>
+      <Box mr="15px">
         <Profile />
       </Box>
     </Box>
