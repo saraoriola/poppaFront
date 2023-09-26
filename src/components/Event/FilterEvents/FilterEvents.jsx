@@ -33,68 +33,68 @@ const FitlerEvents = () => {
     }, [filter, userEvents, userRole?.id, events]);
 
     return (
-        <>
-            <Box>
-                <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
-                    <Box className="button-scroll-container">
-                        {/* NOTE: Cambiar color - active y fuente de letra */}
-                        <Button
-                            borderRadius="20px"
-                            m="0px 5px"
-                            height="2rem"
-                            color="orange"
-                            fontFamily="Telegrafregular"
-                            onClick={() => handleFilterChange("Todos")}
-                        >
-                            Todos
-                        </Button>
-                        <Button
-                            borderRadius="20px"
-                            m="0px 5px"
-                            height="2rem"
-                            color="orange"
-                            fontFamily="Telegrafregular"
-                            onClick={() => handleFilterChange("Inscrito")}
-                        >
-                            Inscrito
-                        </Button>
-                        <Button
-                            borderRadius="20px"
-                            m="0px 5px"
-                            height="2rem"
-                            color="orange"
-                            fontFamily="Telegrafregular"
-                            onClick={() => handleFilterChange("Pendiente")}
-                        >
-                            Pendientes de aprobación
-                        </Button>
-                        {userRole.type === "admin" && (
-                            <Button
-                                borderRadius="20px"
-                                m="0px 5px"
-                                height="2rem"
-                                color="orange"
-                                fontFamily="Telegrafregular"
-                                onClick={() => handleFilterChange("Organizo")}
-                            >
-                                Organizo
-                            </Button>
-                        )}
-                        <Button
-                            borderRadius="20px"
-                            m="0px 5px"
-                            height="2rem"
-                            color="orange"
-                            fontFamily="Telegrafregular"
-                            onClick={() => handleFilterChange("Finalizado")}
-                        >
-                            Finalizado
-                        </Button>
-                    </Box>
-                </Box>
+      <>
+        <Box>
+          <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
+            <Box className="button-scroll-container">
+              {/* NOTE: Cambiar color - active y fuente de letra */}
+              <Button
+                borderRadius="20px"
+                m="0px 5px"
+                height="2rem"
+                color="#cb7862"
+                fontFamily="Telegraf-UltraLight"
+                onClick={() => handleFilterChange("Todos")}
+              >
+                Todos
+              </Button>
+              <Button
+                borderRadius="20px"
+                m="0px 5px"
+                height="2rem"
+                color="#cb7862"
+                fontFamily="Telegraf-UltraLight"
+                onClick={() => handleFilterChange("Inscrito")}
+              >
+                Inscrito
+              </Button>
+              <Button
+                borderRadius="20px"
+                m="0px 5px"
+                height="2rem"
+                color="#cb7862"
+                fontFamily="Telegraf-UltraLight"
+                onClick={() => handleFilterChange("Pendiente")}
+              >
+                Pendientes de aprobación
+              </Button>
+              {userRole.type === "admin" && (
+                <Button
+                  borderRadius="20px"
+                  m="0px 5px"
+                  height="2rem"
+                  color="#cb7862"
+                  fontFamily="Telegraf-UltraLight"
+                  onClick={() => handleFilterChange("Organizo")}
+                >
+                  Organizo
+                </Button>
+              )}
+              <Button
+                borderRadius="20px"
+                m="0px 5px"
+                height="2rem"
+                color="#cb7862"
+                fontFamily="Telegraf-UltraLight"
+                onClick={() => handleFilterChange("Finalizado")}
+              >
+                Finalizado
+              </Button>
             </Box>
-            <PrintEvents filteredEvents={filteredEvents} />
-        </>
+          </Box>
+        </Box>
+        <PrintEvents filteredEvents={filteredEvents} />
+      </>
     );
 };
 

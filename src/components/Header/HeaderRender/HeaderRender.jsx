@@ -12,7 +12,7 @@ const HeaderRender = ({ onSearch }) => {
       justifyContent="space-around"
       alignItems="center"
       height="2.75rem"
-      bg="blue"
+      bg="#004368"
     >
       <Box w="100px" bg="white">
         {/* NOTE: Habrá que ponerle un modal o algo a un icono, si no queda muy feo */}

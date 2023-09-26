@@ -19,16 +19,14 @@ const PrintEvents = ({ filteredEvents }) => {
           <Card m="auto" mt="12px" maxW="22.5rem">
             {/* NOTE: Aquí iría la url del banner */}
             <CardHeader p="10px">
-              <Image src={eventImg} alt="Dan Abramov" w="22.5rem" />
+              <Image src={eventImg} alt="Event" w="22.5rem" />
             </CardHeader>
-            {/* Como utilizo aquí la variable del scss de estilos */}
             <CardBody
               p="0px 10px 10px"
               fontFamily="Nocturne-Black"
-              color="blue"
+              color="#004368"
             >
               <Text>{event.title}</Text>
-              {/* <Text>{event.description}</Text> */}
             </CardBody>
             <CardFooter display="flex" p="0px 10px 10px">
               <Box>{event.dateTime}</Box>
