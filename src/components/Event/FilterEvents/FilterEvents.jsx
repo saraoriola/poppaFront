@@ -22,7 +22,7 @@ const FilterEvents = () => {
                 setFilteredEvents(events.filter((event) => event.estado === "Pendiente"));
                 break;
             case "Organizo":
-                setFilteredEvents(events.filter((event) => event.organizador === userRole.id));
+                setFilteredEvents(events.filter((event) => event.organizador === userRole?.id));
                 break;
             case "Finalizado":
                 setFilteredEvents(events.filter((event) => event.estado === "Finalizado"));
@@ -67,7 +67,7 @@ const FilterEvents = () => {
               >
                 Pendientes de aprobación
               </Button>
-              {userRole.type === "admin" && (
+              {userRole?.type === "admin" && (
                 <Button
                   borderRadius="20px"
                   m="0px 5px"

@@ -8,7 +8,7 @@ import CreateEventButton from "./CreateEventButton/CreateEventButton";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-    const { userRole } = useSelector((state) => state.auth);
+    // const { userRole } = useSelector((state) => state.auth);
     const [searchResults, setSearchResults] = useState([]);
 
     const handleSearch = (results) => {
@@ -17,9 +17,9 @@ const Home = () => {
 
     let createEventButton = null;
 
-    if (userRole === "admin") {
-        createEventButton = <CreateEventButton />;
-    }
+    // if (userRole === "admin") {
+    //     createEventButton = <CreateEventButton />;
+    // }
 
     return (
       <Box bg="#e6dfcf">
