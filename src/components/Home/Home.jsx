@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Link } from "@chakra-ui/react";
-import HeaderRender from "../Header/HeaderRender/HeaderRender";
+import { Box } from "@chakra-ui/react";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import TopButton from "./TopButton/TopButton";

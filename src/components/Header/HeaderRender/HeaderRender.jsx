@@ -1,4 +1,3 @@
-// HeaderRender.js
 import { Box, Icon, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import Search from "../Search/Search";
