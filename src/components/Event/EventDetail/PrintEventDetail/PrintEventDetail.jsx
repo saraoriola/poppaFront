@@ -29,74 +29,42 @@ const PrintEventDetail = () => {
   if (isLoading) {
     return <Spinner />;
   }
-
-  return (
-    <Box>
-      <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
-        <Image
-          src={eventImg}
-          alt="Banner"
-          w="312px"
-          h="140px"
-          ml="24px"
-          mt="20px"
-          borderRadius="4px"
-          objectFit="cover"
-        />
-        <Text
-          pl="24px"
-          mt="5px"
-          fontFamily="Nocturne-Black"
-          color="#004368"
-          fontSize="16px"
-        >
-          {event.title}
-        </Text>
-        <HStack ml="24px">
-          <HStack>
-            <BsCalendar3 size={13} color="#cb7862" />
-            <Text
-              fontFamily="PPTelegraf-Ultralight"
-              fontSize="13"
-              color="#847c7b"
-            >
-              {event.dateTime.split("-").reverse().join("-")}
-            </Text>
-          </HStack>
-          <HStack ml="150px">
-            <BiTimeFive size={13} color="#cb7862" />
-            <Text
-              fontFamily="PPTelegraf-Ultralight"
-              fontSize="13"
-              color="#847c7b"
-            >
-              18:30 h
-            </Text>
-          </HStack>
-        </HStack>
-        <HStack>
-          <HStack ml="24px">
-            <GoLocation size={13} color="#cb7862" />
-            <Text
-              fontFamily="PPTelegraf-Ultralight"
-              fontSize="13"
-              color="#847c7b"
-            >
-              EDEM
-            </Text>
-          </HStack>
-          <HStack ml="210px">
-            <MdMapsHomeWork size={13} color="#cb7862" />
-            <Text
-              fontFamily="PPTelegraf-Ultralight"
-              fontSize="13"
-              color="#847c7b"
-            >
-              {event.location_id}
-            </Text>
-          </HStack>
-        </HStack>
-      </Card>
+    return (
+        <>
+            <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
+                <Image src={eventImg} alt="Banner" w="312px" h="140px" ml="24px" mt="20px" borderRadius="4px" objectFit="cover" />
+                <Text pl="24px" mt="5px" fontFamily="Nocturne-Black" color="#004368" fontSize="16px">
+                    {event.title}
+                </Text>
+                <HStack ml="24px">
+                    <HStack>
+                        <BsCalendar3 size={13} color="#cb7862" />
+                        <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
+                            {/* {event.dateTime.split("-").reverse().join("-")} */}
+                        </Text>
+                    </HStack>
+                    <HStack ml="150px">
+                        <BiTimeFive size={13} color="#cb7862" />
+                        <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
+                            18:30 h
+                        </Text>
+                    </HStack>
+                </HStack>
+                <HStack>
+                    <HStack ml="24px">
+                        <GoLocation size={13} color="#cb7862" />
+                        <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
+                            EDEM
+                        </Text>
+                    </HStack>
+                    <HStack ml="210px">
+                        <MdMapsHomeWork size={13} color="#cb7862" />
+                        <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
+                            {event.location_id}
+                        </Text>
+                    </HStack>
+                </HStack>
+            </Card>
 
       <Box m="10px 25px 10px 25px">
         <Text>Categorias</Text>
