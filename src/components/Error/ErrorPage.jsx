@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Text, Center, Button, Flex } from '@chakra-ui/react';
+import { Box, Image, Text, Button, Flex } from '@chakra-ui/react';
 import { Link, useRouteError } from 'react-router-dom';
 import pageNotFoundImg from '../../assets/images/404.svg';
 
