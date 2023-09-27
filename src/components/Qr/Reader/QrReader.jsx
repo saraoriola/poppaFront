@@ -1,5 +1,6 @@
-import { Heading, Radio, RadioGroup, Stack, Text } from "@chakra-ui/react";
+import { Radio, RadioGroup, Stack, Text, Box } from "@chakra-ui/react";
 import useQrReader from "../../../hooks/useQrReader";
+import "./QrReader.scss";
 
 const QrReader = () => {
     const [scanResult, setScanResult, isCheckIn, setIsCheckIn] = useQrReader();
@@ -10,25 +11,24 @@ const QrReader = () => {
     };
 
     return (
-        <Stack spacing={5} mb={10} mt={10}>
-            <Heading>QR Reader</Heading>
+        <Box pt="200px" pb="350px" bgColor="gray">
             <RadioGroup defaultValue="1">
                 <Stack spacing={5} direction="row">
                     <Radio colorScheme="green" value="1" onChange={() => resetScanner(true)}>
                         Check-in
                     </Radio>
-                    <Radio colorScheme="red" value="2" onChange={() => resetScanner(false)}>
+                    {/* <Radio colorScheme="red" value="2" onChange={() => resetScanner(false)}>
                         Check-out
-                    </Radio>
+                    </Radio> */}
                 </Stack>
             </RadioGroup>
             <div id="reader"></div>
             {scanResult && (
-                <Text fontSize="50px" color={isCheckIn ? "green.200" : "tomato"}>
+                <Text fontSize="20px" color={isCheckIn ? "green.200" : "tomato"}>
                     {scanResult}
                 </Text>
             )}
-        </Stack>
+        </Box>
     );
 };
 
