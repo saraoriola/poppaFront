@@ -16,7 +16,7 @@ const PrintEvents = ({ filteredEvents }) => {
     <>
       {filteredEvents.map((event) => (
         <Link key={event.id} to={"/eventdetail/" + event.id}>
-          <Card m="auto" mt="6px" mb="6px" maxW="22.5rem">
+          <Card  mb="12px" width="312px" height="215px">
             {/* NOTE: Aquí iría la url del banner */}
             <CardHeader p="10px">
               <Image src={eventImg} alt="Event" w="22.5rem" />
