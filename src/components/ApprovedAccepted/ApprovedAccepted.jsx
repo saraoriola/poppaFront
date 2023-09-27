@@ -93,7 +93,7 @@ const ApprovedAccepted = () => {
             Inscribir asistente
           </Button>
           <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="148px" border="1px solid #cb7862" fontSize="14px">
-            <Link to={`/dashboard/${id}`}>Dashboard</Link>
+            <Link to={`/dashboard/5`}>Dashboard</Link>
           </Button>
         </Flex>
         <Flex justifyContent="space-between" mt={2}>
