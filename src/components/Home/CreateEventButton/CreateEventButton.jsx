@@ -10,18 +10,9 @@ const CreateEventButton = () => {
     navigate("/urlDeCrearEvento");
   };
   return (
-    <>
-      <Box
-        onClick={goCreateEvent}
-        position="fixed"
-        bottom="35"
-        right="35"
-        color="orange"
-        bg="white"
-      >
-        <Button>+</Button>
-      </Box>
-    </>
+    <Box onClick={goCreateEvent} position="fixed" bottom="35" right="35" color="orange" bg="white">
+      <Button>+</Button>
+    </Box>
   );
 };
 

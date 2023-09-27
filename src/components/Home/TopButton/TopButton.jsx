@@ -28,16 +28,8 @@ const TopButton = () => {
   return (
     <>
       {showButton && (
-        <Box
-          onClick={scrollToTop}
-          position="fixed"
-          bottom="35"
-          left="35"
-          color="orange"
-          borderRadius="full"
-          bg="white"
-        >
-          <AiOutlineArrowUp />
+        <Box onClick={scrollToTop} position="fixed" bottom="35" left="35" color="orange" borderRadius="full" bg="white" width="36px" height="36px" display="flex" alignItems="center" justifyContent="center" border="2px solid #cb7862">
+          <AiOutlineArrowUp color="#cb7862" size={22} />
         </Box>
       )}
     </>
