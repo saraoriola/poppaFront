@@ -1,74 +1,40 @@
-import { Button } from "@chakra-ui/button";
-import { Box, Flex } from "@chakra-ui/layout";
 import React, { useState } from "react";
 import { AiOutlineShareAlt, AiFillCalendar } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { Flex, Button } from "@chakra-ui/react";
 
-const EventDetailButtons = () => {
-  const [registered, setRegistered] = useState(false);
+const EventDetailButtons = ({ registered }) => {
+  const { id } = useParams();
+  const [isRegistered, setIsRegistered] = useState(registered);
 
-  const handleRegister = () => {
-    setRegistered(!registered);
-  };
+  const handleRegister = () => setIsRegistered(!isRegistered);
 
   return (
     <>
-      <Flex justifyContent="space-between" padding="1rem">
-        <Flex gap="1rem">
-          <AiOutlineShareAlt size="36" color="#cb7862" />
-          <AiFillCalendar size="36" color="#cb7862" />
+      <Flex justifyContent="space-between" mt={5} ml={5} mr={6}>
+        <Flex gap="1rem" ml={1}>
+          <AiOutlineShareAlt size="28" color="#cb7862" />
+          <AiFillCalendar size="28" color="#cb7862" />
         </Flex>
         <Button
-          fontFamily="Telegraf-Regular"
-          bg="#cb7862"
-          color="white"
-          minW="148px"
-          onClick={handleRegister}
-        >
-          {registered ? "Desinscribirse" : "Inscribirse"}
+          bg="#cb7862" color="white" w="148px" h="32px" onClick={handleRegister} >
+          {isRegistered ? "Desinscribirse" : "Inscribirse"}
         </Button>
       </Flex>
-      {registered && (
+      {isRegistered && (
         <>
           <Flex justifyContent="space-evenly" padding="1rem">
-            {/* NOTE: Enlace a la pantalla qr */}
-            {/* NOTE: Solucionar bug de que cuando pulso el botón se queda blanco */}
-            {/* NOTE: Cabmiar Iconos a los buenos */}
-            {/* NOTE: Reajustar los botones para que se vean bien */}
-            {/* NOTE: No sé porque abajo del todo me sale download as image (tampoco he mirado por que xd) */}
-            {/* NOTE: Hardcodear las categorías */}
-            <Link to={""}>
-              <Button
-                fontFamily="Telegraf-Regular"
-                bg="#f2f2f2"
-                border="1px"
-                borderColor="#cb7862"
-                color="#cb7862"
-                minW="148px"
-              >
+            <Link to={`/eventcard/${id}`}>
+              <Button bg="#cb7862" color="white" w="148px" h="32px">
                 Entrada QR
               </Button>
             </Link>
-            <Button
-              fontFamily="Telegraf-Regular"
-              bg="#f2f2f2"
-              border="1px"
-              borderColor="#cb7862"
-              color="#cb7862"
-              minW="148px"
-            >
+            <Button bg="#cb7862" color="white" w="148px" h="32px">
               Foro
             </Button>
           </Flex>
-          <Flex justifyContent="center" padding="1rem">
-            <Button
-              fontFamily="Telegraf-Regular"
-              bg="#f2f2f2"
-              border="1px"
-              borderColor="#cb7862"
-              color="#cb7862"
-              minW="312px"
-            >
+          <Flex justifyContent="center">
+            <Button bg="#cb7862" color="white" w="310px" h="32px">
               Enlace a la sesión
             </Button>
           </Flex>

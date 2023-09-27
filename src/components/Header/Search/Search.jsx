@@ -13,16 +13,7 @@ const Search = () => {
   };
 
   return (
-    <>
-      <Input
-        className="search-input"
-        type="text"
-        placeholder="Search"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        onKeyUp={handleSearch}
-      />
-    </>
+    <Input className="search-input" type="text" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} onKeyUp={handleSearch} />
   );
 };
 

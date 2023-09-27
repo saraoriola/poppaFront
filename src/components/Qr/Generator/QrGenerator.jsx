@@ -1,8 +1,10 @@
-import { Button, Stack } from "@chakra-ui/react";
+import { Box, Button, Stack, Text } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
 import useQrGenerator from "../../../hooks/useQrGenerator";
 
 const QrGenerator = (props) => {
     const [canvasRef] = useQrGenerator(props.eventId);
+    const userConnected = useSelector((state) => state.auth.userConnected);
 
     const downloadQrImage = () => {
         const image = canvasRef.current.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
@@ -13,12 +15,14 @@ const QrGenerator = (props) => {
     };
 
     return (
-        <Stack spacing={5} mb={10} mt={10}>
-            <canvas ref={canvasRef} />
-            <Button colorScheme="whatsapp" width={300} onClick={downloadQrImage}>
-                Download as image
-            </Button>
-        </Stack>
+        <>
+            <Box w="248px" h="248px">
+                <canvas ref={canvasRef} />
+            </Box>
+            <Text ml="90px" mt="100px" fontFamily="PPTelegraf-Regular" fontSize="16" color="#847c7b">
+                {userConnected?.name}
+            </Text>
+        </>
     );
 };
 

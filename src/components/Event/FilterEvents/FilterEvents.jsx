@@ -1,62 +1,76 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import PrintEvents from "../PrintEvents/PrintEvents";
 
 const FilterEvents = () => {
-    const { userRole, userEvents } = useSelector((state) => state.auth);
-    const { events } = useSelector((state) => state.event);
-    const [filter, setFilter] = useState("Todos");
-    const [filteredEvents, setFilteredEvents] = useState(events);
+  const { userRole, userEvents } = useSelector((state) => state.auth);
+  const { events } = useSelector((state) => state.event);
+  const [filter, setFilter] = useState("Todos");
+  const [filteredEvents, setFilteredEvents] = useState(events);
 
-    const handleFilterChange = (newFilter) => {
-        setFilter(newFilter);
-    };
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+  };
 
-    useEffect(() => {
-        switch (filter) {
-            case "Inscrito":
-                setFilteredEvents(userEvents);
-                break;
-            case "Pendiente":
-                setFilteredEvents(events.filter((event) => event.estado === "Pendiente"));
-                break;
-            case "Organizo":
-                setFilteredEvents(events.filter((event) => event.organizador === userRole.id));
-                break;
-            case "Finalizado":
-                setFilteredEvents(events.filter((event) => event.estado === "Finalizado"));
-                break;
-            default:
-                setFilteredEvents(events);
-        }
-    }, [filter, userEvents, userRole?.id, events]);
+  useEffect(() => {
+    switch (filter) {
+      case "Inscrito":
+        setFilteredEvents(userEvents);
+        break;
+      case "Pendiente":
+        setFilteredEvents(
+          events.filter((event) => event.estado === "Pendiente")
+        );
+        break;
+      case "Organizo":
+        setFilteredEvents(
+          events.filter((event) => event.organizador === userRole?.id)
+        );
+        break;
+      case "Finalizado":
+        setFilteredEvents(
+          events.filter((event) => event.estado === "Finalizado")
+        );
+        break;
+      default:
+        setFilteredEvents(events);
+    }
+  }, [filter, userEvents, userRole?.id, events]);
 
     return (
         <>
-            <Box>
-                <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
-                    <Box className="button-scroll-container">
-                        <Button borderRadius="20px" m="0px 5px" height="2rem" color="#cb7862" fontFamily="Telegraf-UltraLight" onClick={() => handleFilterChange("Todos")}>
-                            Todos
-                        </Button>
-                        <Button borderRadius="20px" m="0px 5px" height="2rem" color="#cb7862" fontFamily="Telegraf-UltraLight" onClick={() => handleFilterChange("Inscrito")}>
+            <Box overflowX="auto" whiteSpace="nowrap" mb={5}>
+                <Box className="button-scroll-container" display="inline-block">
+                    <Button
+                        width="auto" height="auto" borderRadius="20px" color="#cb7862" fontFamily="PPTelegraf-UltraLight" fontSize={14} mr={2} onClick={() => handleFilterChange("Todos")}  _hover={{ bg: "#cb7862", color: "white" }}  _active={{ bg: "#cb7862", color: "white" }} style={{ background: "#cb7862", color: "white" }}>
+                        <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px"> Todos</Text>
+                    </Button>
+                    <Button width="auto" height="auto" borderRadius="20px" color="#cb7862"  fontFamily="PPTelegraf-UltraLight"  fontSize={14}  mr={2}  onClick={() => handleFilterChange("Inscrito")}  _hover={{ bg: "#cb7862", color: "white" }} _active={{ bg: "#cb7862", color: "white" }} style={{ background: "#f2f2f2", color: "#cb7862" }}>
+                        <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                             Inscrito
-                        </Button>
-                        <Button borderRadius="20px" m="0px 5px" height="2rem" color="#cb7862" fontFamily="Telegraf-UltraLight" onClick={() => handleFilterChange("Pendiente")}>
+                        </Text>
+                    </Button>
+                    <Button  width="auto"  height="auto" borderRadius="20px"   color="#cb7862"   fontFamily="PPTelegraf-UltraLight"  fontSize={14}mr={2} onClick={() => handleFilterChange("Pendiente")}  _hover={{ bg: "#cb7862", color: "white" }}  _active={{ bg: "#cb7862", color: "white" }} style={{ background: "#f2f2f2", color: "#cb7862" }}>
+                        <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                             Pendientes de aprobación
-                        </Button>
-                        {userRole?.type === "admin" && (
-                            <Button borderRadius="20px" m="0px 5px" height="2rem" color="#cb7862" fontFamily="Telegraf-UltraLight" onClick={() => handleFilterChange("Organizo")}>
+                        </Text>
+                    </Button>
+                    {userRole?.type === "admin" && (
+                        <Button width="auto" height="auto" borderRadius="20px"color="#cb7862" fontFamily="PPTelegraf-UltraLight" fontSize={14}   mr={2} onClick={() => handleFilterChange("Organizo")} _hover={{ bg: "#cb7862", color: "white" }} _active={{ bg: "#cb7862", color: "white" }} style={{ background: "#f2f2f2", color: "#cb7862" }}>
+                            <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                                 Organizo
-                            </Button>
-                        )}
-                        <Button borderRadius="20px" m="0px 5px" height="2rem" color="#cb7862" fontFamily="Telegraf-UltraLight" onClick={() => handleFilterChange("Finalizado")}>
-                            Finalizado
+                            </Text>
                         </Button>
-                    </Box>
+                    )}
+                    <Button width="auto"height="auto" borderRadius="20px" color="#cb7862" fontFamily="PPTelegraf-UltraLight"fontSize={14}mr={2} onClick={() => handleFilterChange("Finalizado")} _hover={{ bg: "#cb7862", color: "white" }} _active={{ bg: "#cb7862", color: "white" }}style={{ background: "#f2f2f2", color: "#cb7862" }}>
+                        <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
+                            Finalizado
+                        </Text>
+                    </Button>
                 </Box>
             </Box>
+
             <PrintEvents filteredEvents={filteredEvents} />
         </>
     );

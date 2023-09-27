@@ -24,7 +24,7 @@ module.exports = {
       /*
       TODO: Por hacer
       FIXME: Por arreglar
-      NOTE: Nota sobre el código
+      : Nota sobre el código
       */
     ],
   },

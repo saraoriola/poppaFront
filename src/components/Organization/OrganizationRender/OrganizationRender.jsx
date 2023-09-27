@@ -5,7 +5,6 @@ import GetOrganizations from "../GetOrganizations/GetOrganizations";
 const Event = () => {
   return (
     <Box>
-      {/* <Componentes /> */}
       <GetOrganizations />
     </Box>
   );

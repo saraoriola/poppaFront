@@ -3,10 +3,10 @@ import { Box, Text, Button, FormControl, FormLabel, Input } from "@chakra-ui/rea
 import locationService from "../../../features/location/locationService";
 
 const GetLocationById = () => {
-    const [location, setLocation] = useState(null); // ---> Almacena los datos de la ubicación.
-    const [loading, setLoading] = useState(false);   // ---> Indica si la búsqueda está en curso (verdadero o falso).
-    const [showMessage, setShowMessage] = useState(false); // ---> Controla la visibilidad del mensaje de error (verdadero para mostrar, falso para ocultar).
-    const [locationId, setLocationId] = useState(''); // --->  Almacena el valor del ID de ubicación ingresado por el usuario.
+    const [location, setLocation] = useState(null); 
+    const [loading, setLoading] = useState(false); 
+    const [showMessage, setShowMessage] = useState(false); 
+    const [locationId, setLocationId] = useState(''); 
 
     const handleSearch = async () => {
         setLoading(true);

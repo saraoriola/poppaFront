@@ -1,30 +1,23 @@
-// HeaderRender.js
-import { Box, Icon, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
-import logo from "../../../assets/images/Logotipo.png";
+import { Box, Image, Link } from "@chakra-ui/react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import logo from "../../../assets/images/Logotipo.png";
 
 const HeaderRender = () => {
+  const goBack = () => {
+    window.history.back();
+  };
+
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="space-between"
-      width="100%"
-      height="44px"
-      backgroundColor="#004368"
-    >
-      <Box ml="15px">
-        <AiOutlineArrowLeft
-          style={{ cursor: "pointer" }}
-          size="28"
-          color="white"
-        />
+    <Box display="flex" alignItems="center" justifyContent="space-between" width="100%" height="44px" bg="#004368">
+      <Box ml="15px" onClick={goBack} cursor="pointer">
+        <Link to="javascript:history.back()">
+          <AiOutlineArrowLeft size="28" color="white" />
+        </Link>
       </Box>
-      <Box>
-        <Image src={logo}></Image>
+      <Box display="flex" alignItems="center">
+        <Image src={logo} alt="Logo" />
       </Box>
       <Box mr="15px">
         <Profile />

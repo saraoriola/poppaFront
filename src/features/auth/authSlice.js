@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import authService from "./authService";
 
-// NOTE: Estoy guardando el role y los eventos que está accediendo el usuario en el local storage. Revisar esto.
 const user = JSON.parse(localStorage.getItem("userConnected")) || null;
 const userEvents = JSON.parse(localStorage.getItem("userEvents")) || null;
 const userRole = JSON.parse(localStorage.getItem("userRole")) || null;
@@ -29,7 +28,7 @@ export const login = createAsyncThunk("auth/login", async (user) => {
     } catch (error) {
         console.error(error);
         const message = error.response.data.message;
-        return thunkAPI.rejectWithValue(message); //action.payload
+        return thunkAPI.rejectWithValue(message);
     }
 });
 
