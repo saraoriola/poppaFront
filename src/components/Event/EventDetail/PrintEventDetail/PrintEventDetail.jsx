@@ -8,7 +8,8 @@ import { BsCalendar3 } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { BiTimeFive } from "react-icons/bi";
 import { MdMapsHomeWork } from "react-icons/md";
-import { Box, Card, Text, HStack, Image, Spinner } from "@chakra-ui/react";
+import { Box, Card, Text, HStack, Image, Spinner, Badge, Stack, Wrap  } from "@chakra-ui/react";
+import "./PrintEventDetail.scss"
 
 const PrintEventDetail = () => {
   const { id } = useParams();
@@ -46,8 +47,42 @@ const PrintEventDetail = () => {
         </HStack>
       </Card>
       <Box><EventDetailButtons registered={registered} /></Box>
-      <Box ml={6} mr={6} mt={2} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>¿No tienes claro cuál es el siguiente paso? No dudes en venir, antiguos alumnos y ponentes top enseñarán sus cartas y contarán su experiencia con nosotros de forma transparente y sin filtros. Si tu sueño es trabajar en algo que te apasione, no puedes perderte este Open Day donde descubrirás qué ramas de especialización buscan las grandes empresas, en clave digital, y cuáles son esas que tienen una mayor empleabilidad.</Box>
-      <Box m="10px 25px 10px 25px"><Text>Categorías</Text><Text fontFamily="PPTelegraf-UltraLight">Implementar etiquetas. Lo pongo aquí porque se supone que son del evento.</Text></Box>
+      <Box ml={6} mr={6} mt={5} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>¿No tienes claro cuál es el siguiente paso? No dudes en venir, antiguos alumnos y ponentes top enseñarán sus cartas y contarán su experiencia con nosotros de forma transparente y sin filtros. Si tu sueño es trabajar en algo que te apasione, no puedes perderte este Open Day donde descubrirás qué ramas de especialización buscan las grandes empresas, en clave digital, y cuáles son esas que tienen una mayor empleabilidad.</Box>
+      <Box m="20px 25px 10px 25px" fontFamily="PPTelegraf-Ultralight" fontSize="13"><Text>Categorías</Text>
+      <Box width="100%">
+      <Stack direction="row">
+        <Wrap spacing={2}>
+          <Badge className="custom-badge">Desafío</Badge>
+          <Badge colorScheme="green" className="custom-badge">
+            Bootcamp
+          </Badge>
+          <Badge colorScheme="red" className="custom-badge">
+            Formación
+          </Badge>
+          <Badge variant="outline" colorScheme="#004368" className="custom-badge">
+            Futuro
+          </Badge>
+          <Badge variant="outline" colorScheme="green" className="custom-badge">
+            Data Science
+          </Badge>
+          <Badge variant="outline" colorScheme="green" className="custom-badge">
+            Fullstack
+          </Badge>
+          <Badge variant="outline" colorScheme="green" className="custom-badge">
+            UX/UI
+          </Badge>
+          <Badge variant="outline" colorScheme="green" className="custom-badge">
+            Ciberseguridad
+          </Badge>
+        </Wrap>
+      </Stack>
+</Box>
+
+
+      
+      
+      </Box>
+      
     </>
   );
 };
