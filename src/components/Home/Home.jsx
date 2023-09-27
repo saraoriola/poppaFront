@@ -22,12 +22,12 @@ const Home = () => {
 
     return (
       <Box bg="#e6dfcf">
-        <Box fontSize="xl" fontFamily="Nocturne-Black" color="#004368" >
+        <Box fontSize="xl" fontFamily="Nocturne-Black" color="#004368"  p={5}>
           <Text>
           Próximos eventos
             </Text>
         </Box>
-        <Box className="father-filter-container">
+        <Box className="father-filter-container" ml={5} mt={-3}>
           <FilterEvents />
         </Box>
         <Box>

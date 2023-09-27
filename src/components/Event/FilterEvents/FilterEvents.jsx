@@ -34,7 +34,7 @@ const FilterEvents = () => {
 
     return (
         <>
-            <Box overflowX="auto" whiteSpace="nowrap">
+            <Box overflowX="auto" whiteSpace="nowrap" mb={5}>
                 <Box className="button-scroll-container" display="inline-block">
                     <Button
                         width="auto"
@@ -64,7 +64,7 @@ const FilterEvents = () => {
                         onClick={() => handleFilterChange("Inscrito")}
                         _hover={{ bg: "#cb7862", color: "white" }}
                         _active={{ bg: "#cb7862", color: "white" }}
-                        style={{ background: "#cb7862", color: "white" }}
+                        style={{ background: "#f2f2f2", color: "#cb7862" }}
                     >
                         <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                             Inscrito
@@ -81,7 +81,7 @@ const FilterEvents = () => {
                         onClick={() => handleFilterChange("Pendiente")}
                         _hover={{ bg: "#cb7862", color: "white" }}
                         _active={{ bg: "#cb7862", color: "white" }}
-                        style={{ background: "#cb7862", color: "white" }}
+                        style={{ background: "#f2f2f2", color: "#cb7862" }}
                     >
                         <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                             Pendientes de aprobación
@@ -99,7 +99,7 @@ const FilterEvents = () => {
                             onClick={() => handleFilterChange("Organizo")}
                             _hover={{ bg: "#cb7862", color: "white" }}
                             _active={{ bg: "#cb7862", color: "white" }}
-                            style={{ background: "#cb7862", color: "white" }}
+                            style={{ background: "#f2f2f2", color: "#cb7862" }}
                         >
                             <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                                 Organizo
@@ -117,7 +117,7 @@ const FilterEvents = () => {
                         onClick={() => handleFilterChange("Finalizado")}
                         _hover={{ bg: "#cb7862", color: "white" }}
                         _active={{ bg: "#cb7862", color: "white" }}
-                        style={{ background: "#cb7862", color: "white" }}
+                        style={{ background: "#f2f2f2", color: "#cb7862" }}
                     >
                         <Text as="span" whiteSpace="normal" paddingY="6px" paddingX="6px">
                             Finalizado
