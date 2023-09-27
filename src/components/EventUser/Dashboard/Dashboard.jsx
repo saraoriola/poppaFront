@@ -1,10 +1,9 @@
 import { useRef } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import HeaderEvent from "./HeaderEvent/HeaderEvent";
-import HeaderDash from "./HeaderDash";
 import LineChart from "./Charts/LineChart/LineChart";
 import PieChart from "./Charts/PieChart/PieChart";
-import BarChart from "./Charts/BarChart/BarChart"; // Asegúrate de importar tu componente BarChart
+import BarChart from "./Charts/BarChart/BarChart"; 
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import useDashboard from "../../../hooks/useDashboard";
