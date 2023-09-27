@@ -16,11 +16,10 @@ const QrGenerator = (props) => {
 
     return (
         <>
-            {" "}
-            <Box w="248px" border="1px">
+            <Box w="248px" h="248px">
                 <canvas ref={canvasRef} />
             </Box>
-            <Text ml="150px" fontFamily="PPTelegraf-Regular" fontSize="15" color="#847c7b">
+            <Text ml="90px" mt="100px" fontFamily="PPTelegraf-Regular" fontSize="16" color="#847c7b">
                 {userConnected?.name}
             </Text>
         </>
