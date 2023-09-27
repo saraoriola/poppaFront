@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Link } from "@chakra-ui/react";
-import HeaderRender from "../Header/HeaderRender/HeaderRender";
+import { Box, Button, Link, Text } from "@chakra-ui/react";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import TopButton from "./TopButton/TopButton";
@@ -23,8 +22,10 @@ const Home = () => {
 
     return (
       <Box bg="#e6dfcf">
-        <Box m="0px 10px 10px 10px" fontSize="xl" fontFamily="Nocturne-Black" color="#004368">
+        <Box fontSize="xl" fontFamily="Nocturne-Black" color="#004368" >
+          <Text>
           Próximos eventos
+            </Text>
         </Box>
         <Box className="father-filter-container">
           <FilterEvents />
