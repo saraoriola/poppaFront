@@ -6,7 +6,6 @@ import { MdMapsHomeWork } from 'react-icons/md'
 import { Avatar } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/images/Logotipo.png"
 import { phrases1, phrases2, phrases3, phrases4, phrases5 } from "../../Phrases/phrases";
 import { Box, Button,Flex, Center, Heading, Image, Tabs, TabList, Tab, TabPanel, TabPanels, Stack, Checkbox, Text, } from "@chakra-ui/react";
 import "./ApprovedAccepted.scss";
