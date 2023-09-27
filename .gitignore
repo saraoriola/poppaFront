@@ -14,6 +14,8 @@ dist-ssr
 .env
 .env.local
 
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,6 +26,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
 
 # Usar estos datos hasta que data proporcione api
 # data   no se puede ignorar esta carpeta porque la necesitamos para desplegar en Vecerl
