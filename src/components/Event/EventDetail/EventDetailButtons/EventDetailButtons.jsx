@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineShareAlt, AiFillCalendar } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
 
 const EventDetailButtons = ({ registered }) => {
-  const [isRegistered, setIsRegistered] = React.useState(registered);
+  const [isRegistered, setIsRegistered] = useState(registered);
 
   const handleRegister = () => {
     setIsRegistered(!isRegistered);
@@ -12,16 +12,16 @@ const EventDetailButtons = ({ registered }) => {
 
   return (
     <>
-      <Flex justifyContent="space-between" padding="1rem">
-        <Flex gap="1rem">
-          <AiOutlineShareAlt size="36" color="#cb7862" />
-          <AiFillCalendar size="36" color="#cb7862" />
+      <Flex justifyContent="space-between" mt={5} ml={5} mr={6}>
+        <Flex gap="1rem" ml={1}>
+          <AiOutlineShareAlt size="28" color="#cb7862" />
+          <AiFillCalendar size="28" color="#cb7862" />
         </Flex>
         <Button
-          fontFamily="Telegraf-Regular"
           bg="#cb7862"
           color="white"
-          minW="148px"
+          w="148px"
+          h="32px"
           onClick={handleRegister}
         >
           {isRegistered ? "Desinscribirse" : "Inscribirse"}
@@ -30,38 +30,31 @@ const EventDetailButtons = ({ registered }) => {
       {isRegistered && (
         <>
           <Flex justifyContent="space-evenly" padding="1rem">
-            {/* Resto del contenido para usuarios inscritos */}
             <Link to={""}>
               <Button
-                fontFamily="Telegraf-Regular"
-                bg="#f2f2f2"
-                border="1px"
-                borderColor="#cb7862"
-                color="#cb7862"
-                minW="148px"
+                bg="#cb7862"
+                color="white"
+                w="148px"
+                h="32px"
               >
                 Entrada QR
               </Button>
             </Link>
             <Button
-              fontFamily="Telegraf-Regular"
-              bg="#f2f2f2"
-              border="1px"
-              borderColor="#cb7862"
-              color="#cb7862"
-              minW="148px"
+              bg="#cb7862"
+              color="white"
+              w="148px"
+              h="32px"
             >
               Foro
             </Button>
           </Flex>
-          <Flex justifyContent="center" padding="1rem">
+          <Flex justifyContent="center">
             <Button
-              fontFamily="Telegraf-Regular"
-              bg="#f2f2f2"
-              border="1px"
-              borderColor="#cb7862"
-              color="#cb7862"
-              minW="312px"
+              bg="#cb7862"
+              color="white"
+              w="310px"
+              h="32px"
             >
               Enlace a la sesión
             </Button>
