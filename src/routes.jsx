@@ -71,7 +71,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "eventcard",
+        path: "eventcard/:id",
         element: <EventCard />,
         errorElement: <ErrorPage />,
     },

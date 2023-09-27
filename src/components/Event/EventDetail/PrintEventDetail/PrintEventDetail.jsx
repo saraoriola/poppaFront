@@ -41,7 +41,7 @@ const PrintEventDetail = () => {
                     <HStack>
                         <BsCalendar3 size={13} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
-                            {event.dateTime.split("-").reverse().join("-")}
+                            {/* {event.dateTime.split("-").reverse().join("-")} */}
                         </Text>
                     </HStack>
                     <HStack ml="150px">
