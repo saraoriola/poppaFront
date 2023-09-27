@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Center, Text } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
 import HeaderRender from '../Header/HeaderRender/HeaderRender';
 
 const Counter = () => {
