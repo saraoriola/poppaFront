@@ -51,17 +51,24 @@ const PrintEventDetail = () => {
       <Box m="20px 25px 10px 25px" fontFamily="PPTelegraf-Ultralight" fontSize="13"><Text>Categorías</Text>
       <Box width="100%">
       <Stack direction="row">
-        <Wrap spacing={2}>
-          <Badge className="custom-badge">Desafío</Badge>
-          <Badge colorScheme="green" className="custom-badge">
-            Bootcamp
-          </Badge>
-          <Badge colorScheme="red" className="custom-badge">
-            Formación
-          </Badge>
-          <Badge variant="outline" colorScheme="#004368" className="custom-badge">
-            Futuro
-          </Badge>
+      <Wrap spacing={2}>
+    <Badge className="custom-badge" bg="#cb7862" color="white">
+      Desafío
+    </Badge>
+    <Badge className="custom-badge" bg="gray" color="white">
+      Bootcamp
+    </Badge>
+    <Badge className="custom-badge" bg="#004368" color="white">
+      Formación
+    </Badge>
+    <Badge
+      className="custom-badge"
+      variant="outline"
+      color="#004368"
+      colorScheme="blue"
+    >
+      Futuro
+    </Badge>
           <Badge variant="outline" colorScheme="green" className="custom-badge">
             Data Science
           </Badge>
