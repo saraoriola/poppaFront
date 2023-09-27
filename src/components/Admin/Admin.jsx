@@ -4,16 +4,18 @@ import QrReader from "../Qr/Reader/QrReader";
 const Admin = () => {
     return (
         <Center>
-            <Grid>
+            {" "}
+            Admin
+            {/* <Grid>
                 <HStack padding="30px">
                     <Box w="500px" h="650px">
                         <QrReader />
                     </Box>
                 </HStack>
-                {/* <HStack padding="30px">
+                <HStack padding="30px">
                     <Dashboard />
-                </HStack> */}
-            </Grid>
+                </HStack>
+            </Grid> */}
         </Center>
     );
 };
