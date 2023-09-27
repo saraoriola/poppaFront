@@ -21,11 +21,11 @@ At Marina de Empresas, we are committed to delivering outstanding event experien
 
 - **Admin area**: We have implemented a real-time dashboard that updates as clients arrive. This dynamic dashboard provides up-to-the-minute information and automatically adjusts as new clients join the system.
 
-<h1>
+
 
   <img src="./src/assets/images/GifReadme.gif"> </img>
   
-</h1>
+
 
 ## Index
 1. [Structure](#structure)
@@ -46,7 +46,7 @@ At Marina de Empresas, we are committed to delivering outstanding event experien
 The choice to structure our project using the Model-View-Controller (MVC) pattern is based on the pursuit of an efficient and visually organized approach for our application. MVC divides the application into three core components: the Model, responsible for data management and business logic; the View, handling visual representation and the user interface; and the Controller, managing control logic and user interaction. This separation of responsibilities not only simplifies collaborative development but also enhances maintainability by enabling developers to work on specific parts of the project without affecting the whole. Furthermore, it facilitates code reuse, potentially speeding up development, and ensures that the application is scalable and adaptable as it evolves, resulting in a more robust and visually appealing final product. Ultimately, the choice of MVC contributes to a more efficient and successful development experience for our project.
 
 
-<img src="./src/assets/images/admin1.png"> </img> |||||||||||||||||||||  <img src="./src/assets/images/dashbord2.png"> </img>
+<img src="./src/assets/images/admin1.png"> </img> <img src="./src/assets/images/dashbord2.png"> </img>
 
 ## 2 - Installation
 
@@ -504,7 +504,7 @@ git push origin my-contribution
     </td>
     <td align="center">
       <a href="https://github.com/AdrianRgGit">
-        <img height="80" width="80" src="https://avatars.githubusercontent.com/u/102881802?s=400&u=633c2ecee4137e2b5e324d321bae47efd8763988&v=4" alt="Adrian Ramirez">
+        <img height="80" width="80" src="https://avatars.githubusercontent.com/u/133784147?v=4" alt="Adrian Ramirez">
       </a>
       <br>
       <a href="https://github.com/AdrianRgGit">Adrian Ramirez</a>
