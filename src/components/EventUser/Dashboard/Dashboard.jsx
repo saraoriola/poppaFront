@@ -8,6 +8,7 @@ import BarChart from "./Charts/BarChart/BarChart"; // Asegúrate de importar tu 
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import useDashboard from "../../../hooks/useDashboard";
+import HeaderRender from "../../Header/HeaderRender/HeaderRender";
 
 function Dashboard() {
     useDashboard();
@@ -52,7 +53,7 @@ function Dashboard() {
 
     return (
         <div>
-            <HeaderDash />
+            <HeaderRender />
             <HeaderEvent />
             <Box padding={5} backgroundColor="#e6dfcf" ref={dashboardRef}>
                 <Box marginBottom={5}>
