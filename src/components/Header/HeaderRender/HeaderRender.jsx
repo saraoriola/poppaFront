@@ -1,7 +1,5 @@
-import { Box, Icon, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import Search from "../Search/Search";
-import Profile from "../Profile/Profile";
+import { Box, Image } from "@chakra-ui/react";
 import logo from "../../../assets/images/Logotipo.png";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
@@ -23,7 +21,7 @@ const HeaderRender = () => {
         />
       </Box>
       <Box>
-        <Image src={logo}></Image>
+        <Image src={logo} alt="Logo" />
       </Box>
       <Box mr="15px">
         <Profile />
