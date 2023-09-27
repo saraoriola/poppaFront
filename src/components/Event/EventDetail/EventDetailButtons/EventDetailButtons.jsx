@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineShareAlt, AiFillCalendar } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Flex, Button } from "@chakra-ui/react";
 
 const EventDetailButtons = ({ registered }) => {
+  const { id } = useParams();
   const [isRegistered, setIsRegistered] = useState(registered);
 
   const handleRegister = () => {
@@ -30,7 +31,7 @@ const EventDetailButtons = ({ registered }) => {
       {isRegistered && (
         <>
           <Flex justifyContent="space-evenly" padding="1rem">
-            <Link to={""}>
+            <Link to={`/eventcard/${id}`}>
               <Button
                 bg="#cb7862"
                 color="white"
