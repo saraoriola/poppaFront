@@ -7,9 +7,7 @@ const EventDetailButtons = ({ registered }) => {
   const { id } = useParams();
   const [isRegistered, setIsRegistered] = useState(registered);
 
-  const handleRegister = () => {
-    setIsRegistered(!isRegistered);
-  };
+  const handleRegister = () => setIsRegistered(!isRegistered);
 
   return (
     <>
@@ -32,31 +30,16 @@ const EventDetailButtons = ({ registered }) => {
         <>
           <Flex justifyContent="space-evenly" padding="1rem">
             <Link to={`/eventcard/${id}`}>
-              <Button
-                bg="#cb7862"
-                color="white"
-                w="148px"
-                h="32px"
-              >
+              <Button bg="#cb7862" color="white" w="148px" h="32px">
                 Entrada QR
               </Button>
             </Link>
-            <Button
-              bg="#cb7862"
-              color="white"
-              w="148px"
-              h="32px"
-            >
+            <Button bg="#cb7862" color="white" w="148px" h="32px">
               Foro
             </Button>
           </Flex>
           <Flex justifyContent="center">
-            <Button
-              bg="#cb7862"
-              color="white"
-              w="310px"
-              h="32px"
-            >
+            <Button bg="#cb7862" color="white" w="310px" h="32px">
               Enlace a la sesión
             </Button>
           </Flex>
