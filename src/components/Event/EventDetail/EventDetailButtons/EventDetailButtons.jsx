@@ -17,12 +17,7 @@ const EventDetailButtons = ({ registered }) => {
           <AiFillCalendar size="28" color="#cb7862" />
         </Flex>
         <Button
-          bg="#cb7862"
-          color="white"
-          w="148px"
-          h="32px"
-          onClick={handleRegister}
-        >
+          bg="#cb7862" color="white" w="148px" h="32px" onClick={handleRegister} >
           {isRegistered ? "Desinscribirse" : "Inscribirse"}
         </Button>
       </Flex>
