@@ -34,7 +34,7 @@ const Login = () => {
           <Text as="b" fontSize="xl" className="title" justifyContent="center" mt={-4}>la bienvenida a</Text>
           <Text as="b" fontSize="4xl" className="title" mt={-2}>Eventum</Text>
           <Text as="b" fontSize="lg" className="title" justifyContent="center" mt={5}>la plataforma de eventos de</Text>
-          <Image src={logo} mt={3}/>
+          <Image src={logo} mt={3} />
           <Box m={10}>
             <FormControl id="email" isRequired className="form-container">
               <FormLabel fontSize="xs" mb={1}>Correo electrónico</FormLabel>
