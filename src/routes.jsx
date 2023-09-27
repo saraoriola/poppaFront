@@ -17,22 +17,22 @@ import QrGenerator from "./components/Qr/Generator/QrGenerator";
 import EventCard from "./components/Event/EventCard/EventCard";
 
 const routes = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [{ index: true, element: <Home /> }],
-  },
-  {
-    path: "login",
-    element: <Login />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "register",
-    element: <Register />,
-    errorElement: <ErrorPage />,
-  },
+    {
+        path: "/",
+        element: <Layout />,
+        errorElement: <ErrorPage />,
+        children: [{ index: true, element: <Home /> }],
+    },
+    {
+        path: "login",
+        element: <Login />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "register",
+        element: <Register />,
+        errorElement: <ErrorPage />,
+    },
 
     {
         path: "location",
