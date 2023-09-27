@@ -13,8 +13,8 @@ import ApproverView from "./components/ApproverView/ApproverView";
 import EventDetail from "./components/Event/EventDetail/EventDetail";
 import Counter from "./components/Counter/Counter";
 import ApprovedAccepted from "./components/ApprovedAccepted/ApprovedAccepted";
-
-
+import QrGenerator from "./components/Qr/Generator/QrGenerator";
+import EventCard from "./components/Event/EventCard/EventCard";
 
 const routes = createBrowserRouter([
   {
@@ -34,44 +34,55 @@ const routes = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 
-  {
-    path: "location",
-    element: <Location />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "dashboard/:id",
-    element: <Dashboard />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "approver/view",
-    element: <ApproverView />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "eventdetail/:id",
-    element: <EventDetail />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "counter",
-    element: <Counter />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "approved/accepted",
-    element: <ApprovedAccepted />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    element: <PrivateRoutes />,
-    errorElement: <ErrorPage />,
-    children: [
-      { path: "logout", element: <Logout /> },
-      { path: "admin", element: <Admin /> },
-    ],
-  },
+    {
+        path: "location",
+        element: <Location />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "dashboard/:id",
+        element: <Dashboard />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "approver/view",
+        element: <ApproverView />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "eventdetail/:id",
+        element: <EventDetail />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "counter",
+        element: <Counter />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "approved/accepted",
+        element: <ApprovedAccepted />,
+        errorElement: <ErrorPage />,
+    },
+
+    {
+        path: "qrgenerator",
+        element: <QrGenerator />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "eventcard",
+        element: <EventCard />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        element: <PrivateRoutes />,
+        errorElement: <ErrorPage />,
+        children: [
+            { path: "logout", element: <Logout /> },
+            { path: "admin", element: <Admin /> },
+        ],
+    },
 ]);
 
 export default routes;

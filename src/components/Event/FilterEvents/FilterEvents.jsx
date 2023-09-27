@@ -33,6 +33,7 @@ const FilterEvents = () => {
     }, [filter, userEvents, userRole?.id, events]);
 
     return (
+
       <>
         <Box>
           <Box display="flex" overflowX="auto" whiteSpace="nowrap" ml="10px">
@@ -90,10 +91,8 @@ const FilterEvents = () => {
                 Finalizado
               </Button>
             </Box>
-          </Box>
-        </Box>
-        <PrintEvents filteredEvents={filteredEvents} />
-      </>
+            <PrintEvents filteredEvents={filteredEvents} />
+        </>
     );
 };
 

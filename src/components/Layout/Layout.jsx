@@ -5,15 +5,13 @@ import Footer from "../Footer/Footer";
 const Layout = () => {
     return (
         <>
-        {/* Acá solo se renderizan los componentes que queremos que se muestren en todas las páginas */}
-            <HeaderRender/>
+            <HeaderRender />
             <div className="custom-margin">
                 <Outlet />
             </div>
             <div>
-                <Footer/>
+                <Footer />
             </div>
-            {/* <Footer /> */}
         </>
     );
 };

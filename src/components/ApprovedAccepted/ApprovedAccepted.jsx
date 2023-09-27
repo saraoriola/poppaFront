@@ -1,18 +1,5 @@
-import {
-    Box,
-    Button,
-    Center,
-    Heading,
-    Image,
-    Tabs,
-    TabList,
-    Tab,
-    TabPanel,
-    TabPanels,
-    Stack,
-    Checkbox
-} from "@chakra-ui/react";
-import { BsCalendarDate } from 'react-icons/bs';
+import React, { useState } from 'react';
+import { BsCalendar3 } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { BiTimeFive } from 'react-icons/bi';
 import { MdMapsHomeWork } from 'react-icons/md'
@@ -20,301 +7,368 @@ import { Avatar } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/Logotipo.png"
-import approvado from "../../assets/images/approvado.png"
+import { phrases1, phrases2, phrases3, phrases4, phrases5 } from "../../Phrases/phrases";
+import { Box, Button,Flex, Center, Heading, Image, Tabs, TabList, Tab, TabPanel, TabPanels, Stack, Checkbox, Text, } from "@chakra-ui/react";
+import "./ApprovedAccepted.scss";
+import HeaderRender from '../Header/HeaderRender/HeaderRender';
+import banner from "../../assets/images/desafio.jpg"
+
 
 const ApprovedAccepted = () => {
+    const [checkboxStatus1, setCheckboxStatus1] = useState([false, false, false, false, false]);
+    const [checkboxStatus2, setCheckboxStatus2] = useState([false, false, false, false, false]);
+    const [checkboxStatus3, setCheckboxStatus3] = useState([false, false, false, false, false]);
+    const [checkboxStatus4, setCheckboxStatus4] = useState([false, false, false, false, false]);
+    const [checkboxStatus5, setCheckboxStatus5] = useState([false, false, false, false, false]);
 
     const userConnected = useSelector((state) => state.auth.userConnected);
 
-    return (
+    const handleCheckboxChange = (index, tab) => {
+        switch (tab) {
+            case 1:
+                const newCheckboxStatus1 = [...checkboxStatus1];
+                newCheckboxStatus1[index] = !newCheckboxStatus1[index];
+                setCheckboxStatus1(newCheckboxStatus1);
+                break;
+            case 2:
+                const newCheckboxStatus2 = [...checkboxStatus2];
+                newCheckboxStatus2[index] = !newCheckboxStatus2[index];
+                setCheckboxStatus2(newCheckboxStatus2);
+                break;
+            case 3:
+                const newCheckboxStatus3 = [...checkboxStatus3];
+                newCheckboxStatus3[index] = !newCheckboxStatus3[index];
+                setCheckboxStatus3(newCheckboxStatus3);
+                break;
+            case 4:
+                const newCheckboxStatus4 = [...checkboxStatus4];
+                newCheckboxStatus4[index] = !newCheckboxStatus4[index];
+                setCheckboxStatus4(newCheckboxStatus4);
+                break;
+            case 5:
+                const newCheckboxStatus5 = [...checkboxStatus5];
+                newCheckboxStatus5[index] = !newCheckboxStatus5[index];
+                setCheckboxStatus5(newCheckboxStatus5);
+                break;
+            default:
+                break;
+        }
+    };
 
-        <Center as="section" bg="gray.100" h="100vh">
-            <Box maxW="430px" bg="#e6dfcf" p="6">
-                <Box display="flex" alignItems="center" justifyContent="space-between" bg="#004368" p={1} borderRadius="xl">
-                    <Image src={logo} />
-                    <div style={{ flex: 1 }}></div>
-                    <Avatar name={userConnected?.name} src={userConnected?.avatar} size="sm" />
-                </Box>
-                <Image
-                    src={approvado}
-                    alt="openday"
-                    borderRadius="xl"
-                    objectFit="cover"
-                    mx="auto"
-                    mt={4}
-                />
-                <Heading my="4" size="lg" fontFamily="Nocturne-Black" color="#004368">
-                    Open Day Masters
-                </Heading>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <BsCalendarDate size={25} color="#cb7862" />
-                        <span style={{ marginLeft: "8px" }}>19/10/2023</span>
-                    </div>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <BiTimeFive size={25} color="#cb7862" />
-                        <span style={{ marginRight: "8px" }}>18:00 hrs</span>
-                    </div>
-                </div>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <GoLocation size={25} color="#cb7862" />
-                        <span style={{ marginLeft: "8px" }}>EDEM / Online </span>
-                    </div>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <MdMapsHomeWork size={25} color="#cb7862" />
-                        <span style={{ marginLeft: "8px" }}>Planta 2, sala reuniones 207 </span>
-                    </div>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Center my="8" height="20px">
-                        <Button
-                            backgroundColor="white"
-                            color="#cb7862"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}
-                            marginRight="20px"  >
-                            Aprobar
-                        </Button>
-                        <Button
-                            backgroundColor="white"
-                            color="#cb7862"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}  >
-                            Cancelar evento
-                        </Button>
-                    </Center>
-                    <Center my="8" height="20px">
-                        <Button
-                            backgroundColor="white"
-                            color="#cb7862"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}  >
-                            Modificar
-                        </Button>
-                    </Center>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Center my="3" height="20px">
-                        <Button
-                            backgroundColor="white"
-                            color="#cb7862"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}
-                            marginRight="23px"  >
-                            Salidas
-                        </Button>
-                        <Button
-                            backgroundColor="white"
-                            color="#cb7862"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}  >
-                            Inscribir asistente
-                        </Button>
-                    </Center>
-                    <Center my="3" height="20px">
-                        <Button
-                            backgroundColor="white"
-                            color="#cb7862"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}  >
-                            Inscritos
-                        </Button>
-                    </Center>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Center my="8" height="20px">
-                        <Button
-                            backgroundColor="#cb7862"
-                            color="white"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}
-                            marginRight="23px"  >
-                            Evento
-                        </Button>
-                        <Button
-                            backgroundColor="#cb7862"
-                            color="white"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}
-                            marginRight="23px"  >
-                            Lector QR CODE
-                        </Button>
-                    </Center>
-                    <Center my="8" height="20px">
-                        <Button
-                            backgroundColor="#cb7862"
-                            color="white"
-                            _hover={{ backgroundColor: "#004368", color: 'white' }}
-                            marginRight="23px"  >
-                            <Link to="/dashboard/:id" >Dashbord </Link>
+    const areAllCheckboxesChecked = (checkboxes) => {
+        return checkboxes.every((isChecked) => isChecked);
+    };
+  
+  return (
+    <>
+      <HeaderRender />
+      <Box padding={6} bgColor="#e6dfcf">
+        <Image
+          src={banner}
+          alt="Bannertripulaciones"
+          borderRadius={4}
+          width="312px"
+          height="140px"
+          objectFit="cover"
+        />
+        <Text
+          color="var(--blue-900, #004368)"
+          fontFamily="Nocturne Serif"
+          fontSize="16px"
+          fontStyle="normal"
+          fontWeight="900"
+          lineHeight="120%"
+          className="custom-font"
+          marginTop={2}
+        >
+          Desafío de Tripulaciones
+          <br />
+          The Bridge septiembre 2023
+        </Text>
 
-                        </Button>
-                    </Center>
-                </div>
-                <div>
-                    <Button
-                        backgroundColor="#white"
-                        color="#cb7862"
-                        _hover={{ backgroundColor: "#004368", color: 'white' }}
-                        marginRight="23px"
-                        w="385px"  >
-                        Editar enlace a la sesión
-                    </Button>
-                </div>
-                <Tabs variant='unstyled' my="4">
+        <Flex justifyContent="space-between" alignItems="center">
+          <Flex alignItems="center">
+            <BsCalendar3 size={15} color="#cb7862" />
+            <Text
+              marginLeft="8px"
+              color="rgba(132, 124, 123, 1)"
+              fontSize="12px"
+              className="custom-text"
+            >
+              29/09/2023
+            </Text>
+          </Flex>
+          <Flex alignItems="center" marginTop="2px">
+            <BiTimeFive size={20} color="#cb7862" />
+            <Text
+              marginLeft="8px"
+              color="rgba(132, 124, 123, 1)"
+              fontSize="12px"
+              className="custom-text"
+            >
+              18:00 hr
+            </Text>
+          </Flex>
+        </Flex>
+
+        <Flex justifyContent="space-between" alignItems="center">
+          <Flex alignItems="center">
+            <GoLocation size={15} color="#cb7862" />
+            <Text
+              marginLeft="8px"
+              color="rgba(132, 124, 123, 1)"
+              fontSize="12px"
+              className="custom-text"
+            >
+              EDEM / Online
+            </Text>
+          </Flex>
+          <Flex alignItems="center" marginTop="2px">
+            <MdMapsHomeWork size={15} color="#cb7862" />
+            <Text
+              marginLeft="8px"
+              color="rgba(132, 124, 123, 1)"
+              fontSize="12px"
+              className="custom-text"
+            >
+              Planta 2, sala reuniones 207
+            </Text>
+          </Flex>
+        </Flex>
+
+        <Flex justifyContent="space-between" mt={5}>
+          <Button
+            backgroundColor="white"
+            color="#c11919"
+            height="32px"
+            width="148px"
+            border="1px solid #c11919"
+            fontSize="14px"
+          >
+            Cancelar evento
+          </Button>
+          <Button
+            backgroundColor="#cb7862"
+            color="white"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            Modificar
+          </Button>
+        </Flex>
+
+        <Flex justifyContent="space-between" mt={2}>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            Inscribir asistente
+          </Button>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            <Link to="/dashboard/:id">Dashboard</Link>
+          </Button>
+        </Flex>
+
+        <Flex justifyContent="space-between" mt={2}>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            Salidas
+          </Button>
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="148px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+          >
+            Foro
+          </Button>
+        </Flex>
+
+        <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="312px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+            mt={2}
+          >
+            Lector QR
+          </Button>
+
+          <Button
+            backgroundColor="rgba(248, 248, 248, 1)"
+            color="#cb7862"
+            height="32px"
+            width="312px"
+            border="1px solid #cb7862"
+            fontSize="14px"
+            mt={2}
+          >
+            Editar enlace a la sesión
+          </Button>
+
+          <Box display="flex"
+width="312px"
+height="184px"
+flex-direction="column"
+justify-content="center"
+align-items="flex-start">
+          <Tabs mt={7}  className='button'variant='enclosed' >
                     <TabList>
-                        <Tab _selected={{ color: 'black', bg: '#48BB78', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
-                            Aprobación
-                        </Tab>
-                        <Tab _selected={{ color: 'black', bg: '#F6AD55', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
-                            Recursos
-                        </Tab>
-                        <Tab _selected={{ color: 'black', bg: '#48BB78', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
-                            Difusión
-                        </Tab>
-                        <Tab _selected={{ color: 'black', bg: '#48BB78', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
-                            Inscritos
-                        </Tab>
-                        <Tab _selected={{ color: 'black', bg: '#F6AD55', borderRadius: "10px 10px 0 0" }} style={{ fontSize: '12px' }}>
-                            After
-                        </Tab>
+                            <Tab
+                                _selected={{
+                                    color: 'black',
+                                    bg: areAllCheckboxesChecked(checkboxStatus1) 
+                                    ? '#48BB78' : checkboxStatus1.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
+                                }}
+                                fontSize="9px" height="24px" width="70px">
+                                Aprobación
+                            </Tab>
+                            <Tab
+                                _selected={{
+                                    color: 'black',
+                                    bg: areAllCheckboxesChecked(checkboxStatus2) 
+                                    ? '#48BB78' : checkboxStatus2.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
+                                }}
+                                fontSize="9px" height="24px" width="60px">
+                                Recursos
+                            </Tab>
+                            <Tab
+                                _selected={{
+                                    color: 'black',
+                                    bg: areAllCheckboxesChecked(checkboxStatus3) 
+                                    ? '#48BB78' : checkboxStatus3.some((isChecked) => isChecked) ? '#F6AD55' :'#f2f2f2',
+                                    border:"1px solid #847c7b"
+                                }}
+                                fontSize="9px" height="24px" width="52px">
+                                Difusión
+                            </Tab>
+                       
+                            <Tab
+                                _selected={{
+                                    color: 'black',
+                                    bg: areAllCheckboxesChecked(checkboxStatus4) 
+                                    ? '#48BB78' : checkboxStatus4.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
+                                }}
+                                fontSize="9px" height="24px" width="60px">
+                                Inscritos
+                            </Tab>
+                       
+                            <Tab
+                                _selected={{
+                                    color: 'black',
+                                    bg: areAllCheckboxesChecked(checkboxStatus5) 
+                                    ? '#48BB78' : checkboxStatus5.some((isChecked) => isChecked) ? '#F6AD55' : '#f2f2f2',
+                                    border:"1px solid #847c7b"
+                                }}
+                                fontSize="9px" height="24px" width="70px">
+                                Post-ev
+                            </Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel backgroundColor="white">
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Confirmación servicio de catering
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Confirmación servicio limpieza
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Pendiente. Servicio Recepción y apoio IT
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Confirmación solicitud material UX/UI
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Confirmación servicio de mesas y camareros
-                                </Checkbox>
-                            </Stack>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px" >
+                            {checkboxStatus1.map((isChecked, index) => (
+                                <Stack spacing={5} direction='row' key={index}>
+                                    <Checkbox mt={1}
+                                        colorScheme={isChecked ? 'green' : 'yellow'}
+                                        defaultChecked={isChecked}
+                                        onChange={() => handleCheckboxChange(index, 1)}
+                                    >
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases1[index]}</Text>
+                                    </Checkbox>
+                                </Stack>
+                            ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
-                                    Pendiente aprob. Montaje y desmontaje
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
-                                    Confirmación servicio limpieza
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
-                                    Pendiente. Servicio Recepción y apoio IT
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Confirmación solicitud material UX/UI
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Programación retransmisión online
-                                </Checkbox>
-                            </Stack>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
+                            {checkboxStatus2.map((isChecked, index) => (
+                                <Stack spacing={5} direction='row' key={index}>
+                                    <Checkbox mt={1}
+                                        colorScheme={isChecked ? 'green' : 'yellow'}
+                                        defaultChecked={isChecked}
+                                        onChange={() => handleCheckboxChange(index, 2)}
+                                    >
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases2[index]}</Text>
+                                    </Checkbox>
+                                </Stack>
+                            ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Publicación evento en portal
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Envio correo electronico usuarios perfiles
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Publicación post web
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Publicación rede social
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Programación retransmisión online
-                                </Checkbox>
-                            </Stack>
+
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
+                            {checkboxStatus3.map((isChecked, index) => (
+                                <Stack spacing={5} direction='row' key={index}>
+                                    <Checkbox mt={1}
+                                        colorScheme={isChecked ? 'green' : 'yellow'}
+                                        defaultChecked={isChecked}
+                                        onChange={() => handleCheckboxChange(index, 3)}
+                                    >
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases3[index]}</Text>
+                                    </Checkbox>
+                                </Stack>
+                            ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    12 inscritos hasta ahora
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Estimación: 85 personas
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Inscritos por rede social
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Interesados deben confirmar el correo
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Público: Joven
-                                </Checkbox>
-                            </Stack>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
+                            {checkboxStatus4.map((isChecked, index) => (
+                                <Stack spacing={5} direction='row' key={index}>
+                                    <Checkbox mt={1}
+                                        colorScheme={isChecked ? 'green' : 'yellow'}
+                                        defaultChecked={isChecked}
+                                        onChange={() => handleCheckboxChange(index, 4)}
+                                    >
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases4[index]}</Text>
+                                    </Checkbox>
+                                </Stack>
+                            ))}
                         </TabPanel>
-                        <TabPanel backgroundColor="white">
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Confirmar desmontaje
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
-                                    Confirmar servicio de limpieza post-evento
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    FeedBack post-evento
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='yellow' defaultChecked>
-                                    Enviar correo pra todas personas post-evento
-                                </Checkbox>
-                            </Stack>
-                            <Stack spacing={5} direction='row'>
-                                <Checkbox colorScheme='green' defaultChecked>
-                                    Actualizar datos/presupuesto
-                                </Checkbox>
-                            </Stack>
+                        <TabPanel backgroundColor='#f2f2f2'  border="1px solid #847c7b" borderRadius="0px 0px 8px 8px" width="312px">
+                            {checkboxStatus5.map((isChecked, index) => (
+                                <Stack spacing={5} direction='row' key={index} >
+                                    <Checkbox mt={1}
+                                        colorScheme={isChecked ? 'green' : 'yellow'}
+                                        defaultChecked={isChecked}
+                                        onChange={() => handleCheckboxChange(index, 5)}
+                                    >
+                                        <Text fontSize="12px" color="#847c7b">{isChecked ? "" : ""} {phrases5[index]}</Text>
+                                    </Checkbox>
+                                </Stack>
+                            ))}
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
-            </Box>
-        </Center>
-    )
-}
+                </Box>
 
-export default ApprovedAccepted
+                <Box mt={8} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>
+    Cuando en The Bridge hablamos de formación práctica e inmersiva, lo hacemos de verdad. Gracias al Reto de Tripulaciones nuestros alumnos pueden experimentar la mejor forma de trabajo en equipo, la manera de resolver problemas complejos y, por supuesto, aumentar su conocimiento en otras disciplinas, haciendo uso de metodologías de trabajo agile y de desarrollo de producto.
+</Box>
 
 
+      </Box>
+    </>
+  );
+};
+
+export default ApprovedAccepted;

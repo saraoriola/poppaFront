@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { getEventById } from "../../../../features/event/eventSlice";
-import eventImg from "../../../../assets/images/desafio.jpg";
-import EventDetailButtons from "../EventDetailButtons/EventDetailButtons";
+import { getEventById } from "../../../features/event/eventSlice";
+import eventImg from "../../../assets/images/desafio.jpg";
+import EventDetailButtons from "../EventDetail/EventDetailButtons/EventDetailButtons";
 import { BsCalendar3 } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { BiTimeFive } from "react-icons/bi";
 import { MdMapsHomeWork } from "react-icons/md";
 import { Card, Box, Text, HStack, Image, Spinner } from "@chakra-ui/react";
 
-const PrintEventDetail = () => {
+const EventCard = () => {
     const { id } = useParams();
     const { event, isLoading } = useSelector((state) => state.event);
     const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const PrintEventDetail = () => {
                     <HStack>
                         <BsCalendar3 size={13} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
-                            {event.dateTime.split("-").reverse().join("-")}
+                            {/* {event.dateTime.split("-").reverse().join("-")} */}
                         </Text>
                     </HStack>
                     <HStack ml="150px">
@@ -67,46 +67,6 @@ const PrintEventDetail = () => {
                 </HStack>
             </Card>
 
-
-  return (
-    <Box>
-      <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
-        <CardHeader p="10px">
-          <Image src={eventImg} alt="Banner" w="22.5rem" />
-        </CardHeader>
-        <CardBody
-          p="0px 10px 10px"
-          fontFamily="Nocturne-Black"
-          color="#004368"
-          fontSize="xl"
-        >
-          <Text>{event.title}</Text>
-        </CardBody>
-        <CardFooter
-          display="column"
-          p="0px 10px 10px"
-          fontFamily="Telegraf-UltraLight"
-          color="#847c7b"
-        >
-          <Box display="flex" justifyContent="space-between">
-            <Box display="flex" alignItems="center" gap="5px">
-              <AiFillCalendar color="#cb7862" />
-              <Box>{event.dateTime}</Box>
-            </Box>
-            <Box display="flex" alignItems="center" gap="5px">
-              <AiOutlineClockCircle color="#cb7862" />
-              <Box>{event.duration_min}</Box>
-            </Box>
-          </Box>
-          <Box display="flex" justifyContent="space-between">
-            <Box display="flex" alignItems="center" gap="5px">
-              <AiFillCalendar color="#cb7862" />
-              <Box>EDEM</Box>
-            </Box>
-            <Box display="flex" alignItems="center" gap="5px">
-              <AiOutlineClockCircle color="#cb7862" />
-              <Box>{event.location_id}</Box>
-
             <Box>
                 <EventDetailButtons />
             </Box>
@@ -126,4 +86,4 @@ const PrintEventDetail = () => {
     );
 };
 
-export default PrintEventDetail;
+export default EventCard;
