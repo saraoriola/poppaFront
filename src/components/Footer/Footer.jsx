@@ -11,7 +11,7 @@ const Footer = () => {
       alignItems="center"
       bg="#847c7b"
       color="#f2f2f2"
-      fontFamily="Telegraf-UltraLight"
+      fontFamily="PPTelegraf-UltraLight"
       fontSize="xs"
       textDecor="underline"
     >
