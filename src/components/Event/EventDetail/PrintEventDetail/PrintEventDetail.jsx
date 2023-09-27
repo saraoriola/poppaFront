@@ -9,7 +9,7 @@ import { GoLocation } from "react-icons/go";
 import { BiTimeFive } from "react-icons/bi";
 import { MdMapsHomeWork } from "react-icons/md";
 import { Box, Card, Text, HStack, Image, Spinner, Badge, Stack, Wrap  } from "@chakra-ui/react";
-import "./PrintEventDetail.scss"
+import "./PrintEventDetail.scss";
 
 const PrintEventDetail = () => {
   const { id } = useParams();
@@ -21,8 +21,7 @@ const PrintEventDetail = () => {
     async function fetchData() {
       try {
         dispatch(getEventById(id));
-        // Simula si el usuario está inscrito o no (esto debe venir de tu estado o backend)
-        setRegistered(true); // Cambia a false si el usuario no está inscrito
+        setRegistered(true); 
       } catch (error) {
         console.error("Hubo un problema");
       }
@@ -49,47 +48,42 @@ const PrintEventDetail = () => {
       <Box><EventDetailButtons registered={registered} /></Box>
       <Box ml={6} mr={6} mt={5} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>¿No tienes claro cuál es el siguiente paso? No dudes en venir, antiguos alumnos y ponentes top enseñarán sus cartas y contarán su experiencia con nosotros de forma transparente y sin filtros. Si tu sueño es trabajar en algo que te apasione, no puedes perderte este Open Day donde descubrirás qué ramas de especialización buscan las grandes empresas, en clave digital, y cuáles son esas que tienen una mayor empleabilidad.</Box>
       <Box m="20px 25px 10px 25px" fontFamily="PPTelegraf-Ultralight" fontSize="13"><Text>Categorías</Text>
-      <Box width="100%">
-      <Stack direction="row">
-      <Wrap spacing={2}>
-    <Badge className="custom-badge" bg="#cb7862" color="white">
-      Desafío
-    </Badge>
-    <Badge className="custom-badge" bg="gray" color="white">
-      Bootcamp
-    </Badge>
-    <Badge className="custom-badge" bg="#004368" color="white">
-      Formación
-    </Badge>
-    <Badge
-      className="custom-badge"
-      variant="outline"
-      color="#004368"
-      colorScheme="blue"
-    >
-      Futuro
-    </Badge>
-          <Badge variant="outline" colorScheme="green" className="custom-badge">
-            Data Science
-          </Badge>
-          <Badge variant="outline" colorScheme="green" className="custom-badge">
-            Fullstack
-          </Badge>
-          <Badge variant="outline" colorScheme="green" className="custom-badge">
-            UX/UI
-          </Badge>
-          <Badge variant="outline" colorScheme="green" className="custom-badge">
-            Ciberseguridad
-          </Badge>
-        </Wrap>
-      </Stack>
-</Box>
-
-
-      
-      
+        <Box width="100%">
+          <Stack direction="row">
+            <Wrap spacing={2}>
+              <Badge className="custom-badge" bg="#cb7862" color="white">
+                Desafío
+              </Badge>
+              <Badge className="custom-badge" bg="gray" color="white">
+                Bootcamp
+              </Badge>
+              <Badge className="custom-badge" bg="#004368" color="white">
+                Formación
+              </Badge>
+              <Badge
+                className="custom-badge"
+                variant="outline"
+                color="#004368"
+                colorScheme="blue"
+              >
+                Futuro
+              </Badge>
+              <Badge variant="outline" colorScheme="green" className="custom-badge">
+                Data Science
+              </Badge>
+              <Badge variant="outline" colorScheme="green" className="custom-badge">
+                Fullstack
+              </Badge>
+              <Badge variant="outline" colorScheme="green" className="custom-badge">
+                UX/UI
+              </Badge>
+              <Badge variant="outline" colorScheme="green" className="custom-badge">
+                Ciberseguridad
+              </Badge>
+            </Wrap>
+          </Stack>
+        </Box>
       </Box>
-      
     </>
   );
 };
