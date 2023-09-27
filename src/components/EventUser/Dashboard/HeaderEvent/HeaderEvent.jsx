@@ -7,6 +7,13 @@ import { getEventById } from "../../../../features/dashboards/dashboardsSlice";
 import fotoevento from "../../../../assets/images/fotoevento.jpg";
 import useWebSocket from "react-use-websocket";
 
+
+const HeaderEvent = () => {
+  const {id} = useParams();
+  return (
+    <div>HeaderEvent</div>
+  )
+
 function isCheckInOp(message) {
     let evt = JSON.parse(message.data);
     return evt.type === "CHECK-IN";

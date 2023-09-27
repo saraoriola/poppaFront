@@ -14,6 +14,11 @@ const EventDetail = () => {
                 <QrGenerator eventId={5} />
             </Box>
         </Box>
+        <Box>
+          <PrintEventDetail />
+          {/* <QrGenerator eventId={5} /> */}
+        </Box>
+      </Box>
     );
 };
 

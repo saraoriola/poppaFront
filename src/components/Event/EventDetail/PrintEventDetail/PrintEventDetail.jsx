@@ -67,6 +67,46 @@ const PrintEventDetail = () => {
                 </HStack>
             </Card>
 
+
+  return (
+    <Box>
+      <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
+        <CardHeader p="10px">
+          <Image src={eventImg} alt="Banner" w="22.5rem" />
+        </CardHeader>
+        <CardBody
+          p="0px 10px 10px"
+          fontFamily="Nocturne-Black"
+          color="#004368"
+          fontSize="xl"
+        >
+          <Text>{event.title}</Text>
+        </CardBody>
+        <CardFooter
+          display="column"
+          p="0px 10px 10px"
+          fontFamily="Telegraf-UltraLight"
+          color="#847c7b"
+        >
+          <Box display="flex" justifyContent="space-between">
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiFillCalendar color="#cb7862" />
+              <Box>{event.dateTime}</Box>
+            </Box>
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiOutlineClockCircle color="#cb7862" />
+              <Box>{event.duration_min}</Box>
+            </Box>
+          </Box>
+          <Box display="flex" justifyContent="space-between">
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiFillCalendar color="#cb7862" />
+              <Box>EDEM</Box>
+            </Box>
+            <Box display="flex" alignItems="center" gap="5px">
+              <AiOutlineClockCircle color="#cb7862" />
+              <Box>{event.location_id}</Box>
+
             <Box>
                 <EventDetailButtons />
             </Box>
