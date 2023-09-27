@@ -10,9 +10,6 @@ const Admin = () => {
                         <QrReader />
                     </Box>
                 </HStack>
-                {/* <HStack padding="30px">
-                    <Dashboard />
-                </HStack> */}
             </Grid>
         </Center>
     );
