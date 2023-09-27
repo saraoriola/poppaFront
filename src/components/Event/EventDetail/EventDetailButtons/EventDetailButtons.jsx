@@ -1,14 +1,13 @@
-import { Button } from "@chakra-ui/button";
-import { Box, Flex } from "@chakra-ui/layout";
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineShareAlt, AiFillCalendar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { Box, Flex, Button } from "@chakra-ui/react";
 
-const EventDetailButtons = () => {
-  const [registered, setRegistered] = useState(false);
+const EventDetailButtons = ({ registered }) => {
+  const [isRegistered, setIsRegistered] = React.useState(registered);
 
   const handleRegister = () => {
-    setRegistered(!registered);
+    setIsRegistered(!isRegistered);
   };
 
   return (
@@ -25,18 +24,13 @@ const EventDetailButtons = () => {
           minW="148px"
           onClick={handleRegister}
         >
-          {registered ? "Desinscribirse" : "Inscribirse"}
+          {isRegistered ? "Desinscribirse" : "Inscribirse"}
         </Button>
       </Flex>
-      {registered && (
+      {isRegistered && (
         <>
           <Flex justifyContent="space-evenly" padding="1rem">
-            {/* NOTE: Enlace a la pantalla qr */}
-            {/* NOTE: Solucionar bug de que cuando pulso el botón se queda blanco */}
-            {/* NOTE: Cabmiar Iconos a los buenos */}
-            {/* NOTE: Reajustar los botones para que se vean bien */}
-            {/* NOTE: No sé porque abajo del todo me sale download as image (tampoco he mirado por que xd) */}
-            {/* NOTE: Hardcodear las categorías */}
+            {/* Resto del contenido para usuarios inscritos */}
             <Link to={""}>
               <Button
                 fontFamily="Telegraf-Regular"

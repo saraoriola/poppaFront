@@ -14,11 +14,14 @@ const PrintEventDetail = () => {
   const { id } = useParams();
   const { event, isLoading } = useSelector((state) => state.event);
   const dispatch = useDispatch();
+  const [registered, setRegistered] = React.useState(false);
 
   useEffect(() => {
     async function fetchData() {
       try {
         dispatch(getEventById(id));
+        // Simula si el usuario está inscrito o no (esto debe venir de tu estado o backend)
+        setRegistered(true); // Cambia a false si el usuario no está inscrito
       } catch (error) {
         console.error("Hubo un problema");
       }
@@ -42,9 +45,9 @@ const PrintEventDetail = () => {
           <HStack ml="210px"><MdMapsHomeWork size={13} color="#cb7862" /><Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">{event.location_id}</Text></HStack>
         </HStack>
       </Card>
-      <Box><EventDetailButtons /></Box>
-      <Box ml={6} mr={6} mt={2} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>Cuando en The Bridge hablamos de formación práctica e inmersiva, lo hacemos de verdad. Gracias al Reto de Tripulaciones nuestros alumnos pueden experimentar la mejor forma de trabajo en equipo, la manera de resolver problemas complejos y, por supuesto, aumentar su conocimiento en otras disciplinas, haciendo uso de metodologías de trabajo agile y de desarrollo de producto.</Box>
-      <Box m="10px 25px 10px 25px"><Text>Categorias</Text><Text fontFamily="Telegraf-UltraLight">Implementar etiquetas. Lo pongo aquí porque se supone que son del evento.</Text></Box>
+      <Box><EventDetailButtons registered={registered} /></Box>
+      <Box ml={6} mr={6} mt={2} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>¿No tienes claro cuál es el siguiente paso? No dudes en venir, antiguos alumnos y ponentes top enseñarán sus cartas y contarán su experiencia con nosotros de forma transparente y sin filtros. Si tu sueño es trabajar en algo que te apasione, no puedes perderte este Open Day donde descubrirás qué ramas de especialización buscan las grandes empresas, en clave digital, y cuáles son esas que tienen una mayor empleabilidad.</Box>
+      <Box m="10px 25px 10px 25px"><Text>Categorías</Text><Text fontFamily="PPTelegraf-UltraLight">Implementar etiquetas. Lo pongo aquí porque se supone que son del evento.</Text></Box>
     </>
   );
 };
