@@ -42,7 +42,7 @@ const PrintEventDetail = () => {
           </HStack>
           <HStack ml="150px">
             <BiTimeFive size={13} color="#cb7862" />
-            <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">18:30 h</Text>
+            <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">18:00 h</Text>
           </HStack>
         </HStack>
         <HStack>

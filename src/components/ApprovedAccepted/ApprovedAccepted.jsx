@@ -209,7 +209,7 @@ const ApprovedAccepted = () => {
           </Tabs>
         </Box>
         <Box mt={8} p={2} backgroundColor='#f2f2f2' className='button' fontSize="13px" color="#847c7b" borderRadius={8} style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}>
-        Cuando en The Bridge hablamos de formación práctica e inmersiva en The Bridge, lo hacemos de verdad. Gracias al Reto de Tripulaciones, nuestros alumnos pueden experimentar la mejor forma de trabajo en equipo, aprender a resolver problemas complejos y, por supuesto, aumentar su conocimiento en otras disciplinas, haciendo uso de metodologías ágiles y de desarrollo de productos.        </Box>
+        Cuando hablamos de formación práctica e inmersiva en The Bridge, lo hacemos de verdad. Gracias al Reto de Tripulaciones, nuestros alumnos pueden experimentar la mejor forma de trabajo en equipo, aprender a resolver problemas complejos y, por supuesto, aumentar su conocimiento en otras disciplinas, haciendo uso de metodologías ágiles y de desarrollo de productos.        </Box>
       </Box>
     </>
   );
