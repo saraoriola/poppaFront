@@ -7,7 +7,6 @@ const CreateEventButton = () => {
   const navigate = useNavigate();
 
   const goCreateEvent = () => {
-    // NOTE: Acabar esto
     navigate("/urlDeCrearEvento");
   };
   return (

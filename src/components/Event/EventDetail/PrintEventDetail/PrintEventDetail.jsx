@@ -11,25 +11,24 @@ import { MdMapsHomeWork } from "react-icons/md";
 import { Card, Box, Text, HStack, Image, Spinner } from "@chakra-ui/react";
 
 const PrintEventDetail = () => {
-    const { id } = useParams();
-    const { event, isLoading } = useSelector((state) => state.event);
-    const dispatch = useDispatch();
+  const { id } = useParams();
+  const { event, isLoading } = useSelector((state) => state.event);
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                dispatch(getEventById(id));
-            } catch (error) {
-                console.error("Hubo un problema");
-            }
-        }
-        fetchData();
-    }, []);
-
-    if (isLoading) {
-        return <Spinner />;
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        dispatch(getEventById(id));
+      } catch (error) {
+        console.error("Hubo un problema");
+      }
     }
+    fetchData();
+  }, [dispatch, id]);
 
+  if (isLoading) {
+    return <Spinner />;
+  }
     return (
         <>
             <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
@@ -41,7 +40,7 @@ const PrintEventDetail = () => {
                     <HStack>
                         <BsCalendar3 size={13} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
-                            {event.dateTime.split("-").reverse().join("-")}
+                            {/* {event.dateTime.split("-").reverse().join("-")} */}
                         </Text>
                     </HStack>
                     <HStack ml="150px">
@@ -67,23 +66,35 @@ const PrintEventDetail = () => {
                 </HStack>
             </Card>
 
-            <Box>
-                <EventDetailButtons />
-            </Box>
+      <Box m="10px 25px 10px 25px">
+        <Text>Categorias</Text>
+        <Text fontFamily="Telegraf-UltraLight">
+          Implementar etiquetas. Lo pongo aquí porque se supone que son del
+          evento.
+        </Text>
+      </Box>
 
-            <Box borderRadius="15px" m="0px 25px 12px 25px" padding="10px" bg="#f2f2f2" textAlign="justify" color="#847c7b">
-                <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae corporis, sequi quam hic facere esse aperiam praesentium accusamus quis aut, autem consequuntur quos est
-                    exercitationem labore non suscipit omnis porro.
-                </Text>
-            </Box>
+      <Box
+        borderRadius="15px"
+        m="0px 25px 12px 25px"
+        padding="10px"
+        bg="#f2f2f2"
+        textAlign="justify"
+        color="#847c7b"
+      >
+        <Text>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          corporis, sequi quam hic facere esse aperiam praesentium accusamus
+          quis aut, autem consequuntur quos est exercitationem labore non
+          suscipit omnis porro.
+        </Text>
+      </Box>
 
-            <Box m="10px 25px 10px 25px">
-                <Text>Categorias</Text>
-                <Text fontFamily="Telegraf-UltraLight">Implementar etiquetas. Lo pongo aquí porque se supone que son del evento.</Text>
-            </Box>
-        </>
-    );
+      <Box>
+        <EventDetailButtons />
+      </Box>
+    </Box>
+  );
 };
 
 export default PrintEventDetail;

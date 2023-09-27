@@ -9,6 +9,8 @@ import { GoLocation } from "react-icons/go";
 import { BiTimeFive } from "react-icons/bi";
 import { MdMapsHomeWork } from "react-icons/md";
 import { Card, Box, Text, HStack, Image, Spinner } from "@chakra-ui/react";
+import QrGenerator from "../../Qr/Generator/QrGenerator";
+import HeaderRender from "../../Header/HeaderRender/HeaderRender";
 
 const EventCard = () => {
     const { id } = useParams();
@@ -32,7 +34,8 @@ const EventCard = () => {
 
     return (
         <>
-            <Card m="auto" mt="12px" maxW="22.5rem" bg="#e6dfcf" boxShadow="0">
+            <HeaderRender />
+            <Card variant="unstyled">
                 <Image src={eventImg} alt="Banner" w="312px" h="140px" ml="24px" mt="20px" borderRadius="4px" objectFit="cover" />
                 <Text pl="24px" mt="5px" fontFamily="Nocturne-Black" color="#004368" fontSize="16px">
                     {event.title}
@@ -41,7 +44,7 @@ const EventCard = () => {
                     <HStack>
                         <BsCalendar3 size={13} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
-                            {/* {event.dateTime.split("-").reverse().join("-")} */}
+                            {event.dateTime}
                         </Text>
                     </HStack>
                     <HStack ml="150px">
@@ -58,30 +61,15 @@ const EventCard = () => {
                             EDEM
                         </Text>
                     </HStack>
-                    <HStack ml="210px">
+                    <HStack ml="170px">
                         <MdMapsHomeWork size={13} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="13" color="#847c7b">
-                            {event.location_id}
+                            Aula 208
                         </Text>
                     </HStack>
                 </HStack>
             </Card>
-
-            <Box>
-                <EventDetailButtons />
-            </Box>
-
-            <Box borderRadius="15px" m="0px 25px 12px 25px" padding="10px" bg="#f2f2f2" textAlign="justify" color="#847c7b">
-                <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae corporis, sequi quam hic facere esse aperiam praesentium accusamus quis aut, autem consequuntur quos est
-                    exercitationem labore non suscipit omnis porro.
-                </Text>
-            </Box>
-
-            <Box m="10px 25px 10px 25px">
-                <Text>Categorias</Text>
-                <Text fontFamily="Telegraf-UltraLight">Implementar etiquetas. Lo pongo aquí porque se supone que son del evento.</Text>
-            </Box>
+            <QrGenerator />
         </>
     );
 };
