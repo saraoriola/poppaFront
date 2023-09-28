@@ -1,0 +1,107 @@
+{
+    "name": "Technology Innovation",
+    "speaker": "Dr. Alicia Tech",
+    "description": "The latest trends in technology",
+    "date": {
+        "day": "15",
+        "month": "September"
+    },
+    "schedule": {
+        "start": "11:00 AM",
+        "end": "12:00 AM"
+    },
+    "attendees": {
+        "registered": 600,
+        "confirmed": 550,
+        "present": 530
+    },
+    "capacity": 700,
+    "entry_exit": [
+        {
+            "id": "Entradas",
+            "data": [
+                {
+                    "x": "9:00",
+                    "y": 1
+                },
+                {
+                    "x": "10:00",
+                    "y": 3
+                },
+                {
+                    "x": "11:00",
+                    "y": 5
+                }
+            ]
+        },
+        {
+            "id": "Salidas",
+            "data": [
+                {
+                    "x": "9:00",
+                    "y": 8
+                },
+                {
+                    "x": "10:00",
+                    "y": 5
+                },
+                {
+                    "x": "11:00",
+                    "y": 6
+                }
+            ]
+        }
+    ],
+    "gender": [
+        {
+            "men": 300,
+            "women": 210,
+            "others": 20
+        }
+    ],
+    "nationality": [
+        {
+            "country": "ARG",
+            "quantity": 2
+        },
+        {
+            "country": "COL",
+            "quantity": 7
+        },
+        {
+            "country": "ESP",
+            "quantity": 8
+        },
+        {
+            "country": "BRA",
+            "quantity": 4
+        }
+    ],
+    "type": [
+        {
+            "id": "FULLSTACK",
+            "label": "FULLSTACK",
+            "value": 2
+        },
+        {
+            "id": "CIBERSEGURIDAD",
+            "label": "CIBERSEGURIDAD",
+            "value": 3
+        },
+        {
+            "id": "UX/UI",
+            "label": "UX/UI",
+            "value": 3
+        },
+        {
+            "id": "DATA",
+            "label": "DATA",
+            "value": 3
+        },
+        {
+            "id": "Otros",
+            "label": "Otros",
+            "value": 3
+        }
+    ]
+}

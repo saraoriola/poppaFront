@@ -1,0 +1,62 @@
+#reader{
+    border: none !important;
+}
+
+#reader__dashboard_section_csr::before{
+    font-family: "PPTelegraf-Regular";
+    font-size: 15px;
+    padding-top: 20px;
+    padding: 40px;
+    background-color: #e6dfcf!important;
+   
+}
+
+button#html5-qrcode-button-camera-start::before {
+    background-color: #004368 !important;
+    color: white !important;
+    padding: 8px;
+    border-radius: 6px;
+    content: "Escanear" !important;
+    display: block;
+    position: absolute;
+    width: 130px;
+    margin-top: 5px;
+    margin-left: -20px !important;
+  
+  }
+  
+button#html5-qrcode-button-camera-stop::before {
+    background-color: #004368 !important;
+    color: white !important;
+    padding: 8px;
+    border-radius: 6px;
+    content: "Finalizar" !important;
+    display: block;
+    position: absolute;
+    width: 120px;
+    margin-top: 3px;
+    margin-left: -20px !important;
+  
+  }
+  
+  #html5-qrcode-select-camera{
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+
+  #html5-qrcode-button-camera-permission::before{
+    background-color: #004368 !important;
+    color: white !important;
+    width: 200px;
+    height: 30px;
+    padding: 8px;
+    margin-bottom: 60px !important;
+    border-radius: 6px;
+    content: "Habilitar cámara";
+    display: block;
+    position: absolute;
+
+  }

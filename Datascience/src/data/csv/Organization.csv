@@ -1,0 +1,199 @@
+,Id,type_id,Name,Web,Email,Tel,Position,Sector
+0,1,1,Lanzadera,https://lanzadera.es,info@lanzadera.es,963568585,General,Emprendimiento
+1,2,1,Edem,https://edem.eu,info@edem.es,963531065,General,Educación
+2,3,1,Angels Capital,https://www.angelscapital.es,info@angelscapital.es,963568585,General,Inversión
+3,4,1,AAA,https://www.triplea.edem.es,triplea@edem.es,963531065,General,organización sin ánimo de lucro
+4,5,2,ACS Actividades de Construccion y Servicios SA,https://www.grupoacs.com,acs@empresa.com,913439200,General,Industriales
+5,6,2,Acciona,https://www.acciona.com,acciona@empresa.com,916632850,General,Industriales
+6,7,2,Acerinox,https://www.acerinox.com,acerinox@empresa.com,913985100,General,Materiales básicos
+7,8,2,Amadeus IT,https://www.amadeus.com,amadeus@empresa.com,915820100,General,Consumo cíclico
+8,9,2,Atresmedia,https://www.atresmediacorporacion.com,atresmedia@empresa.com,916230500,General,Servicios de comunicación
+9,10,2,Bankinter,https://www.bankinter.com,bankinter@empresa.com,913397500,General,Servicios financieros
+10,11,2,Distribuidora Internacional de Alimentacion SA,https://diacorporate.com,dia@empresa.com,913985400,General,Consumidores a la defensiva
+11,12,2,Ebro Foods,https://www.ebrofoods.es,ebrofoods@empresa.com,917245250,General,Consumidores a la defensiva
+12,13,2,Enagas,https://www.enagas.es,enagas@empresa.com,917099230,General,Servicios
+13,14,2,Endesa SA,https://www.endesa.com,endesa@empresa.com,912131503,General,Servicios
+14,15,2,FCC,https://www.fcc.es,fcc@empresa.com,913595400,General,Industriales
+15,16,2,Ferrovial,https://www.ferrovial.com,ferrovial@empresa.com,915862500,General,Industriales
+16,17,2,Grifols SA,https://www.grifols.com,grifols@empresa.com,935710500,General,Sanidad
+17,18,2,Iberdrola,https://www.iberdrola.com,iberdrola@empresa.com,917842915,General,Servicios
+18,19,2,Inditex,https://www.inditex.com,inditex@empresa.com,981185400,General,Consumo cíclico
+19,20,2,Indra A,https://www.indracompany.com,indraa@empresa.com,914805002,General,Tecnología
+20,21,2,Inmobiliaria Colonial SA,https://www.inmocolonial.com,inmobiliariacolonial@empresa.com,934047900,General,Real Estate
+21,22,2,Mapfre,https://www.mapfre.com,mapfre@empresa.com,915812318,General,Servicios financieros
+22,23,2,Obrascon Huarte Lain SA,https://www.ohl.es,ohl@empresa.com,913484100,General,Industriales
+23,24,2,Red Electrica Corporacion SA,https://www.ree.es,redelectrica@empresa.com,916508500,General,Servicios
+24,25,2,Repsol,https://www.repsol.com,repsol@empresa.com,917538100,General,Energía
+25,26,2,Sacyr SA,https://www.sacyr.com,sacyr@empresa.com,915455000,General,Industriales
+26,27,2,Banco Santander,https://www.santander.com,santander@empresa.com,912596520,General,Servicios financieros
+27,28,2,Tecnicas Reunidas,https://www.tecnicasreunidas.es,tecnicasreunidas@empresa.com,915920300,General,Industriales
+28,29,2,Telefonica,https://www.telefonica.com,telefonica@empresa.com,900111004,General,Servicios de comunicación
+29,30,2,Aceites-Albert,https://edem.eu,aceitesalbert@empresa.com,964189999,General,Alimentación
+30,31,3,Acotral,http://www.acotral.com,acotral@empresa.com,964879898,General,Transporte de mercancías
+31,32,3,Actiu,https://www.actiu.com,actiu@empresa.com,963368686,General,Fabricación de mobiliario.
+32,33,3,Ahora,https://www.ahora.es,ahora@empresa.com,963901111,General,Software service
+33,34,3,Alberta-Norweg,https://www.albertanorweg.es,albertanorweg@empresa.com,963804040,General,Consultoría
+34,35,3,American-Express,https://www.americanexpress.com,americanexpress@empresa.com,964651919,General,Financiero/medios de pago
+35,36,3,Andreu-World,https://www.andreuworld.com,andreuworld@empresa.com,964190101,General,Muebles
+36,37,3,Antonio-Tarazona,https://www.antoniotarazona.com,antoniotarazona@empresa.com,964190404,General,Fertilizantes
+37,38,3,Apisol,http://apisol.es,apisol@empresa.com,963837878,General,Alimentación
+38,39,3,Argimiro-Joyero,https://argimirojoyero.com,argimirojoyero@empresa.com,964947272,General,Joyería
+39,40,3,Atribus,https://www.atribus.com,atribus@empresa.com,963269191,General,Marketing digital y data analytics
+40,41,3,Auren,https://auren.com,auren@empresa.com,963090707,General,Consultoría estratégica
+41,42,3,Avanza-Urbana,http://avanzaurbana.com,avanzaurbana@empresa.com,963817272,General,Inmobiliario
+42,43,3,BigBuy,https://www.bigbuy.eu,bigbuy@empresa.com,964581919,General,Distribución
+43,44,3,Broseta,https://www.broseta.com,broseta@empresa.com,964827171,General,Servicios jurídicos
+44,45,3,Carmencita,https://carmencita.com,carmencita@empresa.com,964013636,General,Alimentación
+45,46,3,Chic-kles-Gum,https://www.chic-kles.com,chicklesgum@empresa.com,964624040,General,Alimentación
+46,47,3,Chocolates-Valor,https://www.valor.es,chocolatesvalor@empresa.com,964198686,General,Alimentación
+47,48,3,Comelsa-Milar,https://www.milar.es,comelsamilar@empresa.com,963739292,General,Compras y servicios electrónicos
+48,49,3,Comercial-Virosque,http://www.grupovirosque.es,comercialvirosque@empresa.com,963822929,General,Transportes
+49,50,3,Compac,http://www.compac.es,compac@empresa.com,964478585,General,Superficies decorativas
+50,51,3,Costa-Brava-Mediterranean-Foods,https://www.costabravafoods.com,costabravamediterraneanfoods@empresa.com,964179191,General,Cárnico
+51,52,3,Cuatrecasas,https://www.cuatrecasas.com,cuatrecasas@empresa.com,963637373,General,Actividades jurídicas
+52,53,3,Delibreads,http://www.delibreads.com,delibreads@empresa.com,963194545,General,Alimentación
+53,54,3,Digital-Menta,https://www.digitalmenta.com,digitalmenta@empresa.com,963480303,General,Marketing Digital
+54,55,3,Disfrimur,https://edem.eu,disfrimur@empresa.com,964928888,General,Transporte de mercancías
+55,56,3,Ecija,https://ecija.com,ecija@empresa.com,963301616,General,Servicios abogacía
+56,57,3,El-Rayo-Facility-Services,https://www.elrayofs.com,elrayofacilityservices@empresa.com,963467272,General,Limpieza
+57,58,3,Elmusa,http://elmusa.es,elmusa@empresa.com,964938080,General,Instalaciones eléctricas
+58,59,3,Emuca,https://www.emuca.es,emuca@empresa.com,964102525,General,Mueble y construcción
+59,60,3,Enesa-Continental,https://enesacontinental.com,enesacontinental@empresa.com,964006363,General,Construcción
+60,61,3,Ernst&Young,https://www.ey.com,ernstyoung@empresa.com,964817777,General,Consultoría/Serv. profesionales
+61,62,3,Estimado-Jose-Alfredo,https://estimadojosealfredo.com,estimadojosealfredo@empresa.com,963722828,General,Marketing y publicidad
+62,63,3,Evolutio,https://www.evolutio.com,evolutio@empresa.com,964841919,General,Tecnologías de la información
+63,64,3,Ferrero,https://www.ferrero.es,ferrero@empresa.com,963305555,General,Alimentación
+64,65,3,Fina-Flexible-Packaging,http://www.fina.es,finaflexiblepackaging@empresa.com,963975959,General,Packaging
+65,66,3,Firmus,https://www.firmushomes.es,firmus@empresa.com,963609292,General,Inmobiliario
+66,67,3,Font-Salem,https://www.fontsalem.com,fontsalem@empresa.com,964659898,General,Bebidas
+67,68,3,Fontestad,http://fontestad.com,fontestad@empresa.com,963538787,General,Citrícola
+68,69,3,Foodiverse,https://foodiverse.com,foodiverse@empresa.com,964563636,General,Alimentación
+69,70,3,FrosTrol,https://frost-trol.com,frostrol@empresa.com,964692525,General,Refrigeración comercial
+70,71,3,Gesvalt,https://gesvalt.es,gesvalt@empresa.com,963715454,General,"Consultoría, Valoración y Tasaciones Inmobiliarias"
+71,72,3,GFT,https://www.gft.com,gft@empresa.com,963889292,General,Consultoría tecnológica
+72,73,3,GOI-Travel,https://www.letsgoi.com,goitravel@empresa.com,964408383,General,Logística
+73,74,3,Grant-Thornton-Asesores,https://www.grantthornton.es,grantthorntonasesores@empresa.com,963077878,General,Servicios abogacía
+74,75,3,Grefusa,https://grefusa.com,grefusa@empresa.com,963733737,General,Frutos secos y snacks
+75,76,3,GRP-Cano-Lopera,https://www.canolopera.es,grpcanolopera@empresa.com,964192727,General,Sistemas de seguridad
+76,77,3,Grupo-Alapont,https://alapont.com,alapont@empresa.com,963609696,General,Ascensores
+77,78,3,Grupo-BdB,https://web.grupobdb.com,bdb@empresa.com,963016868,General,Distribución de materiales de construcción
+78,79,3,Grupo-Gimeno,https://www.grupogimeno.com,gimeno@empresa.com,964851818,General,Servicios
+79,80,3,Grupo-Imaga,https://www.grupoimaga.es,imaga@empresa.com,963618787,General,Instalaciones eléctricas
+80,81,3,Grupo-Integraval,https://grupointegraval.es,integraval@empresa.com,964307272,General,Construcción
+81,82,3,Grupo-JV-Facility-Services,https://grupojv.es,jvfacilityservices@empresa.com,963533030,General,Limpieza e higienización
+82,83,3,Grupo-Panstar,https://edem.eu,panstar@empresa.com,963289595,General,Panadero
+83,84,3,Grupo-Ribera,https://www.riberasalud.com,ribera@empresa.com,964176868,General,Salud
+84,85,3,Grupo-SGS,https://www.sgs.es,sgs@empresa.com,964602121,General,Servicios
+85,86,3,Grupo-Simetria,https://simetriagrupo.com,simetria@empresa.com,964876464,General,Servicios
+86,87,3,Grupo-StartGo,https://www.startgoconnection.es,startgo@empresa.com,963924545,General,Marketing y Publicidad
+87,88,3,Grupo-Tesela,https://grupotesela.com,tesela@empresa.com,964356767,General,Construcción
+88,89,3,Grupotec,https://grupotec.es,tec@empresa.com,964906767,General,Ingeniería
+89,90,3,Herbolario-Navarro,https://www.herbolarionavarro.es,herbolarionavarro@empresa.com,963087373,General,Herbolario y ecotienda
+90,91,3,Hidro-water,https://hidro-water.com,hidrowater@empresa.com,963582828,General,Industria del agua
+91,92,3,Howden-Iberia,https://www.howdeniberia.com,howdeniberia@empresa.com,963329393,General,Seguros
+92,93,3,Ibercacao,https://www.ibercacao.es,ibercacao@empresa.com,963335555,General,Alimentación
+93,94,3,Ice-Cream-Factory,https://www.icfc.es,icecreamfactory@empresa.com,963683535,General,Alimentación
+94,95,3,Ideas-Interiorismo,https://ideasinteriorismo.com,ideasinteriorismo@empresa.com,964958080,General,Arquitectura
+95,96,3,Implica-Corporate-Finance,https://implicacf.com,implicacorporatefinance@empresa.com,963156161,General,Fusiones & Adquisiciones / Financiación & Deuda
+96,97,3,Improven,https://www.improven.com,improven@empresa.com,963549191,General,Consultoría de empresas
+97,98,3,Indaws-Business-Solutions,https://www.indaws.es,indawsbusinesssolutions@empresa.com,964362929,General,Consultoría tecnológica
+98,99,3,Indosuez-Wealth-Management,https://spain.ca-indosuez.com,indosuezwealthmanagement@empresa.com,964101515,General,Financiero
+99,100,3,Infraca,https://www.infraca.com,infraca@empresa.com,963725353,General,Puertas industriales
+100,101,3,Inside-Logistics,https://www.insidelogistics.com,insidelogistics@empresa.com,963503737,General,Logístico
+101,102,3,ITC-Packaging,https://www.itc-packaging.com,itcpackaging@empresa.com,963426060,General,Packaging
+102,103,3,Itene,https://www.itene.com,itene@empresa.com,964429999,General,"Envase, embalaje, transporte y logística"
+103,104,3,Jovi-Serrano,https://www.aviserrano.com,joviserrano@empresa.com,964458080,General,Alimentación
+104,105,3,KPMG,https://home.kpmg,kpmg@empresa.com,963929696,General,Servicios profesionales
+105,106,3,Logifruit,https://logifruit.es,logifruit@empresa.com,963453636,General,Logística
+106,107,3,Mazel-Asistencia-Industrial,https://mazel.es,mazelasistenciaindustrial@empresa.com,964315757,General,Ingeniería industrial
+107,108,3,Minusval-Eil,https://www.minusval.es,minusvaleil@empresa.com,963475757,General,Limpieza
+108,109,3,Moyca,http://www.moyca.org,moyca@empresa.com,963477979,General,Agroalimentario
+109,110,3,MSC,https://www.msc.com,msc@empresa.com,964019999,General,Transporte
+110,111,3,Nexo-Global-Management,https://www.nexotelecom.es,nexoglobalmanagement@empresa.com,964278282,General,Consultoría tecnológica
+111,112,3,NTT-Data,https://www.nttdata.com,nttdata@empresa.com,963728585,General,Servicios IT
+112,113,3,Nunsys,https://www.nunsys.com,nunsys@empresa.com,963398686,General,TIC
+113,114,3,Obras-AT4,https://at4grupo.es,obrasat4@empresa.com,964552929,General,Construcción
+114,115,3,Olivares-Consultores-Inmobiliarios,https://www.olivaresconsultores.es,olivaresconsultoresinmobiliarios@empresa.com,963158888,General,Proptech/Inmobiliario
+115,116,3,PageGroup,https://www.page.com,pagegroup@empresa.com,963129999,General,Consultoría estratégica
+116,117,3,Paletas-Marpa,https://paletasmarpa.es,paletasmarpa@empresa.com,964267474,General,Industria cárnica
+117,118,3,PCS,https://www.pcs.es,pcs@empresa.com,963539494,General,Alimentación
+118,119,3,PFS,https://www.pfsgroup.es,pfs@empresa.com,964116363,General,Consultoría tecnológica
+119,120,3,Pinturas-Blatem,https://www.blatem.com,pinturasblatem@empresa.com,963777878,General,Producción industrial
+120,121,3,Pinturas-Isaval,https://www.isaval.es,pinturasisaval@empresa.com,964522929,General,Producción industrial
+121,122,3,PPG,https://www.ppg.com,ppg@empresa.com,964714141,General,Industria química
+122,123,3,Reca-Hispania,https://es.reca.com,recahispania@empresa.com,963207373,General,Comercio de metal
+123,124,3,RFL-Cargo,https://rflcargo.com,rflcargo@empresa.com,964477171,General,Transitario/logística
+124,125,3,Rolser,https://www.rolser.com,rolser@empresa.com,964104343,General,Productos de menaje
+125,126,3,Royo-Group,https://www.royogroup.com,royogroup@empresa.com,964117878,General,Mueble del baño
+126,127,3,S2-GRUPO,https://s2grupo.es,s2grupo@empresa.com,964586868,General,Ciberseguridad
+127,128,3,Saica-Pack,https://edem.eu,saicapack@empresa.com,964794747,General,Papelero y embalaje
+128,129,3,Sanitas-Seguros,https://www.sanitas.es,sanitasseguros@empresa.com,963672424,General,Seguros
+129,130,3,Schindler,https://www.schindler.com,schindler@empresa.com,964819898,General,Ascensores y escaleras mecánicas
+130,131,3,Smart-Fan,https://smartfan.es,smartfan@empresa.com,964391515,General,Construcción
+131,132,3,Smurfit-Kappa,https://www.smurfitkappa.com,smurfitkappa@empresa.com,963515555,General,Servicios
+132,133,3,SPB,https://www.spb.es,spb@empresa.com,963106868,General,Químico y gran consumo
+133,134,3,SUE-Abogados,https://www.sueabogados.com,sueabogados@empresa.com,963210000,General,Abogacía
+134,135,3,Tareca-Vending,https://www.tarecavending.com,tarecavending@empresa.com,964126767,General,Servicio vending
+135,136,3,Teika,https://teika.es,teika@empresa.com,963053232,General,Distribución
+136,137,3,Teoxane,https://www.teoxane.com,teoxane@empresa.com,963318787,General,Medicina estética
+137,138,3,Tiba,https://www.tibagroup.com,tiba@empresa.com,963382121,General,Transitarios/Logística
+138,139,3,Transbenifayo,http://www.transbenifayo.com,transbenifayo@empresa.com,963938282,General,Transporte
+139,140,3,Triangle-Solutions-RRHH,https://www.trianglerrhh.es,trianglesolutionsrrhh@empresa.com,964730303,General,Consultoría RRHH
+140,141,3,Unilabs,https://www.unilabs.es,unilabs@empresa.com,963537474,General,Salud
+141,142,3,Velarte,https://www.velarte.com,velarte@empresa.com,963209292,General,Alimentación
+142,143,3,Viokox,https://viokox.com,viokox@empresa.com,963647575,General,Higiene personal y cosméticos
+143,144,3,Vithas-Sanidad,https://vithas.es,vithassanidad@empresa.com,964481919,General,Medicina y salud
+144,145,3,Viva-Aquaservice,https://www.aquaservice.com,vivaaquaservice@empresa.com,963576262,General,Servicios
+145,146,3,VIVA!-Conversion,https://www.vivaconversion.es,viva!conversion@empresa.com,964468585,General,Marketing y publicidad
+146,147,3,Vygon,https://www.vygon.es,vygon@empresa.com,963064949,General,Material médico-quirúrgico
+147,148,3,Yacare,https://yacare.es,yacare@empresa.com,963317373,General,Retail
+148,149,3,Air-Nostrum,http://www.airnostrum.es,airnostrum@empresa.com,964504040,General,Aviación
+149,150,4,ANECOOP,http://www.anecoop.com,anecoop@empresa.com,963461818,General,Agroalimentario
+150,151,4,Angels,http://angelscapital.es,angels@empresa.com,964136060,General,Gestión de Inversiones
+151,152,4,Atitlan,http://www.atitlan.es,atitlan@empresa.com,963002020,General,Grupo Inversor
+152,153,4,AVE,http://www.ave.org.es,ave@empresa.com,963307474,General,Asociación empresarial
+153,154,4,Banco-Sabadell,https://www.bancsabadell.com,bancosabadell@empresa.com,963720202,General,Bancario
+154,155,4,CaixaBank,https://www.caixabank.es,caixabank@empresa.com,964249595,General,Bancario
+155,156,4,Cajamar,https://www.cajamar.es,cajamar@empresa.com,963517575,General,Bancario
+156,157,4,Capgemini,https://www.capgemini.com,capgemini@empresa.com,963648787,General,Consultoría tecnológica
+157,158,4,Coca-Cola,http://www.ccepiberia.com,cocacola@empresa.com,963171010,General,Fabricación y comercialización de bebidas
+158,159,4,Deloitte,http://www.deloitte.es,deloitte@empresa.com,963019999,General,Servicios profesionales
+159,160,4,Forvasa,https://edem.eu,forvasa@empresa.com,964180101,General,Alimentación
+160,161,4,Garrigues,http://www.garrigues.com,garrigues@empresa.com,964696767,General,Asesoría fiscal y legal
+161,162,4,Grupo-Palma,http://grupopalma.es,palma@empresa.com,964354545,General,"Automovilístico, sanitario, inmobiliario y educación"
+162,163,4,Helados-Estiu,http://www.helados-estiu.com,heladosestiu@empresa.com,963247474,General,Alimentación
+163,164,4,Idom,http://www.idom.com,idom@empresa.com,963282525,General,"Ingeniería industrial, arquitectura y consultoría"
+164,165,4,Importaco,http://www.importaco.com,importaco@empresa.com,964201515,General,Alimentación y bebidas
+165,166,4,Inmoalameda,https://edem.eu,inmoalameda@empresa.com,963676868,General,Tenencia y gestión de sociedades
+166,167,4,Mercadona,http://www.mercadona.es,mercadona@empresa.com,963953535,General,Distribución
+167,168,4,Pamesa,http://www.pamesa.com,pamesa@empresa.com,964354545,General,Cerámica
+168,169,4,PwC,http://www.pwc.es,pwc@empresa.com,963318686,General,Servicios profesionales
+169,170,4,Schreiber-Foods,https://www.schreiberfoods.com,schreiberfoods@empresa.com,963608080,General,Alimentación
+170,171,4,Torrecid,http://www.torrecid.com,torrecid@empresa.com,963611010,General,Cerámica y vidrio
+171,172,4,Vodafone,http://vodafone.es,vodafone@empresa.com,963041818,General,Telecomunicaciones
+172,173,5,Universidad de Madrid,https://universidaddemadrid.com,info@universidaddemadrid.com,964934702,General,Educación
+173,174,5,Universidad de Sevilla,https://universidaddesevilla.com,info@universidaddesevilla.com,963421763,General,Educación
+174,175,5,Colegio Valenciano,https://colegiovalenciano.com,info@colegiovalenciano.com,964352029,General,Educación
+175,176,5,Instituto Benicalap,https://institutobenicalap.com,info@institutobenicalap.com,963241497,General,Educación
+176,177,5,Colegio Santa María,https://colegiosantamaria.com,info@colegiosantamaria.com,963199090,General,Educación
+177,178,5,Colegio La Salle,https://colegiolasalle.com,info@colegiolasalle.com,963413229,General,Educación
+178,179,5,Universidad Complutense de Madrid,https://universidadcomplutensedemadrid.com,info@universidadcomplutensedemadrid.com,964084093,General,Educación
+179,180,5,Colegio Cervantes,https://colegiocervantes.com,info@colegiocervantes.com,964932451,General,Educación
+180,181,5,Colegio San Ignacio,https://colegiosanignacio.com,info@colegiosanignacio.com,964248364,General,Educación
+181,182,5,Colegio San José,https://colegiosanjose.com,info@colegiosanjose.com,964828909,General,Educación
+182,183,5,Universidad de Barcelona,https://universidaddebarcelona.com,info@universidaddebarcelona.com,964336820,General,Educación
+183,184,5,Colegio San Francisco,https://colegiosanfrancisco.com,info@colegiosanfrancisco.com,963349942,General,Educación
+184,185,5,Universidad Pablo de Olavide,https://universidadpablodeolavide.com,info@universidadpablodeolavide.com,963723508,General,Educación
+185,186,5,Universidad de Valencia,https://universidaddevalencia.com,info@universidaddevalencia.com,964223584,General,Educación
+186,187,5,Universidad Politécnica de Barcelona,https://universidadpolitecnicadebarcelona.com,info@universidadpolitecnicadebarcelona.com,964128189,General,Educación
+187,188,5,Colegio Sagrado Corazón,https://colegiosagradocorazon.com,info@colegiosagradocorazon.com,964637677,General,Educación
+188,189,5,Colegio Montessori,https://colegiomontessori.com,info@colegiomontessori.com,963852606,General,Educación
+189,190,5,Colegio El Carmen,https://colegioelcarmen.com,info@colegioelcarmen.com,964236371,General,Educación
+190,191,5,Universidad Politécnica de Valencia,https://universidadpolitecnicadevalencia.com,info@universidadpolitecnicadevalencia.com,964884943,General,Educación
+191,192,5,Colegio La Presentación,https://colegiolapresentacion.com,info@colegiolapresentacion.com,964091928,General,Educación
+192,193,5,Colegio San Vicente,https://colegiosanvicente.com,info@colegiosanvicente.com,964814106,General,Educación
+193,194,5,Colegio San Antonio,https://colegiosanantonio.com,info@colegiosanantonio.com,964886746,General,Educación
+194,195,5,Colegio Nuestra Señora de los Desamparados,https://colegionuestrasenoradelosdesamparados.com,info@colegionuestrasenoradelosdesamparados.com,964091976,General,Educación
+195,196,5,Universidad Rey Juan Carlos,https://universidadreyjuancarlos.com,info@universidadreyjuancarlos.com,963954427,General,Educación
+196,197,5,Universidad Autónoma de Madrid,https://universidadautonomademadrid.com,info@universidadautonomademadrid.com,964208403,General,Educación
+197,198,5,Universidad Politécnica de Madrid,https://universidadpolitecnicademadrid.com,info@universidadpolitecnicademadrid.com,964172962,General,Educación
