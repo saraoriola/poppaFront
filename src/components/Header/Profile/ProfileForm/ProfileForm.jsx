@@ -9,18 +9,17 @@ import Logout from "../../../User/Logout/Logout";
 const ProfileForm = () => {
     const userConnected = useSelector((state) => state.auth.userConnected);
     const [interests, setInterests] = useState(["Masters", "Formación", "Futuro", "Finanzas e Inversión", "Gestión empresarial", "Habilidades directivas"]);
-    console.log(userConnected);
+
     const removeInterest = (index) => {
         const updatedInterests = [...interests];
         updatedInterests.splice(index, 1);
         setInterests(updatedInterests);
     };
-    // console.log(userConnected);
 
     return (
         <>
             <Flex justifyContent="center" alignItems="center" flexDirection="column" bgColor="#e6dfcf">
-                <Box h="105px" bgColor="rgba(203, 120, 98, 0.7)" w="360px" borderRadius="0" display="flex" alignItems="center">
+                <Box h="105px" bgColor="rgba(203, 120, 98, 0.7)" w="100%" borderRadius="0" display="flex" alignItems="center">
                     <Box mt="108px" ml="116px">
                         <Box bgColor="gray" w="39px" h="39px" borderRadius="full" display="flex" justifyContent="center" alignItems="center" position="absolute" top="180px" left="160px">
                             <MdModeEdit size="18px" color="white" />
