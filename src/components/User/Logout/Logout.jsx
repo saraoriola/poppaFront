@@ -22,7 +22,7 @@ const Logout = () => {
     };
 
     return (
-        <Button mt="6%" ml="60%" colorScheme="blue" onClick={handleLogout}>
+        <Button w="140px" h="32px" fontSize="14px" ml="17px" color="#F8F8F8" bgColor="#cb7862" type="submit" onClick={handleLogout}>
             Cerrar Sesión
         </Button>
     );
