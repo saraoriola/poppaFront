@@ -41,7 +41,7 @@ const QrReader = () => {
                         {isCheckIn ? "Registrado" : "Error al registrar"}
                     </Text>
                 )}
-                <Box mt="250px">
+                <Box mt="50px">
                     <Link to="approved/accepted" style={{ display: "flex", justifyContent: "center", opacity: 0.8 }}>
                         <IoArrowBackCircle size="50px" />
                     </Link>
