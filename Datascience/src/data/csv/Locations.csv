@@ -1,0 +1,45 @@
+Id,Facility_id,Meeting_Room,Capacity,Description
+1,1,P-001,50,"Planta 0, Pasillo 1"
+2,1,P-101,50,"Planta 1, Pasillo 1"
+3,1,P-201,50,"Planta 2, Pasillo 1"
+4,1,A-001,60,"Planta 0, Auditorio 1"
+5,1,A-101,60,"Planta 1, Auditorio 1"
+6,1,A-102,50,"Planta 1, Auditorio 2"
+7,1,A-201,40,"Planta 2, Auditorio 1"
+8,1,A-202,40,"Planta 2, Auditorio 2"
+9,1,L-101,20,"Planta 1, Aula 1"
+10,1,L-102,20,"Planta 1, Aula 2"
+11,1,L-103,20,"Planta 1, Aula 3"
+12,1,L-104,20,"Planta 1, Aula 4"
+13,1,L-201,20,"Planta 2, Aula 1"
+14,1,L-202,20,"Planta 2, Aula 2"
+15,1,L-203,20,"Planta 2, Aula 3"
+16,1,L-204,20,"Planta 2, Aula 4"
+17,1,M-101,8,"Planta 1, Sala reuniones 1"
+18,1,M-102,10,"Planta 1, Sala reuniones 2"
+19,1,M-201,10,"Planta 2, Sala reuniones 1"
+20,1,M-202,10,"Planta 2, Sala reuniones 2"
+21,1,M-203,12,"Planta 2, Sala reuniones 3"
+22,1,M-204,12,"Planta 2, Sala reuniones 4"
+23,2,P-001,50,P00_Pasillo
+24,2,P-101,50,P01_Pasillo
+25,2,P-201,50,P02_Pasillo
+26,2,A-001,60,P00_Auditorio_01
+27,2,A-101,60,P01_Auditorio_01
+28,2,A-102,50,P01_Auditorio_02
+29,2,A-201,40,P02_Auditorio_01
+30,2,A-202,40,P02_Auditorio_02
+31,2,L-101,20,P01_Aula_01
+32,2,L-102,20,P01_Aula_02
+33,2,L-103,20,P01_Aula_03
+34,2,L-104,20,P01_Aula_04
+35,2,L-201,20,P02_Aula_01
+36,2,L-202,20,P02_Aula_02
+37,2,L-203,20,P02_Aula_03
+38,2,L-204,20,P02_Aula_04
+39,2,M-101,8,P01_Sala_Reuniones_01
+40,2,M-102,10,P01_Sala_Reuniones_02
+41,2,M-201,10,P02_Sala_Reuniones_01
+42,2,M-202,10,P02_Sala_Reuniones_02
+43,2,M-203,12,P02_Sala_Reuniones_03
+44,2,M-204,12,P02_Sala_Reuniones_04

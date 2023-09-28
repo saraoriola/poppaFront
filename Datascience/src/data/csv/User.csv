@@ -1,0 +1,61 @@
+Id,Organization_id,Responsability,Career,Course,Catchment,File,Gender,Name,Surname,Email,Password,Tel,Birthdate,Avatar,Country,Interests
+1,2,Campus manager,Grado,,Contratado,,Female,Raquel,Cabrera,raquel.cabrera@gmail.com,,657042370,1980-10-11 0:00:00,,Croatia,Emprendimiento
+2,2,Gerente de Logística,Máster,,Contratado,,Male,Manuel,Torres,manuel.torres@gmail.com,,628069713,1981-03-05 0:00:00,,Spain,Inversión
+3,2,Gerente de Logística,Máster,,Contratado,,Male,Manuel,Johnson,manuel.johnson@gmail.com,,612472809,1982-11-12 0:00:00,,Spain,Docencia
+4,2,Gerente de Marketing,Grado,,Contratado,,Male,Diego,Hernández,diego.hernández@gmail.com,,661070823,1979-08-28 0:00:00,,Spain,Nuevas tecnologías
+5,2,Gerente de Marketing,Máster,,Contratado,,Male,Mario,Molina,mario.molina@gmail.com,,660731374,1985-09-15 0:00:00,,Norway,Emprendimiento
+6,2,Ponente,Máster,,Contratado,,Male,Javier,Thomas,javier.thomas@gmail.com,,629968039,1978-11-30 0:00:00,,Spain,Emprendimiento
+7,2,profesores,Grado,,Contratado,,Male,Fernando,Herrero,fernando.herrero@gmail.com,,629415962,1984-06-22 0:00:00,,Spain,Docencia
+8,2,profesores,Grado,,Contratado,,Male,Gabriel,Suárez,gabriel.suárez@gmail.com,,614253808,1985-03-05 0:00:00,,Spain,Finanzas
+9,2,Responsable de Área Bootcamps,Grado,,Contratado,,Female,Ana,Vega,ana.vega@gmail.com,,688536659,1986-11-12 0:00:00,,Ireland,Derecho
+10,2,Responsable de Área grado ADE,Grado,,Contratado,,Male,Mario,Vicente,mario.vicente@gmail.com,,616824481,1983-08-28 0:00:00,,Spain,Recursos humanos
+11,2,Responsables de Informatica,Máster,,Contratado,,Female,Miguel Ángel,Cruz,luisa.cruz@gmail.com,,699144351,1989-09-15 0:00:00,,Spain,Derecho
+12,2,Responsables de Informatica,Máster,,Contratado,,Female,Estefanía,Silva,isabel.silva@gmail.com,,637275640,1982-11-30 0:00:00,,Spain,Deporte
+13,2,Responsables de Informatica,Grado,,Contratado,,Male,Víctor,Ruiz,miguel.ruiz@gmail.com,,691989983,1988-06-22 0:00:00,,Spain,Deporte
+14,2,Responsables de Informatica,Grado,,Contratado,,Male,Adrián,Cabrera,josé.cabrera@gmail.com,,628808944,1989-03-05 0:00:00,,Italy,Actualidad
+15,2,Responsables de Informatica,Grado,,Contratado,,Male,Sara,Silva,raul.silva@gmail.com,,626600448,1990-11-12 0:00:00,,Spain,Actualidad
+16,2,Responsables de Informatica,Máster,,Contratado,,Male,Patricia,Aguilar,santiago.aguilar@gmail.com,,661850643,1987-08-28 0:00:00,,Netherlands,Derecho
+17,2,Responsables de Informatica,Grado,,Contratado,,Male,Alan,González,gustavo.gonzález@gmail.com,,683695939,1993-09-15 0:00:00,,Spain,Deporte
+18,2,Responsables de Informatica,Máster,,Contratado,,Male,Jorman,Reyes,gustavo.reyes@gmail.com,,681587456,1986-11-30 0:00:00,,Hungary,Derecho
+19,2,Responsables de Informatica,Grado,,Contratado,,Male,Santiago,Hernández,gustavo.hernández@gmail.com,,692393409,1992-06-22 0:00:00,,Croatia,Docencia
+20,2,Responsables de Informatica,Máster,,Contratado,,Male,Alejandro,Torres,javier.torres@gmail.com,,607734432,1993-03-05 0:00:00,,Austria,Docencia
+21,2,Responsables de Informatica,Máster,,Contratado,,Male,Rafael,Torres,rafael.torres@gmail.com,,607734432,1994-11-12 0:00:00,,España,Docencia
+22,2,Técnico de Informática,Grado,,Contratado,,Female,Silvia,Campos,clara.campos@gmail.com,,668735501,1991-08-28 0:00:00,,Spain,Actualidad
+23,2,Técnico de Informática,Grado,,Contratado,,Male,Andrés,Iglesias,ricardo.iglesias@gmail.com,,621045613,1997-09-15 0:00:00,,Belgium,Actualidad
+24,173,Alumno,Grado,Otros,Asistente,Persona educada y organizada. Ha estudiado informática y está interesado en IA.,Male,Gustavo,Hernández,gustavo.hernández@gmail.com,,624263548,2003-09-15 0:00:00,,Spain,Nuevas tecnologías
+25,174,Alumno,Grado,Otros,Asistente,Interesado en emprender en el sector de la automoción.,Male,Fernando,Arias,fernando.arias@gmail.com,,677575858,2000-06-22 0:00:00,,Spain,Deporte
+26,179,Alumno,Grado,Otros,Interesado,El Open day le causó muy buena impresión.,Female,Raquel,Alonso,raquel.alonso@gmail.com,,691839008,2001-03-05 0:00:00,,Monaco,Finanzas
+27,183,Alumno,Grado,Otros,Interesado,El Open day le causó muy buena impresión.,Female,Marta,Vicente,marta.vicente@gmail.com,,614480853,1999-11-12 0:00:00,,Spain,Inversión
+28,185,Alumno,Grado,Otros,Interesado,El Open day le causó muy buena impresión.,Female,Maria,Díaz,maria.díaz@gmail.com,,606494642,2002-08-28 0:00:00,,France,IT
+29,175,Alumno,Grado,1 Bachiller,Interesado,Está estudiando el bachillerato de letras. Interesado en la doble licenciatura de ADE y Derecho.,Female,Beatriz,Ramos,beatriz.ramos@gmail.com,,656927156,2007-05-15 0:00:00,,Spain,Nuevas tecnologías
+30,177,Alumno,Grado,1 Bachiller,Interesado,Está estudiando el bachillerato de letras. Interesado en la doble licenciatura de ADE y Derecho.,Female,Maria,López,maria.lópez@gmail.com,,688837440,2007-02-03 0:00:00,,Malta,Actualidad
+31,178,Alumno,Grado,2 Bachiller,Matriculado,El Open day le causó muy buena impresión.,Female,Clara,Suárez,clara.suárez@gmail.com,,621203387,2006-10-11 0:00:00,,Denmark,Nuevas tecnologías
+32,180,Alumno,Grado,2 Bachiller,Admitido,Está estubiando el bachillerato de económicas.,Female,Irene,Vicente,irene.vicente@gmail.com,,699566548,2006-07-25 0:00:00,,Spain,Finanzas
+33,181,Alumno,Grado,2 Bachiller,Entrevistado,Está estudiando el bachillerato de letras. Interesado en la doble licenciatura de ADE y Derecho.,Male,Gabriel,Castro,gabriel.castro@gmail.com,,621536083,2006-03-23 0:00:00,,Spain,Deporte
+34,155,CEO,Máster,,Admitido,Interesado en formarse en liderazgo de personas.,Female,Irene,Moreno,irene.moreno@gmail.com,,695814718,1980-10-11 0:00:00,,Spain,IT
+35,167,Responsable RRHH,Máster,,Interesado,Está interesado en el grado de ADE.,Female,Luisa,Fernández,luisa.fernández@gmail.com,,686621084,1981-03-05 0:00:00,,Czech Republic,Derecho
+36,163,Gerente Fiscal,Máster,,Interesado,Está interesado en el grado de Marketing.,Female,Clara,Fernández,clara.fernández@gmail.com,,654216046,1982-11-12 0:00:00,,Spain,Derecho
+37,170,Ventas,Máster,,Matriculado,Está interesado en el grado de Marketing.,Male,Andrés,López,andrés.lópez@gmail.com,,613405047,1979-08-28 0:00:00,,Spain,Recursos humanos
+38,152,Ponente,Doctorado,,Asistente,Interesado en emprender en el sector de la automoción.,Female,Silvia,Smith,silvia.smith@gmail.com,,678055988,1985-09-15 0:00:00,,Spain,Finanzas
+39,43,Responsable técnico BBDD,Máster,,Admitido,Interesado en que su empresa sea miembro de MdE.,Female,Eva,Torres,eva.torres@gmail.com,,621490482,1978-11-30 0:00:00,,Spain,Derecho
+40,50,Ponente,Máster,,Interesado,El Open day le causó muy buena impresión.,Female,Eva,Sánchez,eva.sánchez@gmail.com,,632930106,1984-06-22 0:00:00,,Spain,IT
+41,56,Gerente Jurídico,Doctorado,,Asistente,El Open day le causó muy buena impresión.,Male,Diego,Evans,diego.evans@gmail.com,,674306256,1985-03-05 0:00:00,,Iceland,Derecho
+42,66,Jefe de ventas,Máster,,Interesado,Nos pidió que le avisáramos para la próxima feria de empleo.,Male,Diego,Mendoza,diego.mendoza@gmail.com,,618721442,1986-11-12 0:00:00,,Croatia,Recursos humanos
+43,75,Jefe de Departamento,Doctorado,,Interesado,Nos pidió que le informáramos si salen nuevos Bootcamps.,Male,Ricardo,Wilson,ricardo.wilson@gmail.com,,609969437,1983-08-28 0:00:00,,Spain,Finanzas
+44,84,Jefe de equipo,Máster,,Matriculado,Interesado en emprender en el sector de la automoción.,Male,Andrés,Méndez,andrés.méndez@gmail.com,,663817728,1989-09-15 0:00:00,,Latvia,Derecho
+45,96,Jefe de proyecto,Doctorado,,Admitido,Nos pidió que le avisáramos para la próxima feria de empleo.,Female,Elena,Smith,elena.smith@gmail.com,,644390188,1982-11-30 0:00:00,,Denmark,IT
+46,100,Técnico RRHH,Doctorado,,Interesado,Nos pidió que le avisáramos para la próxima feria de empleo.,Female,Maria,Jiménez,maria.jiménez@gmail.com,,635548985,1988-06-22 0:00:00,,Liechtenstein,Finanzas
+47,108,Ponente,Máster,,Interesado,Nos pidió que le informáramos si salen nuevos Bootcamps.,Female,Alicia,Díaz,alicia.díaz@gmail.com,,656213249,1989-03-05 0:00:00,,Sweden,Finanzas
+48,120,Técnico Márketing,Máster,,Matriculado,Está interesado en el grado de Marketing.,Male,Mario,Wilson,mario.wilson@gmail.com,,618225331,1990-11-12 0:00:00,,Norway,Docencia
+49,124,Programador,Máster,,Admitido,Está estudiando el bachillerato de letra. Interesado en la doble licenciatura de ADE y Derecho.,Male,José,Wilson,josé.wilson@gmail.com,,646574417,1987-08-28 0:00:00,,Spain,Inversión
+50,126,Diseñador,Máster,,Interesado,Nos pidió que le avisáramos para la próxima feria de empleo.,Female,Ana,Thomas,ana.thomas@gmail.com,,615905976,1993-09-15 0:00:00,,Spain,Inversión
+51,5,Ponente,Doctorado,,Interesado,Interesado en que su empresa sea miembro de MdE.,Male,Antonio,Suárez,antonio.suárez@gmail.com,,621351986,1986-11-30 0:00:00,,Spain,IT
+52,7,Administrativo,Máster,,Asistente,Nos pidió que le avisáramos para la próxima feria de empleo.,Female,Alicia,Suárez,alicia.suárez@gmail.com,,651065439,1992-06-22 0:00:00,,Spain,Inversión
+53,8,Asistente técnico,Máster,,Admitido,Está interesado en el grado de ADE.,Female,Sofia,Ramos,sofia.ramos@gmail.com,,684238225,1993-03-05 0:00:00,,Cyprus,Recursos humanos
+54,9,Ponente,Doctorado,,Asistente,Está interesado en el grado de ADE.,Male,Alejandro,Suárez,alejandro.suárez@gmail.com,,612230772,1994-11-12 0:00:00,,Slovenia,Inversión
+55,11,Producto owner,Máster,,Entrevistado,Nos pidió que le avisáramos para la próxima feria de empleo.,Male,Diego,Sánchez,diego.sánchez@gmail.com,,661536987,1991-08-28 0:00:00,,United Kingdom,Finanzas
+56,12,Producto manager,Grado,,Admitido,Nos pidió que le avisáramos para la próxima feria de empleo.,Male,Santiago,Vicente,santiago.vicente@gmail.com,,637166624,1997-09-15 0:00:00,,Spain,Inversión
+57,13,Coordinador de proyectos,Máster,,Interesado,Nos pidió que le avisáramos para la próxima feria de empleo.,Female,Beatriz,Mendoza,beatriz.mendoza@gmail.com,,685848824,1990-11-30 0:00:00,,Spain,Deporte
+58,14,Gerente de contabilidad,Grado,,Interesado,Nos pidió que le informáramos si salen nuevos Bootcamps.,Female,Isabel,Reyes,isabel.reyes@gmail.com,,627913543,1996-06-22 0:00:00,,Italy,Finanzas
+59,15,Gerente fiscal,Grado,,Asistente,Está interesado en el grado de Marketing.,Male,Raul,Romero,raul.romero@gmail.com,,648765274,1997-03-05 0:00:00,,Spain,IT
+60,16,Consultor de inversión,Grado,,Admitido,Está interesado en el grado de ADE.,Female,Irene,Gómez,irene.gómez@gmail.com,,627921480,1998-11-12 0:00:00,,Spain,Actualidad

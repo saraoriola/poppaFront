@@ -1,0 +1,25 @@
+Id,Event_id,Name,Mail
+1,1,Antonio García,antoniogarcia@example.com
+2,1,Carmen Martínez,carmenmartinez@example.com
+3,1,Francisco López,franciscolopez@example.com
+4,1,María Pérez,mariaperez@example.com
+5,1,Juan Sánchez,juansanchez@example.com
+6,1,Ana Torres,anatorres@example.com
+7,2,José Ruiz,josruiz@example.com
+8,2,Isabel Gómez,isabelgomez@example.com
+9,2,Manuel Romero,manuelromero@example.com
+10,2,Laura Suárez,laurasuarez@example.com
+11,3,David González,davidgonzalez@example.com
+12,3,Marta Hernández,martahernandez@example.com
+13,3,Carlos Jiménez,carlosjimenez@example.com
+14,4,Paula Díaz,pauladiaz@example.com
+15,4,Miguel Ángel Moreno,miguelangelmoreno@example.com
+16,5,Lucía Álvarez,luciaalvarez@example.com
+17,5,Pablo Gutiérrez,pablogutierrez@example.com
+18,5,Sofía Castro,sofiacastro@example.com
+19,5,Alejandro Ortega,alejandroortega@example.com
+20,5,Andrea Flores,andreaflores@example.com
+21,6,Javier Medina,javiermedina@example.com
+22,6,Natalia Vega,nataliavega@example.com
+23,6,Sergio Torres,sergiotorres@example.com
+24,6,Elena Serrano,elenaserrano@example.com
