@@ -34,7 +34,7 @@ const EventCard = () => {
     return (
         <>
             <HeaderRender />
-            <Card variant="unstyled">
+            <Card variant="unstyled" mt="5px">
                 <Image src={eventImg} alt="Banner" w="312px" h="140px" ml="24px" mt="20px" borderRadius="4px" objectFit="cover" />
                 <Text pl="24px" mt="5px" fontFamily="Nocturne-Black" color="#004368" fontSize="16px">
                     Desafío de Tripulaciones <br /> The Bridge septiembre 2023
@@ -46,7 +46,7 @@ const EventCard = () => {
                             {event.dateTime}
                         </Text>
                     </HStack>
-                    <HStack ml="150px">
+                    <HStack ml="150px" mt="4px">
                         <BiTimeFive size={15} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="12" color="#847c7b">
                             18.00 h
@@ -54,16 +54,16 @@ const EventCard = () => {
                     </HStack>
                 </HStack>
                 <HStack>
-                    <HStack ml="24px">
+                    <HStack ml="24px" mt="8px">
                         <GoLocation size={15} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="12" color="#847c7b">
                             EDEM / Online
                         </Text>
                     </HStack>
-                    <HStack ml="129px">
+                    <HStack ml="35px" mt="8px">
                         <MdMapsHomeWork size={15} color="#cb7862" />
                         <Text fontFamily="PPTelegraf-Ultralight" fontSize="12" color="#847c7b">
-                            Aula 208
+                            Planta 2, Sala reuniones 207
                         </Text>
                     </HStack>
                 </HStack>

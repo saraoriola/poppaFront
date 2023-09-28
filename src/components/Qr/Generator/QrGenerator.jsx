@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import useQrGenerator from "../../../hooks/useQrGenerator";
 
@@ -16,12 +16,14 @@ const QrGenerator = (props) => {
 
     return (
         <>
-            <Box w="248px" h="248px">
-                <canvas ref={canvasRef} />
-            </Box>
-            <Text ml="90px" mt="100px" fontFamily="PPTelegraf-Regular" fontSize="16" color="#847c7b">
-                {userConnected?.name}
-            </Text>
+            <Flex justifyContent="center" alignContent="center" w="100%" direction="column">
+                <Box w="248px" h="248px">
+                    <canvas ref={canvasRef} />
+                </Box>
+                <Text w="90%" mt="100px" textAlign="center" fontFamily="PPTelegraf-Regular" fontSize="16" color="#847c7b">
+                    {userConnected?.name}
+                </Text>
+            </Flex>
         </>
     );
 };
