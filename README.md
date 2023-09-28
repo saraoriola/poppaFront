@@ -1,4 +1,6 @@
 
+ <img src="./src/assets/images/banner.jpg"> </img>
+ 
   <h1 align="center" id="top">Eventum - Front end</h1>
 
 
@@ -511,5 +513,7 @@ git push origin my-contribution
     </td>
   </tr>
 </table>
+
+
 
 
