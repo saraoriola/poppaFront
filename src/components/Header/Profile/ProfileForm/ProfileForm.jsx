@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
 import { Flex, VStack, FormControl, FormLabel, Input, Select, Button, Image, Box, Wrap, Text, HStack, Tag, TagLabel, TagCloseButton, WrapItem } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { MdModeEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Logout from "../../../User/Logout/Logout";
+import avatar from "../../../../assets/images/user-icon.svg";
 
 const ProfileForm = () => {
     const userConnected = useSelector((state) => state.auth.userConnected);
@@ -24,7 +24,7 @@ const ProfileForm = () => {
                         <Box bgColor="gray" w="39px" h="39px" borderRadius="full" display="flex" justifyContent="center" alignItems="center" position="absolute" top="180px" left="160px">
                             <MdModeEdit size="18px" color="white" />
                         </Box>
-                        <Image borderRadius="full" boxSize="128px" src="src/assets/images/user-icon.svg" alt="User" />
+                        <Image borderRadius="full" boxSize="128px" src={avatar} alt="User" />
                     </Box>
                 </Box>
                 <HStack w="100%" mt="80px" ml="50px">
