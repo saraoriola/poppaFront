@@ -29,27 +29,10 @@ const logout = async () => {
     return res.data;
 };
 
-//ESTO LO VAMOS A IMPLEMENTAR EN EL PERFIL, DE MOMENTO DEJARLO COMENTADO
-
-// const uploadAvatar = async avatar => {
-//   const token = JSON.parse(localStorage.getItem('token'));
-//   const res = await apiClient.post('/users/avatar', avatar, {
-//     headers: {
-//       Authorization: token,
-//     },
-//   });
-//   if (res.data) {
-//     localStorage.setItem('user', JSON.stringify(res.data.user));
-//   }
-//   return res.data;
-// };
-
 const authService = {
     register,
     login,
     logout,
-
-    //   uploadAvatar,
 };
 
 export default authService;

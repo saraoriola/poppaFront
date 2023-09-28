@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import useQrGenerator from "../../../hooks/useQrGenerator";
 

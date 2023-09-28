@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Admin from "./components/Admin/Admin";
+import Profile from "./components/Profile/Profile";
 import Register from "./components/User/Register/Register";
 import ErrorPage from "./components/Error/ErrorPage";
 import Home from "./components/Home/Home";
@@ -88,7 +88,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: "logout", element: <Logout /> },
-            { path: "admin", element: <Admin /> },
+            { path: "profile", element: <Profile /> },
         ],
     },
 ]);
