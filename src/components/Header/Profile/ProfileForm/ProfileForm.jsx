@@ -4,12 +4,12 @@ import { Flex, VStack, FormControl, FormLabel, Input, Select, Button, Image, Box
 import { useSelector } from "react-redux";
 import { MdModeEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Logout from "../User/Logout/Logout";
+import Logout from "../../../User/Logout/Logout";
 
-const Profile = () => {
+const ProfileForm = () => {
     const userConnected = useSelector((state) => state.auth.userConnected);
     const [interests, setInterests] = useState(["Masters", "Formación", "Futuro", "Finanzas e Inversión", "Gestión empresarial", "Habilidades directivas"]);
-
+    console.log(userConnected);
     const removeInterest = (index) => {
         const updatedInterests = [...interests];
         updatedInterests.splice(index, 1);
@@ -36,34 +36,46 @@ const Profile = () => {
                     </Link>
                     <Logout />
                 </HStack>
+                <HStack w="100%" mt="15px" ml="50px">
+                    <Link to="/approved/accepted">
+                        <Button w="140px" h="32px" fontSize="14px" bgColor="#F8F8F8" color="#cb7862" type="submit">
+                            <Text>Aprobador</Text>
+                        </Button>
+                    </Link>
+                    <Link to="/readerqr">
+                        <Button w="140px" h="32px" fontSize="14px" ml="17px" color="#F8F8F8" bgColor="#cb7862" type="submit">
+                            <Text>Lector de QR</Text>
+                        </Button>
+                    </Link>
+                </HStack>
                 <Box w="85%" mt="10%" variant="unstyled">
                     <VStack w="100%">
                         <FormControl id="nombre">
                             <FormLabel fontSize="12px" fontFamily="PPTelegraf-Regular" color="#847c7b">
                                 Nombre
                             </FormLabel>
-                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" />
+                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" fontFamily="PPTelegraf-Regular" fontSize="12px" placeholder={userConnected.name} />
                         </FormControl>
 
                         <FormControl id="apellidos">
                             <FormLabel fontSize="12px" fontFamily="PPTelegraf-Regular" color="#847c7b">
                                 Apellidos
                             </FormLabel>
-                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" />
+                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" fontFamily="PPTelegraf-Regular" />
                         </FormControl>
 
                         <FormControl id="email">
                             <FormLabel fontSize="12px" fontFamily="PPTelegraf-Regular" color="#847c7b">
                                 E-mail
                             </FormLabel>
-                            <Input type="email" bgColor="white" border="1px solid #cb7862" h="32px" />
+                            <Input type="email" bgColor="white" border="1px solid #cb7862" h="32px" fontFamily="PPTelegraf-Regular" fontSize="12px" placeholder={userConnected.email} />
                         </FormControl>
 
                         <FormControl id="contrasena">
                             <FormLabel fontSize="12px" fontFamily="PPTelegraf-Regular" color="#847c7b">
                                 Contraseña
                             </FormLabel>
-                            <Input type="password" bgColor="white" border="1px solid #cb7862" h="32px" />
+                            <Input type="password" bgColor="white" border="1px solid #cb7862" h="32px" fontFamily="PPTelegraf-Regular" fontSize="12px" placeholder="Valencia23!" />
                         </FormControl>
 
                         <HStack w="100%">
@@ -97,7 +109,7 @@ const Profile = () => {
                             <FormLabel fontSize="12px" fontFamily="PPTelegraf-Regular" color="#847c7b">
                                 País
                             </FormLabel>
-                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" />
+                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" fontFamily="PPTelegraf-Regular" fontSize="12px" placeholder={userConnected.country} />
                         </FormControl>
 
                         <FormControl id="cargo">
@@ -118,7 +130,7 @@ const Profile = () => {
                             <FormLabel fontSize="12px" fontFamily="PPTelegraf-Regular" color="#847c7b">
                                 Área
                             </FormLabel>
-                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" />
+                            <Input type="text" bgColor="white" border="1px solid #cb7862" h="32px" fontFamily="PPTelegraf-Regular" fontSize="12px" placeholder={userConnected.area} />
                         </FormControl>
                         <Text mr="80%" color="#847c7b" fontSize="12px" fontFamily="PPTelegraf-Regular">
                             Intereses:
@@ -151,4 +163,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default ProfileForm;

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Profile from "./components/Profile/Profile";
 import Register from "./components/User/Register/Register";
 import ErrorPage from "./components/Error/ErrorPage";
 import Home from "./components/Home/Home";
@@ -16,6 +15,7 @@ import ApprovedAccepted from "./components/ApprovedAccepted/ApprovedAccepted";
 import QrGenerator from "./components/Qr/Generator/QrGenerator";
 import EventCard from "./components/Event/EventCard/EventCard";
 import QrReader from "./components/Qr/Reader/QrReader";
+import ProfileForm from "./components/Header/Profile/ProfileForm/ProfileForm";
 
 const routes = createBrowserRouter([
     {
@@ -88,7 +88,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: "logout", element: <Logout /> },
-            { path: "profile", element: <Profile /> },
+            { path: "profile", element: <ProfileForm /> },
         ],
     },
 ]);

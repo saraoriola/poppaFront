@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Text } from "@chakra-ui/react";
 import FilterEvents from "../Event/FilterEvents/FilterEvents";
 import GetAllEvents from "../Event/GetAllEvents/GetAllEvents";
 import TopButton from "./TopButton/TopButton";
@@ -22,24 +22,23 @@ const Home = () => {
     }
 
     return (
-        <Box bg="#e6dfcf">
-            <HStack fontSize="xl" fontFamily="Nocturne-Black" color="#004368" p={5}>
-                <Text ml={1}>Próximos eventos</Text>
-                <Link to="/readerqr">
-                    <Button>Lector QR</Button>
-                </Link>
-            </HStack>
-            <Box className="father-filter-container" ml={6} mt={-3}>
-                <FilterEvents />
+        <Flex alignContent="center" justifyContent="center">
+            <Box bg="#e6dfcf">
+                <HStack fontSize="xl" fontFamily="Nocturne-Black" color="#004368" p={5}>
+                    <Text ml="40px">Próximos eventos</Text>
+                </HStack>
+                <Box ml="13%">
+                    <FilterEvents />
+                </Box>
+                <Box>
+                    <GetAllEvents />
+                </Box>
+                <Box>
+                    <TopButton />
+                    {createEventButton}
+                </Box>
             </Box>
-            <Box>
-                <GetAllEvents />
-            </Box>
-            <Box display="flex" alignItems="center" justifyContent="space-between" margin="0px 20px">
-                <TopButton />
-                {createEventButton}
-            </Box>
-        </Box>
+        </Flex>
     );
 };
 
