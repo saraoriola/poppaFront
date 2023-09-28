@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 const Profile = () => {
     const userConnected = useSelector((state) => state.auth.userConnected);
 
-    // Renderizar el enlace a /approved/accepted si hay un usuario conectado,
-    // de lo contrario, renderizar el enlace a /login
     return (
         <>
             {userConnected ? (
-                <Link to="/approved/accepted">
+                <Link to="profile">
                     <Avatar name={userConnected?.name} src={userConnected?.avatar} size={"sm"} />
                 </Link>
             ) : (
