@@ -7,8 +7,8 @@
         "month": "September"
     },
     "schedule": {
-        "start": "09:00 AM",
-        "end": "05:00 PM"
+        "start": "11:00 AM",
+        "end": "12:00 AM"
     },
     "attendees": {
         "registered": 600,

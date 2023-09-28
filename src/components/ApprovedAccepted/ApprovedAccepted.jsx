@@ -1,49 +1,46 @@
 import React, { useState } from 'react';
-import { useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom';
 import { BsCalendar3 } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { BiTimeFive } from 'react-icons/bi';
-import { MdMapsHomeWork } from 'react-icons/md'
-import { useSelector } from "react-redux";
+import { MdMapsHomeWork } from 'react-icons/md';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { phrases1, phrases2, phrases3, phrases4, phrases5 } from "../../Phrases/phrases";
-import { Box, Button, Flex, Image, Tabs, TabList, Tab, TabPanel, TabPanels, Stack, Checkbox, Text } from "@chakra-ui/react";
-import "./ApprovedAccepted.scss";
+import { phrases1, phrases2, phrases3, phrases4, phrases5 } from '../../Phrases/phrases';
+import { FaUser, FaChartBar, FaQrcode, FaEdit, FaShare, FaCalendarPlus, FaTimesCircle, FaDoorOpen, FaCommentDots } from 'react-icons/fa';
+import { Box, Button, Flex, Image, Tabs, TabList, Tab, TabPanel, TabPanels, Stack, Checkbox, Text, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton } from '@chakra-ui/react';
+import './ApprovedAccepted.scss';
 import HeaderRender from '../Header/HeaderRender/HeaderRender';
-import banner from "../../assets/images/desafio.jpg"
+import banner from '../../assets/images/desafio.jpg';
 
 const ApprovedAccepted = () => {
+  const linkStyle = { display: "flex", alignItems: "center", margin: "8px 0", fontFamily: "PPTelegraf-Ultralight", fontSize: "15px" };
+  const iconStyle = { marginRight: "10px", color: "#cb7862", marginLeft: "10px", height: "20px", width: "20px" };
+  const [isOpen, setIsOpen] = useState(false);
+  const onClose = () => setIsOpen(false);
+  const onOpen = () => setIsOpen(true);
   const [checkboxStatus1, setCheckboxStatus1] = useState([false, false, false, false, false]);
   const [checkboxStatus2, setCheckboxStatus2] = useState([false, false, false, false, false]);
   const [checkboxStatus3, setCheckboxStatus3] = useState([false, false, false, false, false]);
   const [checkboxStatus4, setCheckboxStatus4] = useState([false, false, false, false, false]);
   const [checkboxStatus5, setCheckboxStatus5] = useState([false, false, false, false, false]);
   const userConnected = useSelector((state) => state.auth.userConnected);
+
   const handleCheckboxChange = (index, tab) => {
+    const setCheckboxStatus = (state, t) => state.map((status, i) => (i === index ? !status : status));
     switch (tab) {
-      case 1:
-        setCheckboxStatus1(prevStatus => [...prevStatus.map((status, i) => (i === index ? !status : status))]);
-        break;
-      case 2:
-        setCheckboxStatus2(prevStatus => [...prevStatus.map((status, i) => (i === index ? !status : status))]);
-        break;
-      case 3:
-        setCheckboxStatus3(prevStatus => [...prevStatus.map((status, i) => (i === index ? !status : status))]);
-        break;
-      case 4:
-        setCheckboxStatus4(prevStatus => [...prevStatus.map((status, i) => (i === index ? !status : status))]);
-        break;
-      case 5:
-        setCheckboxStatus5(prevStatus => [...prevStatus.map((status, i) => (i === index ? !status : status))]);
-        break;
-      default:
-        break;
+      case 1: setCheckboxStatus1((prevStatus) => [...setCheckboxStatus(prevStatus, 1)]); break;
+      case 2: setCheckboxStatus2((prevStatus) => [...setCheckboxStatus(prevStatus, 2)]); break;
+      case 3: setCheckboxStatus3((prevStatus) => [...setCheckboxStatus(prevStatus, 3)]); break;
+      case 4: setCheckboxStatus4((prevStatus) => [...setCheckboxStatus(prevStatus, 4)]); break;
+      case 5: setCheckboxStatus5((prevStatus) => [...setCheckboxStatus(prevStatus, 5)]); break;
+      default: break;
     }
   };
-  const areAllCheckboxesChecked = (checkboxes) => {
-    return checkboxes.every((isChecked) => isChecked);
-  };
+
+  const areAllCheckboxesChecked = (checkboxes) => checkboxes.every((isChecked) => isChecked);
   const { id } = useParams();
+
   return (
     <>
       <HeaderRender />
@@ -80,36 +77,74 @@ const ApprovedAccepted = () => {
             </Text>
           </Flex>
         </Flex>
-        <Flex justifyContent="space-between" mt={5}>
-          <Button backgroundColor="white" color="#c11919" height="32px" width="148px" border="1px solid #c11919" fontSize="14px">
-            Cancelar evento
-          </Button>
-          <Button backgroundColor="#cb7862" color="white" height="32px" width="148px" border="1px solid #cb7862" fontSize="14px">
-            Modificar
-          </Button>
+        <Flex justifyContent="space-between" mt={5} >
+          <Box>
+          <Button
+  backgroundColor="#cb7862"
+  color="white"
+  height="32px"
+  width="148px"
+  border="1px solid #cb7862"
+  fontSize="14px"
+  onClick={onOpen}
+  ml="165px"
+>
+  Modificar
+</Button>
+
+
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        size="md" 
+      >
+        <DrawerOverlay />
+        <DrawerContent
+        borderRadius="0 10px 10px 0"
+        mt={318}
+          style={{
+            width: "250px", 
+            height: "450px", 
+          }}
+        >
+          <DrawerCloseButton />
+          <DrawerBody>
+          <Flex direction="column" alignItems="flex-start" mt={2}>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaQrcode style={{ ...iconStyle, color: '#cb7862' }} /> Lector QR
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaUser style={{ ...iconStyle, color: '#cb7862' }} /> Inscribir asistente
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaDoorOpen style={{ ...iconStyle, color: '#cb7862' }} /> Salidas
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaCommentDots style={{ ...iconStyle, color: '#cb7862' }} /> Foro
+        </Link>
+        <Link to="/dashboard/5" style={linkStyle}>
+          <FaChartBar style={{ ...iconStyle, color: '#cb7862' }} /> Dashboard
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaEdit style={{ ...iconStyle, color: '#cb7862' }} /> Editar enlace a la sesión
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaShare style={{ ...iconStyle, color: '#cb7862' }} /> Compartir
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaCalendarPlus style={{ ...iconStyle, color: '#cb7862' }} /> Añadir al calendario
+        </Link>
+        <Link to="/your-path-here" style={linkStyle}>
+          <FaTimesCircle style={{ ...iconStyle, color: '#cb7862' }} /> Cancelar evento
+        </Link>
+      </Flex>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </Box>
         </Flex>
-        <Flex justifyContent="space-between" mt={2}>
-          <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="148px" border="1px solid #cb7862" fontSize="14px">
-            Inscribir asistente
-          </Button>
-          <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="148px" border="1px solid #cb7862" fontSize="14px">
-            <Link to={`/dashboard/5`}>Dashboard</Link>
-          </Button>
-        </Flex>
-        <Flex justifyContent="space-between" mt={2}>
-          <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="148px" border="1px solid #cb7862" fontSize="14px">
-            Salidas
-          </Button>
-          <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="148px" border="1px solid #cb7862" fontSize="14px">
-            Foro
-          </Button>
-        </Flex>
-        <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="312px" border="1px solid #cb7862" fontSize="14px" mt={2}>
-          Lector QR
-        </Button>
-        <Button backgroundColor="rgba(248, 248, 248, 1)" color="#cb7862" height="32px" width="312px" border="1px solid #cb7862" fontSize="14px" mt={2}>
-          Editar enlace a la sesión
-        </Button>
+
         <Box display="flex" width="312px" height="184px" flexDirection="column" justifyContent="center" alignItems="flex-start">
           <Tabs mt={7} className='button' variant='enclosed'>
             <TabList>
